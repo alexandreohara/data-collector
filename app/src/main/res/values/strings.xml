@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Data Collector</string>
+    <string name="add_item_text">Adicionar Itens</string>
+    <string name="consult_data">Consultar Planilha</string>
+    <string name="select_item">Escolha uma das opções para adicionar um item</string>
+    <string name="new_scan_text">Escanear Código de Barras</string>
+    <string name="empty_button">Inserir Manualmente</string>
+    <string name="serial_number_text">Digitar Serial Number</string>
+    <string name="search_button">Buscar Dados</string>
 </resources>
