@@ -1,5 +1,6 @@
 package com.example.alexandre.datacollector.db
 
+import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
@@ -14,5 +15,5 @@ interface ItemDao {
     fun deleteLine()
 
     @Query("SELECT * FROM item_table")
-    fun getAllItems()
+    fun getAllItems(): LiveData<List<Item>>
 }
