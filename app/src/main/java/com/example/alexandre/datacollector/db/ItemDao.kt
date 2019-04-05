@@ -1,5 +1,18 @@
 package com.example.alexandre.datacollector.db
 
-/**
- * Created by alexandre on 04/04/19.
- */
+import android.arch.persistence.room.Dao
+import android.arch.persistence.room.Insert
+import android.arch.persistence.room.Query
+
+@Dao
+
+interface ItemDao {
+    @Insert
+    fun insert(item: Item)
+
+    @Query("DELETE FROM item_table")
+    fun deleteLine()
+
+    @Query("SELECT * FROM item_table")
+    fun getAllItems()
+}
