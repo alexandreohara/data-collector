@@ -20,12 +20,12 @@
         app:layout_constraintVertical_bias="0.24000001" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/add_main_button"
         style="@style/PrimaryButton"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:text="@string/add_item_text"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/main_consult_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.725" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/main_consult_button"
         style="@style/SecondaryButton"
         android:layout_width="225dp"
         android:layout_height="wrap_content"

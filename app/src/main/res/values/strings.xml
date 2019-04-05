@@ -6,5 +6,13 @@
     <string name="new_scan_text">Escanear Código de Barras</string>
     <string name="empty_button">Inserir Manualmente</string>
     <string name="serial_number_text">Digitar Serial Number</string>
-    <string name="search_button">Buscar Dados</string>
+    <string name="continue_button">Continuar</string>
+    <string name="ManualInsert">Inserir Manualmente</string>
+    <string name="state_question">Qual o estado deste item?</string>
+    <string name="no_conditions_text">Sem Condiçoes</string>
+    <string name="bad_text">Ruim</string>
+    <string name="item_status_text">Qual o estado deste item?</string>
+    <string name="item_location">Localização do item</string>
+    <string name="observation_text">Observações</string>
+    <string name="add_picture_text">Adicionar Fotografia?</string>
 </resources>
