@@ -19,5 +19,9 @@ interface ItemDao {
     fun deleteLine()
 
     @Query("SELECT * FROM item_table")
-    fun getAllItems(): LiveData<List<Item>>
+    fun getAllItems(): List<Item>
+
+    @Query("SELECT * from item_table WHERE number = :key")
+    fun getItem(key: Int): Item?
+
 }
