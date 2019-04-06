@@ -2,6 +2,7 @@ package com.example.alexandre.datacollector
 import android.arch.persistence.room.Room
 import android.support.test.runner.AndroidJUnit4
 import android.support.test.InstrumentationRegistry
+import android.util.Log
 import com.example.alexandre.datacollector.db.ItemDatabase
 import com.example.alexandre.datacollector.db.ItemDao
 import com.example.alexandre.datacollector.db.Item
@@ -67,8 +68,77 @@ class ItemDatabaseTest {
                 installDate = "",
                 note = ""
         )
+        val item2 = Item(
+                number = 1234,
+                name = "name2",
+                deploymentState = "deploymentState2",
+                description = "description2",
+                incidentState = "incidentState2",
+                vendor = "SAMSUNG2",
+                model = "MODEL2",
+                type = "type2",
+                owner = "Owner",
+                serialNumber = "",
+                operatingSystem = "",
+                graphicAdapter = "",
+                otherEquipment = "",
+                warrantyExpirationDate = "",
+                installDate = "",
+                note = ""
+        )
         itemDao.insert(item)
-        val dbItem = itemDao.getItem(2313)
+        itemDao.insert(item2)
+        var dbItem = itemDao.getItem(2313)
         assertEquals(dbItem?.name, "name")
+        dbItem = itemDao.getItem(1234)
+        assertEquals(dbItem?.name, "name2")
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun checkDatabaseSize() {
+        val item = Item(
+                number = 444,
+                name = "name",
+                deploymentState = "deploymentState",
+                description = "description",
+                incidentState = "incidentState",
+                vendor = "SAMSUNG",
+                model = "MODEL",
+                type = "type",
+                owner = "Owner",
+                serialNumber = "",
+                operatingSystem = "",
+                graphicAdapter = "",
+                otherEquipment = "",
+                warrantyExpirationDate = "",
+                installDate = "",
+                note = ""
+        )
+        val item2 = Item(
+                number = 1234,
+                name = "name2",
+                deploymentState = "deploymentState2",
+                description = "description2",
+                incidentState = "incidentState2",
+                vendor = "SAMSUNG2",
+                model = "MODEL2",
+                type = "type2",
+                owner = "Owner",
+                serialNumber = "",
+                operatingSystem = "",
+                graphicAdapter = "",
+                otherEquipment = "",
+                warrantyExpirationDate = "",
+                installDate = "",
+                note = ""
+        )
+        itemDao.insert(item)
+        var itemsList = itemDao.getAllItems()
+        assertEquals(itemsList?.size, 1)
+        itemDao.insert(item2)
+        itemsList = itemDao.getAllItems()
+        assertEquals(itemsList?.size, 2)
     }
 }
+
