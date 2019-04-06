@@ -6,6 +6,8 @@ import android.arch.persistence.room.PrimaryKey
 @Entity(tableName = "item_table")
 
 data class Item(
+        @PrimaryKey(autoGenerate = false)
+        var number: Int = 0,
         var name: String,
         var deploymentState: String,
         var incidentState: String,
@@ -21,7 +23,4 @@ data class Item(
         var warrantyExpirationDate: String,
         var installDate: String,
         var note: String
-) {
-    @PrimaryKey(autoGenerate = false)
-    var number: Int = 0
-}
+)

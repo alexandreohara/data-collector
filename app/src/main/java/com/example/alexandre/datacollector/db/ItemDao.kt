@@ -5,6 +5,10 @@ import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
 
+/* Data Access Object - Classe para acessar as informacoes do banco de dados.
+Usar @Query para adicionar uma Query customizada
+ */
+
 @Dao
 
 interface ItemDao {
