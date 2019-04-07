@@ -24,4 +24,7 @@ interface ItemDao {
     @Query("SELECT * from item_table WHERE number = :key")
     fun getItem(key: Int): Item?
 
+    @Query("SELECT * FROM item_table WHERE serialNumber = :serialNumber")
+    fun getItemBySerialNumber(serialNumber: String): Item?
+
 }
