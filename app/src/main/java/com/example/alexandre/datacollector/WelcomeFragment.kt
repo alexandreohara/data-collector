@@ -25,7 +25,7 @@ class WelcomeFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.welcome, container, false)
         binding.addMainButton.setOnClickListener { v ->
-            v.findNavController().navigate(R.id.action_welcomeFragment_to_detailsFragment)
+            v.findNavController().navigate(R.id.action_welcomeFragment_to_newItemFragment)
         }
         return binding.root
     }

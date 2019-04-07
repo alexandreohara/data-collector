@@ -10,11 +10,20 @@
         android:label="WelcomeFragment"
         tools:layout="@layout/welcome">
         <action
-            android:id="@+id/action_welcomeFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/action_welcomeFragment_to_newItemFragment"
+            app:destination="@id/newItemFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detailsFragment"
+        android:id="@+id/newItemFragment"
+        android:name="com.example.alexandre.datacollector.NewItemFragment"
+        android:label="NewItemFragment"
+        tools:layout="@layout/add_new_item">
+        <action
+            android:id="@+id/action_newItemFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment2"
         android:name="com.example.alexandre.datacollector.DetailsFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/details"/>
