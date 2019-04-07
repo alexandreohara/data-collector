@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Data Collector</string>
+    <string name="add_item_text">Adicionar Itens</string>
+    <string name="consult_data">Consultar Planilha</string>
+    <string name="select_item">Escolha uma das opções para adicionar um item</string>
+    <string name="new_scan_text">Escanear Código de Barras</string>
+    <string name="empty_button">Inserir Manualmente</string>
+    <string name="serial_number_text">Digitar Serial Number</string>
+    <string name="continue_button">Continuar</string>
+    <string name="ManualInsert">Inserir Manualmente</string>
+    <string name="state_question">Qual o estado deste item?</string>
+    <string name="no_conditions_text">Sem Condiçoes</string>
+    <string name="bad_text">Ruim</string>
+    <string name="item_status_text">Qual o estado deste item?</string>
+    <string name="item_location">Localização do item</string>
+    <string name="observation_text">Observações</string>
+    <string name="add_picture_text">Adicionar Fotografia?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

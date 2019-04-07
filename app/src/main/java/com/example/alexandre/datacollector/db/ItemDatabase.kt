@@ -1,0 +1,58 @@
+package com.example.alexandre.datacollector.db
+
+import android.arch.persistence.db.SupportSQLiteDatabase
+import android.arch.persistence.room.Database
+import android.arch.persistence.room.RoomDatabase
+import android.content.Context
+import android.os.AsyncTask
+import android.arch.persistence.room.Room
+
+/* Classe que junta a entidade Item com o DAO */
+
+@Database(entities = arrayOf(Item::class), version = 1)
+abstract class ItemDatabase: RoomDatabase() {
+    abstract fun itemDao(): ItemDao
+
+    companion object {
+        @Volatile
+        private var instance: ItemDatabase? = null
+
+        fun getInstance(context: Context): ItemDatabase? {
+            if (instance == null) {
+                synchronized(ItemDatabase::class) {
+                    instance = Room.databaseBuilder(
+                            context.applicationContext,
+                            ItemDatabase::class.java, "items_database")
+                            .fallbackToDestructiveMigration()
+                            .addCallback(roomCallback)
+                            .build()
+
+                }
+            }
+            return instance
+        }
+
+        fun destroyInstance() {
+            instance = null
+        }
+
+        private val roomCallback = object : RoomDatabase.Callback() {
+            override fun onCreate(db: SupportSQLiteDatabase) {
+                super.onCreate(db)
+                PopulateDbAsyncTask(instance)
+                        .execute()
+            }
+        }
+    }
+
+    class PopulateDbAsyncTask(db: ItemDatabase?) : AsyncTask<Unit, Unit, Unit>() {
+        private val noteDao = db?.itemDao()
+
+        override fun doInBackground(vararg p0: Unit?) {
+            //noteDao?.insert(Item("Title 1", "description 1"))
+            //noteDao?.insert(Item("Title 2", "description 2"))
+            //noteDao?.insert(Item("Title 3", "description 3"))
+        }
+    }
+
+}
