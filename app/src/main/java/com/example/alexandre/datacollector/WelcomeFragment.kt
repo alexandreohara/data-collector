@@ -17,7 +17,6 @@ import com.example.alexandre.datacollector.databinding.WelcomeBinding
  */
 class WelcomeFragment : Fragment() {
 
-    //Inflating and Returning the View with DataBindingUtil
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<WelcomeBinding>(inflater, R.layout.welcome, container, false)
