@@ -5,7 +5,36 @@
       <map>
         <entry key="navigation.xml">
           <value>
-            <LayoutPositions />
+            <LayoutPositions>
+              <option name="myPositions">
+                <map>
+                  <entry key="detailsFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="254" />
+                            <option name="y" value="40" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="welcomeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="40" />
+                            <option name="y" value="40" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </LayoutPositions>
           </value>
         </entry>
       </map>
