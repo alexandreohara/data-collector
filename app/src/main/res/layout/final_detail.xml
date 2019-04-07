@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/t3_dropdown_list"
             android:layout_width="203dp"
             android:layout_height="29dp"
             android:layout_marginStart="8dp"
@@ -78,10 +78,10 @@
             android:text="@string/observation_text"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/t3_dropdown_list" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/t3_observation_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -103,36 +103,37 @@
             android:text="@string/add_picture_text"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/t3_observation_text" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/t3_camera_button"
             android:layout_width="71dp"
             android:layout_height="46dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/secondary_button"
+            android:contentDescription="@string/content_description_camera"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.944"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/t3_observation_text"
             app:srcCompat="@android:drawable/ic_menu_camera" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/t3_finish_button"
             android:layout_width="360dp"
             android:layout_height="45dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="31dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/primary_button"
-            android:text="Button"
+            android:text="@string/finish"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     </android.support.constraint.ConstraintLayout>
 
