@@ -1,6 +1,7 @@
 package com.example.alexandre.datacollector
 
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.alexandre.datacollector.item.ItemViewModel
 import com.example.alexandre.datacollector.item.ItemViewModelFactory
 import com.example.alexandre.datacollector.databinding.AddNewItemBinding
@@ -35,6 +37,13 @@ class NewItemFragment : Fragment() {
 
         binding.itemViewModel = itemViewModel
         binding.setLifecycleOwner(this)
+
+        itemViewModel.navigateToDetails.observe(this, Observer {
+            item ->
+            item?.let {
+                this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+            }
+        })
 
         return binding.root
     }

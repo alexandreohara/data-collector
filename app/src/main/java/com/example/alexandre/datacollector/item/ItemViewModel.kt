@@ -2,6 +2,8 @@ package com.example.alexandre.datacollector.item
 
 import android.app.Application
 import android.arch.lifecycle.AndroidViewModel
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.MutableLiveData
 import com.example.alexandre.datacollector.db.Item
 import com.example.alexandre.datacollector.db.ItemDao
 
@@ -13,24 +15,11 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     private var number = 0
     private var serialNumber = ""
-    val item = Item(
-            number = 0,
-            name = "",
-            deploymentState = "",
-            description = "",
-            incidentState = "",
-            vendor = "",
-            model = "",
-            type = "",
-            owner = "",
-            serialNumber = "",
-            operatingSystem = "",
-            graphicAdapter = "",
-            otherEquipment = "",
-            warrantyExpirationDate = "",
-            installDate = "",
-            note = ""
-    )
+    private var item = MutableLiveData<Item?>()
+
+    private val _navigateToDetails = MutableLiveData<Item>()
+    val navigateToDetails: LiveData<Item>
+        get() = _navigateToDetails
 
     fun getItemByNumber(number: Int) {
         database.getItem(number)
@@ -38,5 +27,9 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     fun getItemBySerialNumber(serialNumber: String) {
         database.getItemBySerialNumber(serialNumber)
+    }
+
+    fun doneNavigating() {
+        _navigateToDetails.value = null
     }
 }
