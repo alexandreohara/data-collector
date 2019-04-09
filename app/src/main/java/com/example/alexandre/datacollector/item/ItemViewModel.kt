@@ -25,8 +25,8 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     private var item = MutableLiveData<Item?>()
-    private var number = ""
-    private var serialNumber = ""
+    var number = "teste"
+    var serialNumber = ""
 
     init {
         item.value = Item()
