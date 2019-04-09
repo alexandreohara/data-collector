@@ -25,26 +25,28 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     private var item = MutableLiveData<Item?>()
-    private var number = 0
+    private var number = ""
     private var serialNumber = ""
 
     init {
         item.value = Item()
     }
 
-    fun onButtonClicked(typeSelected: String, value: String) {
+    fun onButtonClicked(typeSelected: String) {
         uiScope.launch {
-            getItemFromDatabase(typeSelected, value)
+            item.value = getItemFromDatabase(typeSelected)
+            _navigateToDetails.value = getItemFromDatabase(typeSelected)
         }
     }
 
-    private suspend fun getItemFromDatabase(typeSelected: String, value: String): Item? {
+    //executa a acao de buscar no database em outra thread.
+    private suspend fun getItemFromDatabase(typeSelected: String): Item? {
         return withContext(Dispatchers.IO) {
             var item: Item?
             if (typeSelected == "NUMBER") {
-                item = database.getItem(value)
+                item = database.getItem(number)
             } else if (typeSelected == "SERIAL_NUMBER") {
-                item = database.getItemBySerialNumber(value)
+                item = database.getItemBySerialNumber(serialNumber)
             } else {
                 item = null
             }

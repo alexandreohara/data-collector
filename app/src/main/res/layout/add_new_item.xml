@@ -83,7 +83,8 @@
                 android:layout_marginRight="10dp"
                 android:text="@string/continue_button"
                 android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:onClick="@{() -> itemViewModel.onButtonClicked()"/>
 
         </RadioGroup>
     </ScrollView>
