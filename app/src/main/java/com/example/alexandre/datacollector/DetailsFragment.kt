@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.alexandre.datacollector.databinding.DetailsBinding
 
 
@@ -20,6 +21,9 @@ class DetailsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<DetailsBinding>(inflater, R.layout.details, container, false)
+        binding.t2ContinueButton.setOnClickListener { view ->
+            view.findNavController().navigate(R.id.action_detailsFragment2_to_finalDetailFragment)
+        }
         return binding.root
     }
 

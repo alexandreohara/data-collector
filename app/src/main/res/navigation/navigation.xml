@@ -26,5 +26,24 @@
         android:id="@+id/detailsFragment2"
         android:name="com.example.alexandre.datacollector.DetailsFragment"
         android:label="DetailsFragment"
-        tools:layout="@layout/details"/>
+        tools:layout="@layout/details">
+        <action
+            android:id="@+id/action_detailsFragment2_to_finalDetailFragment"
+            app:destination="@id/finalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalDetailFragment"
+        android:name="com.example.alexandre.datacollector.FinalDetailFragment"
+        android:label="FinalDetailFragment"
+        tools:layout="@layout/final_detail">
+        <action
+            android:id="@+id/action_finalDetailFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@+id/welcomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_finalDetailFragment_to_newItemFragment"
+            app:destination="@id/newItemFragment"
+            app:popUpTo="@+id/welcomeFragment" />
+    </fragment>
 </navigation>
