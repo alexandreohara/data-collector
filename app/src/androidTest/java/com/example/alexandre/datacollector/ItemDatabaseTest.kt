@@ -51,7 +51,7 @@ class ItemDatabaseTest {
     @Throws(Exception::class)
     fun insertAndGetItem() {
         val item = Item(
-                number = 2313,
+                number = "2313",
                 name = "name",
                 deploymentState = "deploymentState",
                 description = "description",
@@ -69,7 +69,7 @@ class ItemDatabaseTest {
                 note = ""
         )
         val item2 = Item(
-                number = 1234,
+                number = "1234",
                 name = "name2",
                 deploymentState = "deploymentState2",
                 description = "description2",
@@ -88,9 +88,9 @@ class ItemDatabaseTest {
         )
         itemDao.insert(item)
         itemDao.insert(item2)
-        var dbItem = itemDao.getItem(2313)
+        var dbItem = itemDao.getItem("2313")
         assertEquals(dbItem?.name, "name")
-        dbItem = itemDao.getItem(1234)
+        dbItem = itemDao.getItem("1234")
         assertEquals(dbItem?.name, "name2")
     }
 
@@ -98,7 +98,7 @@ class ItemDatabaseTest {
     @Throws(Exception::class)
     fun checkDatabaseSize() {
         val item = Item(
-                number = 444,
+                number = "444",
                 name = "name",
                 deploymentState = "deploymentState",
                 description = "description",
@@ -116,7 +116,7 @@ class ItemDatabaseTest {
                 note = ""
         )
         val item2 = Item(
-                number = 1234,
+                number = "1234",
                 name = "name2",
                 deploymentState = "deploymentState2",
                 description = "description2",
