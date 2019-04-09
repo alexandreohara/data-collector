@@ -15,31 +15,36 @@ abstract class ItemDatabase: RoomDatabase() {
 
     companion object {
         @Volatile
-        private var instance: ItemDatabase? = null
+        private var INSTANCE: ItemDatabase? = null
 
-        fun getInstance(context: Context): ItemDatabase? {
-            if (instance == null) {
-                synchronized(ItemDatabase::class) {
+        fun getInstance(context: Context): ItemDatabase {
+            synchronized(this) {
+                var instance = INSTANCE
+
+                if (instance == null) {
                     instance = Room.databaseBuilder(
                             context.applicationContext,
-                            ItemDatabase::class.java, "items_database")
+                            ItemDatabase::class.java,
+                            "items_database")
                             .fallbackToDestructiveMigration()
                             .addCallback(roomCallback)
                             .build()
-
+                    INSTANCE = instance
                 }
+
+                return instance
             }
-            return instance
+
         }
 
         fun destroyInstance() {
-            instance = null
+            INSTANCE = null
         }
 
         private val roomCallback = object : RoomDatabase.Callback() {
             override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
-                PopulateDbAsyncTask(instance)
+                PopulateDbAsyncTask(INSTANCE)
                         .execute()
             }
         }
