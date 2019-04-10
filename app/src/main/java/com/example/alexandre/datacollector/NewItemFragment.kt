@@ -29,6 +29,16 @@ class NewItemFragment : Fragment() {
             v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
         }
 
+        binding.t1ScanRadio.setOnClickListener {
+            binding.t1ScanText.visibility = View.VISIBLE
+            binding.t1SerialText.visibility = View.GONE
+        }
+
+        binding.t1SerialRadio.setOnClickListener {
+            binding.t1SerialText.visibility = View.VISIBLE
+            binding.t1ScanText.visibility = View.GONE
+        }
+
         // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
