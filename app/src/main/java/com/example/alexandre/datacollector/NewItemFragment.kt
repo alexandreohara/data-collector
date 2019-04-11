@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.alexandre.datacollector.item.ItemViewModel
@@ -22,13 +23,27 @@ import com.example.alexandre.datacollector.db.ItemDatabase
  */
 class NewItemFragment : Fragment() {
 
+    private lateinit var binding: AddNewItemBinding
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val binding: AddNewItemBinding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
+
+        // validacao dos campos antes da navegacao
         binding.t1ContinueButton.setOnClickListener { v ->
-            v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+            if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
+                Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
+            } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
+                Toast.makeText(context, "Serial Number é obrigatório!", Toast.LENGTH_SHORT).show()
+            }else if (binding.t1RadioGroup.checkedRadioButtonId == -1){
+                Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
+            } else {
+                binding.t1ContinueButton.text = "Aguarde..."
+                v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+            }
         }
 
+        // listeners para mostrar/esconder campos de texto
         binding.t1ScanRadio.setOnClickListener {
             binding.t1ScanText.visibility = View.VISIBLE
             binding.t1SerialText.visibility = View.GONE
@@ -36,6 +51,11 @@ class NewItemFragment : Fragment() {
 
         binding.t1SerialRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.VISIBLE
+            binding.t1ScanText.visibility = View.GONE
+        }
+
+        binding.t1ManualRadio.setOnClickListener {
+            binding.t1SerialText.visibility = View.GONE
             binding.t1ScanText.visibility = View.GONE
         }
 
@@ -58,5 +78,25 @@ class NewItemFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.t1ContinueButton.text = "CONTINUAR"
 
+        // mostra o campo de texto do Radio Button selecionado
+        if (findSelected() == "NUMBER") {
+            binding.t1ScanText.visibility = View.VISIBLE
+        } else if (findSelected() == "SERIAL_NUMBER") {
+            binding.t1SerialText.visibility = View.VISIBLE
+        }
+    }
+
+    private fun findSelected(): String {
+        if (binding.t1RadioGroup.checkedRadioButtonId == binding.t1ScanRadio.id) {
+            return "NUMBER"
+        } else if (binding.t1RadioGroup.checkedRadioButtonId == binding.t1SerialRadio.id) {
+            return "SERIAL_NUMBER"
+        } else{
+            return "MANUAL"
+        }
+    }
 }
