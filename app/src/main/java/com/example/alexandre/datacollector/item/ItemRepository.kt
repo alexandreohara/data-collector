@@ -1,4 +1,4 @@
-package com.example.alexandre.datacollector.Item
+package com.example.alexandre.datacollector.item
 
 import android.app.Application
 

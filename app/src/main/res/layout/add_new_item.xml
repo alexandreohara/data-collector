@@ -2,12 +2,18 @@
 
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="itemViewModel"
+            type="com.example.alexandre.datacollector.item.ItemViewModel"/>
+    </data>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioGroup
+            android:id="@+id/t1_radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -36,7 +42,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/t1_serial_radio"
@@ -54,7 +61,8 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/t1_manual_radio"

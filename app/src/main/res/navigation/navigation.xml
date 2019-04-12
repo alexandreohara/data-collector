@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/welcomeFragment"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.alexandre.datacollector.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_newItemFragment"
+            app:destination="@id/newItemFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/newItemFragment"
+        android:name="com.example.alexandre.datacollector.NewItemFragment"
+        android:label="NewItemFragment"
+        tools:layout="@layout/add_new_item">
+        <action
+            android:id="@+id/action_newItemFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment2"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.example.alexandre.datacollector.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/details">
+        <action
+            android:id="@+id/action_detailsFragment2_to_finalDetailFragment"
+            app:destination="@id/finalDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalDetailFragment"
+        android:name="com.example.alexandre.datacollector.FinalDetailFragment"
+        android:label="FinalDetailFragment"
+        tools:layout="@layout/final_detail">
+        <action
+            android:id="@+id/action_finalDetailFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@+id/welcomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_finalDetailFragment_to_newItemFragment"
+            app:destination="@id/newItemFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@+id/welcomeFragment" />
+    </fragment>
 </navigation>
