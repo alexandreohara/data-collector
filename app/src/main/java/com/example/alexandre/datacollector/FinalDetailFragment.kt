@@ -3,9 +3,15 @@ package com.example.alexandre.datacollector
 import android.app.Activity
 import android.app.AlertDialog
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.databinding.DataBindingUtil
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
+import android.provider.MediaStore
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -47,8 +53,7 @@ class FinalDetailFragment : Fragment() {
         }
 
         binding.t3FinishButton.setOnClickListener { view ->
-            binding.t3FinishButton.text = "Aguarde!"
-            itemViewModel.qualityState = seekBar?.progress
+            binding.t3FinishButton.text = "Aguarde..."
             createCSV()
             writeCSV()
             dialog.show()
@@ -65,6 +70,37 @@ class FinalDetailFragment : Fragment() {
         binding.setLifecycleOwner(this)
 
         return binding.root
+    }
+
+//    override fun onAttach(context: Context?) {
+//        super.onAttach(context)
+//
+//    }
+
+    override fun onStart() {
+        super.onStart()
+        val packageManager = activity?.packageManager
+        binding.t3CameraButton.setOnClickListener {
+            dispatchTakePictureIntent(packageManager)
+        }
+    }
+
+    val REQUEST_IMAGE_CAPTURE = 1
+
+    private fun dispatchTakePictureIntent(pm: PackageManager?) {
+        Intent (MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+            takePictureIntent.resolveActivity(pm)?.also {
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
+            val imageBitmap = data.extras.get("data") as Bitmap
+            binding.imageView2.setImageBitmap(imageBitmap)
+            binding.imageView2.visibility = View.VISIBLE
+        }
     }
 
     private fun navigateHome() {
