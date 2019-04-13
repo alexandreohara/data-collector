@@ -30,18 +30,18 @@ class NewItemFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
 
         // validacao dos campos antes da navegacao
-        binding.t1ContinueButton.setOnClickListener { v ->
-            if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
-                Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
-            } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
-                Toast.makeText(context, "Serial Number é obrigatório!", Toast.LENGTH_SHORT).show()
-            }else if (binding.t1RadioGroup.checkedRadioButtonId == -1){
-                Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
-            } else {
-                binding.t1ContinueButton.text = "Aguarde..."
-                v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-            }
-        }
+//        binding.t1ContinueButton.setOnClickListener { v ->
+//            if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
+//                Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
+//            } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
+//                Toast.makeText(context, "Serial Number é obrigatório!", Toast.LENGTH_SHORT).show()
+//            }else if (binding.t1RadioGroup.checkedRadioButtonId == -1){
+//                Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
+//            } else {
+//                binding.t1ContinueButton.text = "Aguarde..."
+//                v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+//            }
+//        }
 
         // listeners para mostrar/esconder campos de texto
         binding.t1ScanRadio.setOnClickListener {
@@ -63,20 +63,31 @@ class NewItemFragment : Fragment() {
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
         val viewModelFactory = ItemViewModelFactory(dataSource, application)
-        val itemViewModel = ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        var itemViewModel = activity?.run {
+            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
 
-        binding.itemViewModel = itemViewModel
-        binding.setLifecycleOwner(this)
+            binding.itemViewModel = itemViewModel
+            binding.setLifecycleOwner(this)
 
-        itemViewModel.navigateToDetails.observe(this, Observer {
-            item ->
-            item?.let {
-                this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-            }
-        })
+            itemViewModel?.navigateToDetails?.observe(this, Observer {
+                item ->
+                item?.let {
+                    //println(it)
+                    itemViewModel?.description = it.description
+                    itemViewModel?.item?.value?.deploymentState = it.deploymentState
+                    itemViewModel?.item?.value?.number = it.number
+                    itemViewModel?.model = it.model
+                    println(itemViewModel?.item?.value?.description)
+                    println(itemViewModel?.item?.value?.deploymentState)
+                    this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                } ?: run {
+                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
+                }
+            })
 
-        return binding.root
-    }
+            return binding.root
+        }
 
     override fun onResume() {
         super.onResume()

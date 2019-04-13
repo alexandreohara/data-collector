@@ -24,18 +24,24 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    private var item = MutableLiveData<Item?>()
-    var number = "teste"
-    var serialNumber = ""
+    var item = MutableLiveData<Item?>()
+    var number: String? = "1234"
+    var serialNumber: String? = ""
+    var model: String? = "MMM"
+    var description: String? = ""
+    var typeSelected = ""
 
     init {
         item.value = Item()
     }
 
-    fun onButtonClicked(typeSelected: String) {
+    fun onButtonClicked() {
         uiScope.launch {
-            item.value = getItemFromDatabase(typeSelected)
-            _navigateToDetails.value = getItemFromDatabase(typeSelected)
+            //item.value = getItemFromDatabase(typeSelected)
+            _navigateToDetails.value = getItemFromDatabase("NUMBER")
+            model = _navigateToDetails.value?.model
+            description = _navigateToDetails.value?.description
+
         }
     }
 
@@ -44,9 +50,14 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         return withContext(Dispatchers.IO) {
             var item: Item?
             if (typeSelected == "NUMBER") {
-                item = database.getItem(number)
+                item = database.getItem("1234")
             } else if (typeSelected == "SERIAL_NUMBER") {
-                item = database.getItemBySerialNumber(serialNumber)
+                if (serialNumber != null) {
+                    item = database.getItemBySerialNumber(serialNumber!!)
+                } else {
+                    item = null
+                }
+
             } else {
                 item = null
             }
