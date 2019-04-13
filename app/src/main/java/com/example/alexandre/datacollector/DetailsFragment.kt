@@ -36,7 +36,6 @@ class DetailsFragment : Fragment() {
         var itemViewModel = activity?.run{
             ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
         }
-        println(itemViewModel?.item?.value?.description)
 
         binding.itemViewModel = itemViewModel
         binding.setLifecycleOwner(this)

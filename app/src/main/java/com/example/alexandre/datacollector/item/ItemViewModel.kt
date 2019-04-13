@@ -25,9 +25,14 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     var item = MutableLiveData<Item?>()
-    var number: String? = "1234"
+    var oldNumber: String? = ""
+    var number: String? = ""
+    var name: String? = ""
+    var deploymentState: String? = ""
     var serialNumber: String? = ""
-    var model: String? = "MMM"
+    var vendor: String? = ""
+    var model: String? = ""
+    var type: String? = ""
     var description: String? = ""
     var typeSelected = ""
 
@@ -37,10 +42,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     fun onButtonClicked() {
         uiScope.launch {
-            //item.value = getItemFromDatabase(typeSelected)
             _navigateToDetails.value = getItemFromDatabase("NUMBER")
-            model = _navigateToDetails.value?.model
-            description = _navigateToDetails.value?.description
 
         }
     }
@@ -72,5 +74,18 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     fun doneNavigating() {
         _navigateToDetails.value = null
+    }
+
+    fun clearData() {
+        oldNumber = ""
+        number = ""
+        name = ""
+        deploymentState = ""
+        serialNumber = ""
+        vendor = ""
+        model = ""
+        type = ""
+        description = ""
+        typeSelected = ""
     }
 }

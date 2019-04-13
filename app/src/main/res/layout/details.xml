@@ -49,7 +49,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
-                android:text="@={itemViewModel.number}"/>
+                android:text="@={itemViewModel.oldNumber}"/>
 
             <TextView
                 android:id="@+id/textView15"
@@ -72,7 +72,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                android:text="@={itemViewModel.serialNumber}"/>
 
             <TextView
                 android:id="@+id/textView13"
@@ -95,7 +96,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                android:text="@={itemViewModel.name}"/>
 
             <TextView
                 android:id="@+id/textView14"
@@ -118,7 +120,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                android:text="@={itemViewModel.vendor}"/>
 
             <TextView
                 android:id="@+id/textView16"
@@ -165,7 +168,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:text="@={itemViewModel.type}"/>
 
             <TextView
                 android:id="@+id/textView18"

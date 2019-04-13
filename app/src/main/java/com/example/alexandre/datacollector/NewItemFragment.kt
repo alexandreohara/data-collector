@@ -74,13 +74,19 @@ class NewItemFragment : Fragment() {
                 item ->
                 item?.let {
                     //println(it)
-                    itemViewModel?.description = it.description
-                    itemViewModel?.item?.value?.deploymentState = it.deploymentState
-                    itemViewModel?.item?.value?.number = it.number
-                    itemViewModel?.model = it.model
-                    println(itemViewModel?.item?.value?.description)
-                    println(itemViewModel?.item?.value?.deploymentState)
+                    itemViewModel.description = it.description
+                    itemViewModel.oldNumber = it.number
+                    itemViewModel.model = it.model
+                    itemViewModel.name = it.name
+                    itemViewModel.deploymentState = it.deploymentState
+                    itemViewModel.serialNumber = it.serialNumber
+                    itemViewModel.vendor = it.vendor
+                    itemViewModel.model = it.model
+                    itemViewModel.type = it.type
+                    itemViewModel.description = it.description
+
                     this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                    itemViewModel.doneNavigating()
                 } ?: run {
                     //TODO: LEANDRO colocar aviso de: Item nao encontrado!
                 }
