@@ -2,7 +2,11 @@
 
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <data>
+        <variable
+            name="itemViewModel"
+            type="com.example.alexandre.datacollector.item.ItemViewModel"/>
+    </data>
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -44,7 +48,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                android:text="@={itemViewModel.oldNumber}"/>
 
             <TextView
                 android:id="@+id/textView15"
@@ -67,7 +72,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                android:text="@={itemViewModel.serialNumber}"/>
 
             <TextView
                 android:id="@+id/textView13"
@@ -90,7 +96,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                android:text="@={itemViewModel.name}"/>
 
             <TextView
                 android:id="@+id/textView14"
@@ -113,7 +120,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                android:text="@={itemViewModel.vendor}"/>
 
             <TextView
                 android:id="@+id/textView16"
@@ -136,7 +144,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                android:text="@={itemViewModel.model}"/>
 
             <TextView
                 android:id="@+id/textView17"
@@ -159,7 +168,8 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:text="@={itemViewModel.type}"/>
 
             <TextView
                 android:id="@+id/textView18"
@@ -183,7 +193,8 @@
                 android:inputType="textMultiLine"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                android:text="@={itemViewModel.description}"/>
 
             <Button
                 android:id="@+id/t2_continue_button"

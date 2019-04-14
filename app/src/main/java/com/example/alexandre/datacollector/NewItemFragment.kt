@@ -29,6 +29,14 @@ class NewItemFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
 
+        // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
+        val application = requireNotNull(this.activity).application
+        val dataSource = ItemDatabase.getInstance(application).itemDao()
+        val viewModelFactory = ItemViewModelFactory(dataSource, application)
+        var itemViewModel = activity?.run {
+            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
+
         // validacao dos campos antes da navegacao
         binding.t1ContinueButton.setOnClickListener { v ->
             if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
@@ -39,7 +47,8 @@ class NewItemFragment : Fragment() {
                 Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
             } else {
                 binding.t1ContinueButton.text = "Aguarde..."
-                v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                itemViewModel?.onButtonClicked()
+                //v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
             }
         }
 
@@ -59,27 +68,45 @@ class NewItemFragment : Fragment() {
             binding.t1ScanText.visibility = View.GONE
         }
 
+            binding.itemViewModel = itemViewModel
+            binding.setLifecycleOwner(this)
+
+            itemViewModel?.navigateToDetails?.observe(this, Observer {
+                item ->
+                item?.let {
+                    //println(it)
+                    itemViewModel.description = it.description
+                    itemViewModel.oldNumber = it.number
+                    itemViewModel.model = it.model
+                    itemViewModel.name = it.name
+                    itemViewModel.deploymentState = it.deploymentState
+                    itemViewModel.serialNumber = it.serialNumber
+                    itemViewModel.vendor = it.vendor
+                    itemViewModel.model = it.model
+                    itemViewModel.type = it.type
+                    itemViewModel.description = it.description
+
+                    this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                    itemViewModel.doneNavigating()
+                } ?: run {
+                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
+                }
+            })
+
+            return binding.root
+        }
+
+    override fun onResume() {
+        super.onResume()
+
         // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
         val viewModelFactory = ItemViewModelFactory(dataSource, application)
-        val itemViewModel = ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        var itemViewModel = activity?.run {
+            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
 
-        binding.itemViewModel = itemViewModel
-        binding.setLifecycleOwner(this)
-
-        itemViewModel.navigateToDetails.observe(this, Observer {
-            item ->
-            item?.let {
-                this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-            }
-        })
-
-        return binding.root
-    }
-
-    override fun onResume() {
-        super.onResume()
         binding.t1ContinueButton.text = "CONTINUAR"
 
         // mostra o campo de texto do Radio Button selecionado
@@ -88,6 +115,7 @@ class NewItemFragment : Fragment() {
         } else if (findSelected() == "SERIAL_NUMBER") {
             binding.t1SerialText.visibility = View.VISIBLE
         }
+        itemViewModel?.typeSelected = findSelected()
     }
 
     private fun findSelected(): String {

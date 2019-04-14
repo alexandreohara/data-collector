@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey
 
 data class Item(
         @PrimaryKey(autoGenerate = false)
-        var number: Int = 0,
+        var number: String = "",
         var name: String = "",
         var deploymentState: String = "",
         var incidentState: String = "",

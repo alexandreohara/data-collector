@@ -51,9 +51,28 @@ abstract class ItemDatabase: RoomDatabase() {
     }
 
     class PopulateDbAsyncTask(db: ItemDatabase?) : AsyncTask<Unit, Unit, Unit>() {
-        private val noteDao = db?.itemDao()
+        private val itemDao = db?.itemDao()
 
         override fun doInBackground(vararg p0: Unit?) {
+            itemDao?.insert(Item(
+                    number = "1234",
+                    name = "name",
+                    deploymentState = "deploymentState",
+                    description = "description",
+                    incidentState = "incidentState",
+                    vendor = "SAMSUNG",
+                    model = "MODEL",
+                    type = "type",
+                    owner = "Owner",
+                    serialNumber = "SERIAL_NUMBER",
+                    operatingSystem = "operatingSystem",
+                    graphicAdapter = "graphicAdapter",
+                    otherEquipment = "otherEquipment",
+                    warrantyExpirationDate = "warrantyExpirationDate",
+                    installDate = "installDate",
+                    note = "note"
+
+            ))
             //noteDao?.insert(Item("Title 1", "description 1"))
             //noteDao?.insert(Item("Title 2", "description 2"))
             //noteDao?.insert(Item("Title 3", "description 3"))

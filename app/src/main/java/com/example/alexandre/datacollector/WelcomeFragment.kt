@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import com.example.alexandre.datacollector.databinding.ActivityMainBinding
 import com.example.alexandre.datacollector.databinding.WelcomeBinding
 
 
@@ -30,12 +29,6 @@ class WelcomeFragment : Fragment() {
         }
         return binding.root
     }
-
-
-    //The complete onClickListener with Navigation
-//    binding.playButton.setOnClickListener { v: View ->
-//        v.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
-//    }
 
 
 }
