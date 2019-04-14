@@ -34,6 +34,9 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var model: String? = ""
     var type: String? = ""
     var description: String? = ""
+    var observation: String? = ""
+    var qualityState: Int? = 0
+
     var typeSelected = ""
 
     init {
