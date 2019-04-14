@@ -25,11 +25,11 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     var item = MutableLiveData<Item?>()
-    var oldNumber: String? = ""
-    var number: String? = ""
+    var oldNumber: String = ""
+    var number: String = ""
     var name: String? = ""
     var deploymentState: String? = ""
-    var serialNumber: String? = ""
+    var serialNumber: String = ""
     var vendor: String? = ""
     var model: String? = ""
     var type: String? = ""
@@ -51,15 +51,11 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private suspend fun getItemFromDatabase(typeSelected: String): Item? {
         return withContext(Dispatchers.IO) {
             var item: Item?
+            println(typeSelected)
             if (typeSelected == "NUMBER") {
-                item = database.getItem("1234")
+                item = database.getItem(oldNumber)
             } else if (typeSelected == "SERIAL_NUMBER") {
-                if (serialNumber != null) {
-                    item = database.getItemBySerialNumber(serialNumber!!)
-                } else {
-                    item = null
-                }
-
+                item = database.getItemBySerialNumber(serialNumber)
             } else {
                 item = null
             }

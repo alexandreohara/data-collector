@@ -98,6 +98,15 @@ class NewItemFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+
+        // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
+        val application = requireNotNull(this.activity).application
+        val dataSource = ItemDatabase.getInstance(application).itemDao()
+        val viewModelFactory = ItemViewModelFactory(dataSource, application)
+        var itemViewModel = activity?.run {
+            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
+
         binding.t1ContinueButton.text = "CONTINUAR"
 
         // mostra o campo de texto do Radio Button selecionado
@@ -106,6 +115,7 @@ class NewItemFragment : Fragment() {
         } else if (findSelected() == "SERIAL_NUMBER") {
             binding.t1SerialText.visibility = View.VISIBLE
         }
+        itemViewModel?.typeSelected = findSelected()
     }
 
     private fun findSelected(): String {
