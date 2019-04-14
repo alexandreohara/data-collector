@@ -3,10 +3,18 @@ package com.example.alexandre.datacollector
 import android.app.Activity
 import android.app.AlertDialog
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.databinding.DataBindingUtil
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
+import android.provider.MediaStore
 import android.support.v4.app.Fragment
+import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +27,8 @@ import com.warkiz.widget.IndicatorSeekBar
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
+import android.widget.Toast
+import java.text.SimpleDateFormat
 import java.util.*
 
 /**
@@ -27,8 +37,16 @@ import java.util.*
  */
 class FinalDetailFragment : Fragment() {
 
+    val REQUEST_IMAGE_CAPTURE = 1
+    val REQUEST_TAKE_PHOTO = 1
+    var currentPhotoPath: String = ""
+
     private lateinit var binding: FinalDetailBinding
     private lateinit var itemViewModel: ItemViewModel
+    //private lateinit var currentPhotoPath: String
+
+    // PRECISO CONSEGUIR DE VOLTA O NUM DE SERIE:
+    private var serialNum = "1234"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -47,10 +65,10 @@ class FinalDetailFragment : Fragment() {
         }
 
         binding.t3FinishButton.setOnClickListener { view ->
-            binding.t3FinishButton.text = "Aguarde!"
-            itemViewModel.qualityState = seekBar?.progress
+            binding.t3FinishButton.text = "Aguarde..."
             createCSV()
             writeCSV()
+            galleryAddPic()
             dialog.show()
         }
 
@@ -66,6 +84,69 @@ class FinalDetailFragment : Fragment() {
 
         return binding.root
     }
+
+    override fun onStart() {
+        super.onStart()
+        binding.t3CameraButton.setOnClickListener {
+            dispatchTakePictureIntent()
+        }
+    }
+
+    private fun galleryAddPic() {
+        Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { mediaScanIntent ->
+            val f = File(currentPhotoPath)
+            mediaScanIntent.data = Uri.fromFile(f)
+            context!!.sendBroadcast(mediaScanIntent)
+        }
+    }
+
+
+    @Throws(IOException::class)
+    private fun createImageFile(): File {
+        // Create an image file name
+        val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        println(timeStamp)
+        val storageDir: File =  activity!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        println(storageDir)
+        return File.createTempFile(
+                "JPEG_${timeStamp}_", /* prefix */
+                ".jpg", /* suffix */
+                storageDir /* directory */
+        ).apply {
+            // Save a file: path for use with ACTION_VIEW intents
+            currentPhotoPath = absolutePath
+        }
+    }
+
+    private fun dispatchTakePictureIntent() {
+        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+            // Ensure that there's a camera activity to handle the intent
+            takePictureIntent.resolveActivity(activity!!.packageManager)?.also {
+                // Create the File where the photo should go
+                val photoFile: File? = try {
+                    createImageFile()
+                } catch (ex: IOException) {
+                    // Error occurred while creating the File
+                    Toast.makeText(context, currentPhotoPath, Toast.LENGTH_SHORT).show()
+                    null
+                }
+                // Continue only if the File was successfully created
+                photoFile?.also {
+                    val photoURI: Uri = FileProvider.getUriForFile(
+                            context!!,
+                            "com.example.android.fileprovider",
+                            it
+                    )
+                    println(photoURI)
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+                    startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
+                    println('f')
+
+                }
+            }
+        }
+    }
+
 
     private fun navigateHome() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_welcomeFragment)
