@@ -29,19 +29,28 @@ class NewItemFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
 
+        // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
+        val application = requireNotNull(this.activity).application
+        val dataSource = ItemDatabase.getInstance(application).itemDao()
+        val viewModelFactory = ItemViewModelFactory(dataSource, application)
+        var itemViewModel = activity?.run {
+            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
+
         // validacao dos campos antes da navegacao
-//        binding.t1ContinueButton.setOnClickListener { v ->
-//            if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
-//                Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
-//            } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
-//                Toast.makeText(context, "Serial Number é obrigatório!", Toast.LENGTH_SHORT).show()
-//            }else if (binding.t1RadioGroup.checkedRadioButtonId == -1){
-//                Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
-//            } else {
-//                binding.t1ContinueButton.text = "Aguarde..."
-//                v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-//            }
-//        }
+        binding.t1ContinueButton.setOnClickListener { v ->
+            if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
+                Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
+            } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
+                Toast.makeText(context, "Serial Number é obrigatório!", Toast.LENGTH_SHORT).show()
+            }else if (binding.t1RadioGroup.checkedRadioButtonId == -1){
+                Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
+            } else {
+                binding.t1ContinueButton.text = "Aguarde..."
+                itemViewModel?.onButtonClicked()
+                //v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+            }
+        }
 
         // listeners para mostrar/esconder campos de texto
         binding.t1ScanRadio.setOnClickListener {
@@ -57,14 +66,6 @@ class NewItemFragment : Fragment() {
         binding.t1ManualRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.GONE
             binding.t1ScanText.visibility = View.GONE
-        }
-
-        // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
-        val application = requireNotNull(this.activity).application
-        val dataSource = ItemDatabase.getInstance(application).itemDao()
-        val viewModelFactory = ItemViewModelFactory(dataSource, application)
-        var itemViewModel = activity?.run {
-            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
         }
 
             binding.itemViewModel = itemViewModel
