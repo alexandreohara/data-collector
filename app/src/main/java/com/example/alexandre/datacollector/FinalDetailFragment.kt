@@ -52,8 +52,6 @@ class FinalDetailFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.final_detail, container, false)
-        var seekBar: IndicatorSeekBar? = view?.findViewById(R.id.seek_bar)
-
 
         val dialog = AlertDialog.Builder(context)
         dialog.setMessage("Seu item foi registrado com sucesso!")
@@ -66,8 +64,10 @@ class FinalDetailFragment : Fragment() {
 
         binding.t3FinishButton.setOnClickListener { view ->
             binding.t3FinishButton.text = "Aguarde..."
-            createCSV()
-            writeCSV()
+            itemViewModel.qualityState = binding.seekBar.progress
+            Toast.makeText(context, itemViewModel.qualityState.toString(), Toast.LENGTH_SHORT).show();
+            //createCSV()
+            //writeCSV()
             galleryAddPic()
             dialog.show()
         }
@@ -109,7 +109,7 @@ class FinalDetailFragment : Fragment() {
         val storageDir: File =  activity!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         println(storageDir)
         return File.createTempFile(
-                "JPEG_${timeStamp}_", /* prefix */
+                "${serialNum}_${timeStamp}_", /* prefix */
                 ".jpg", /* suffix */
                 storageDir /* directory */
         ).apply {
