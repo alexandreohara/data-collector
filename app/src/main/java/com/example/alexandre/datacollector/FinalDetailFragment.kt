@@ -6,20 +6,16 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.os.Environment
-import android.os.Handler
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.alexandre.datacollector.databinding.FinalDetailBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
 import com.example.alexandre.datacollector.item.ItemViewModel
 import com.example.alexandre.datacollector.item.ItemViewModelFactory
 import com.warkiz.widget.IndicatorSeekBar
-import com.warkiz.widget.SeekParams;
-import com.warkiz.widget.OnSeekChangeListener;
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
@@ -51,7 +47,6 @@ class FinalDetailFragment : Fragment() {
         }
 
         binding.t3FinishButton.setOnClickListener { view ->
-            // view.findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
             binding.t3FinishButton.text = "Aguarde!"
             itemViewModel.qualityState = seekBar?.progress
             createCSV()
