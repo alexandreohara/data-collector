@@ -25,7 +25,7 @@ import java.util.*
  * A simple [Fragment] subclass.
  *
  */
-class FinalDetailFragment : Fragment(), OnSeekChangeListener {
+class FinalDetailFragment : Fragment() {
 
     private lateinit var binding: FinalDetailBinding
     private lateinit var itemViewModel: ItemViewModel
@@ -35,7 +35,6 @@ class FinalDetailFragment : Fragment(), OnSeekChangeListener {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.final_detail, container, false)
         var seekBar: IndicatorSeekBar? = view?.findViewById(R.id.seek_bar)
-        seekBar?.onSeekChangeListener
 
 
         val dialog = AlertDialog.Builder(context)
@@ -50,6 +49,8 @@ class FinalDetailFragment : Fragment(), OnSeekChangeListener {
         binding.t3FinishButton.setOnClickListener { view ->
             // view.findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
             binding.t3FinishButton.text = "Aguarde!"
+            itemViewModel.qualityState = seekBar?.progress
+            println(itemViewModel.qualityState)
             dialog.show()
         }
 
@@ -74,18 +75,6 @@ class FinalDetailFragment : Fragment(), OnSeekChangeListener {
     private fun navigateNewItem() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
         println(itemViewModel.qualityState)
-    }
-
-    override fun onSeeking(seekParams: SeekParams?) {
-        itemViewModel.qualityState = seekParams?.progress
-    }
-
-    override fun onStartTrackingTouch(seekBar: IndicatorSeekBar?) {
-        itemViewModel.qualityState = seekBar?.progress
-    }
-
-    override fun onStopTrackingTouch(seekBar: IndicatorSeekBar?) {
-        itemViewModel.qualityState = seekBar?.progress
     }
 
 }
