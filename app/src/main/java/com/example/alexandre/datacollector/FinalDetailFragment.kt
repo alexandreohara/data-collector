@@ -5,6 +5,7 @@ import android.app.AlertDialog
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -19,6 +20,9 @@ import com.example.alexandre.datacollector.item.ItemViewModelFactory
 import com.warkiz.widget.IndicatorSeekBar
 import com.warkiz.widget.SeekParams;
 import com.warkiz.widget.OnSeekChangeListener;
+import java.io.File
+import java.io.FileWriter
+import java.io.IOException
 import java.util.*
 
 /**
@@ -50,7 +54,8 @@ class FinalDetailFragment : Fragment() {
             // view.findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
             binding.t3FinishButton.text = "Aguarde!"
             itemViewModel.qualityState = seekBar?.progress
-            println(itemViewModel.qualityState)
+            createCSV()
+            writeCSV()
             dialog.show()
         }
 
@@ -75,6 +80,65 @@ class FinalDetailFragment : Fragment() {
     private fun navigateNewItem() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
         println(itemViewModel.qualityState)
+    }
+
+    private fun createCSV() {
+        val CSV_HEADER = "id,name"
+        var dir = Environment.getExternalStorageDirectory()
+        var file: File = File(dir, "/teste4.csv")
+        print(file.exists())
+        if (!file.exists()) {
+            var fileWriter = FileWriter(file)
+            try {
+                fileWriter.append(CSV_HEADER)
+                fileWriter.append('\n')
+            } catch (e: Exception) {
+                println("Writing CSV error!")
+                e.printStackTrace()
+            } finally {
+                try {
+                    fileWriter!!.flush()
+                    fileWriter.close()
+                } catch (e: IOException) {
+                    println("Flushing/closing error!")
+                    e.printStackTrace()
+                }
+            }
+        }
+    }
+
+    private fun writeCSV() {
+
+        // var fileWriter: FileWriter? = null
+        var dir = Environment.getExternalStorageDirectory()
+        var file: File = File(dir, "/teste4.csv")
+        var fileWriter = FileWriter(file, true)
+        var random = Random()
+        var int: Int = random.nextInt()
+        try {
+            fileWriter.append("teste")
+            fileWriter.append(",")
+            fileWriter.append(int.toString())
+            fileWriter.append('\n')
+
+            fileWriter.close()
+
+            //val os = FileOutputStream()
+            //os.write(data)
+
+            println("Write CSV successfully!")
+        } catch (e: Exception) {
+            println("Writing CSV error!")
+            e.printStackTrace()
+        } finally {
+            try {
+                fileWriter!!.flush()
+                fileWriter.close()
+            } catch (e: IOException) {
+                println("Flushing/closing error!")
+                e.printStackTrace()
+            }
+        }
     }
 
 }
