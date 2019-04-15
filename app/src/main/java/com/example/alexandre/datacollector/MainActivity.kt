@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         var fileReader: BufferedReader? = null
         var csvReader: CSVReader? = null
         try {
-            fileReader = applicationContext.assets.open("Export_Notebook.csv").bufferedReader()
+            fileReader = applicationContext.assets.open("Export_Ramal.csv").bufferedReader()
             csvReader = CSVReaderBuilder(fileReader).
                     withCSVParser(CSVParserBuilder().
                             withSeparator(';').
@@ -82,15 +82,11 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
                         description = line[6],
                         type = line[7],
                         owner = line[8],
-                        serialNumber = line[9],
-                        operatingSystem = line[10],
-                        graphicAdapter = line[11],
-                        otherEquipment = line[12],
-                        warrantyExpirationDate = line[13],
-                        installDate = line[14],
-                        note = line[15]
+                        serialNumber = line[9]
                 )
                 val dataSource = ItemDatabase.getInstance(application).itemDao()
+                println(dataSource.getRowsCount())
+                //println(item)
                 dataSource.insert(item)
                 //PopulateDbAsync(item, application)
                 line = csvReader.readNext()
