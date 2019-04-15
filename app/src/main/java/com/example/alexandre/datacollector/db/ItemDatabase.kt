@@ -6,6 +6,11 @@ import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 import android.os.AsyncTask
 import android.arch.persistence.room.Room
+import android.content.res.Resources
+import com.example.alexandre.datacollector.item.ItemViewModel
+import com.opencsv.CSVReader
+import com.opencsv.CSVReaderBuilder
+import java.io.*
 
 /* Classe que junta a entidade Item com o DAO */
 
@@ -55,7 +60,7 @@ abstract class ItemDatabase: RoomDatabase() {
 
         override fun doInBackground(vararg p0: Unit?) {
             itemDao?.insert(Item(
-                    number = "123",
+                    number = "1234",
                     name = "name",
                     deploymentState = "deploymentState",
                     description = "description",
@@ -75,6 +80,7 @@ abstract class ItemDatabase: RoomDatabase() {
             ))
 
         }
+
     }
 
 }

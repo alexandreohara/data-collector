@@ -27,4 +27,7 @@ interface ItemDao {
     @Query("SELECT * FROM item_table WHERE serialNumber = :serialNumber")
     fun getItemBySerialNumber(serialNumber: String): Item?
 
+    @Query("SELECT count(*) FROM item_table")
+    fun getRowsCount(): Int
+
 }

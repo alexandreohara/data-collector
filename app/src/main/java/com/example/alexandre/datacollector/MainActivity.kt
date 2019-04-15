@@ -20,31 +20,47 @@ import com.opencsv.CSVParserBuilder
 import com.opencsv.CSVReader
 import com.opencsv.CSVReaderBuilder
 import com.opencsv.enums.CSVReaderNullFieldIndicator
+import kotlinx.coroutines.*
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.coroutines.CoroutineContext
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CoroutineScope {
 
     private val paths = arrayOf("item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3","item 1", "item 2", "item 3")
     private lateinit var binding: ActivityMainBinding
+    private lateinit var job: Job
+    override val coroutineContext: CoroutineContext
+        get() = job + Dispatchers.Main
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val application = requireNotNull(this).application
-        readCSV(application)
+        job = Job()
+        launch {
+            async(Dispatchers.Default) {
+                readCSV(application)
+            }
+        }
+
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        job.cancel()
+    }
+
 
     private fun readCSV(application: Application) {
 
         var fileReader: BufferedReader? = null
         var csvReader: CSVReader? = null
-        println("PASSEI AQUI")
         try {
-            //fileReader = BufferedReader(InputStreamReader(assets.open("addresses.csv")))
-       //     fileReader = BufferedReader(FileReader("addresses.csv"))
             fileReader = applicationContext.assets.open("Export_Notebook.csv").bufferedReader()
             csvReader = CSVReaderBuilder(fileReader).
                     withCSVParser(CSVParserBuilder().
@@ -74,7 +90,9 @@ class MainActivity : AppCompatActivity() {
                         installDate = line[14],
                         note = line[15]
                 )
-                PopulateDbAsync(item, application).execute()
+                val dataSource = ItemDatabase.getInstance(application).itemDao()
+                dataSource.insert(item)
+                //PopulateDbAsync(item, application)
                 line = csvReader.readNext()
             }
             csvReader.close()
@@ -93,21 +111,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
 }
 
-class PopulateDbAsync(item: Item, application: Application) : AsyncTask<Any, Any, Any>() {
-    val application: Application
-    var item: Item
-    init {
-        this.application = application
-        this.item = item
-    }
-
-    override fun doInBackground(vararg p0: Any?): Any {
-        val dataSource = ItemDatabase.getInstance(application).itemDao()
-        dataSource.insert(item)
-        return 1
-    }
-}
+//class PopulateDbAsync(item: Item, application: Application) : AsyncTask<Any, Any, Any>() {
+//    val application: Application
+//    var item: Item
+//    init {
+//        this.application = application
+//        this.item = item
+//    }
+//
+//    override fun doInBackground(vararg p0: Any?): Any {
+//        val dataSource = ItemDatabase.getInstance(application).itemDao()
+//        dataSource.insert(item)
+//        return 1
+//    }
+//}
 
 

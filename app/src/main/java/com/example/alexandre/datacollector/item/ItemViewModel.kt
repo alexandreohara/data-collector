@@ -53,8 +53,9 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     //executa a acao de buscar no database em outra thread.
     private suspend fun getItemFromDatabase(typeSelected: String): Item? {
         return withContext(Dispatchers.IO) {
+            val rows = database.getRowsCount()
+            println("ROWS: " + rows)
             var item: Item?
-            println(typeSelected)
             if (typeSelected == "NUMBER") {
                 item = database.getItem(oldNumber)
             } else if (typeSelected == "SERIAL_NUMBER") {
