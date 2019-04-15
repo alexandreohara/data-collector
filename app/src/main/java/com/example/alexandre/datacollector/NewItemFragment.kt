@@ -90,6 +90,13 @@ class NewItemFragment : Fragment() {
                     itemViewModel.doneNavigating()
                 } ?: run {
                     //TODO: LEANDRO colocar aviso de: Item nao encontrado!
+//                    println('a')
+//                    println(itemViewModel)
+//                    println(itemViewModel.oldNumber)
+//                    println(itemViewModel.serialNumber)
+//                    if (itemViewModel.oldNumber == "") {
+//                        Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
+//                    }
                 }
             })
 
