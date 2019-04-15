@@ -18,6 +18,9 @@ import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.SpinnerAdapter
 import androidx.navigation.fragment.findNavController
 import com.example.alexandre.datacollector.databinding.FinalDetailBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
@@ -28,6 +31,7 @@ import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 import android.widget.Toast
+import kotlinx.android.synthetic.main.final_detail.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -37,21 +41,21 @@ import java.util.*
  */
 class FinalDetailFragment : Fragment() {
 
-    val REQUEST_IMAGE_CAPTURE = 1
     val REQUEST_TAKE_PHOTO = 1
     var currentPhotoPath: String = ""
 
     private lateinit var binding: FinalDetailBinding
     private lateinit var itemViewModel: ItemViewModel
-    //private lateinit var currentPhotoPath: String
 
-    // PRECISO CONSEGUIR DE VOLTA O NUM DE SERIE:
+    // TODO: numero de serie fake. Apagar
     private var serialNum = "1234"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.final_detail, container, false)
+
+        //val dropDown = Array(100, { i -> (i + 1).toString() })
 
         val dialog = AlertDialog.Builder(context)
         dialog.setMessage("Seu item foi registrado com sucesso!")
@@ -65,9 +69,9 @@ class FinalDetailFragment : Fragment() {
         binding.t3FinishButton.setOnClickListener { view ->
             binding.t3FinishButton.text = "Aguarde..."
             itemViewModel.qualityState = binding.seekBar.progress
-            Toast.makeText(context, itemViewModel.qualityState.toString(), Toast.LENGTH_SHORT).show();
             //createCSV()
             //writeCSV()
+            // Toast.makeText(context, binding.t3DropdownList.selectedItem.toString(), Toast.LENGTH_SHORT).show()
             galleryAddPic()
             dialog.show()
         }
@@ -87,6 +91,10 @@ class FinalDetailFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        val dropDown = Array(100, { i -> "localização " + (i + 1).toString() })
+        val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, dropDown)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.t3DropdownList.adapter = adapter
         binding.t3CameraButton.setOnClickListener {
             dispatchTakePictureIntent()
         }
@@ -109,6 +117,7 @@ class FinalDetailFragment : Fragment() {
         val storageDir: File =  activity!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         println(storageDir)
         return File.createTempFile(
+                // TODO: Recuperar o numero de serie e colocar na foto!
                 "${serialNum}_${timeStamp}_", /* prefix */
                 ".jpg", /* suffix */
                 storageDir /* directory */
