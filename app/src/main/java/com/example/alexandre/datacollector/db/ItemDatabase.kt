@@ -55,7 +55,7 @@ abstract class ItemDatabase: RoomDatabase() {
 
         override fun doInBackground(vararg p0: Unit?) {
             itemDao?.insert(Item(
-                    number = "1234",
+                    number = "123",
                     name = "name",
                     deploymentState = "deploymentState",
                     description = "description",
@@ -73,9 +73,7 @@ abstract class ItemDatabase: RoomDatabase() {
                     note = "note"
 
             ))
-            //noteDao?.insert(Item("Title 1", "description 1"))
-            //noteDao?.insert(Item("Title 2", "description 2"))
-            //noteDao?.insert(Item("Title 3", "description 3"))
+
         }
     }
 

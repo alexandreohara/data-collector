@@ -27,6 +27,7 @@ android {
         enabled = true
     }
 
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
@@ -60,6 +61,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // OpenCSV
+    implementation "com.opencsv:opencsv:4.1"
 }
 
 configurations.all {
