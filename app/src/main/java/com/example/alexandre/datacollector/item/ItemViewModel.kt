@@ -36,6 +36,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var description: String? = ""
     var observation: String? = ""
     var qualityState: Int? = 0
+    var localization: String? = ""
 
     var typeSelected = ""
 
@@ -87,5 +88,6 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         type = ""
         description = ""
         typeSelected = ""
+        localization = ""
     }
 }

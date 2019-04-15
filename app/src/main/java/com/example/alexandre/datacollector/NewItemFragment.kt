@@ -73,31 +73,51 @@ class NewItemFragment : Fragment() {
 
             itemViewModel?.navigateToDetails?.observe(this, Observer {
                 item ->
-                item?.let {
-                    //println(it)
-                    itemViewModel.description = it.description
-                    itemViewModel.oldNumber = it.number
-                    itemViewModel.model = it.model
-                    itemViewModel.name = it.name
-                    itemViewModel.deploymentState = it.deploymentState
-                    itemViewModel.serialNumber = it.serialNumber
-                    itemViewModel.vendor = it.vendor
-                    itemViewModel.model = it.model
-                    itemViewModel.type = it.type
-                    itemViewModel.description = it.description
+                if (item == null) { // de qualquer jeito ele cai aqui, acho que pq a principio ainda nao tem o item e so dps ele chega
+                    Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
+                    binding.t1ContinueButton.text = "Continuar"
+                } else {
+                    itemViewModel.description = item.description
+                    itemViewModel.oldNumber = item.number
+                    itemViewModel.model = item.model
+                    itemViewModel.name = item.name
+                    itemViewModel.deploymentState = item.deploymentState
+                    itemViewModel.serialNumber = item.serialNumber
+                    itemViewModel.vendor = item.vendor
+                    itemViewModel.model = item.model
+                    itemViewModel.type = item.type
+                    itemViewModel.description = item.description
 
-                    this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                    findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                     itemViewModel.doneNavigating()
-                } ?: run {
-                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
-//                    println('a')
-//                    println(itemViewModel)
-//                    println(itemViewModel.oldNumber)
-//                    println(itemViewModel.serialNumber)
-//                    if (itemViewModel.oldNumber == "") {
-//                        Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
-//                    }
                 }
+
+
+//                item?.let {
+//                    //println(it)
+//                    itemViewModel.description = it.description
+//                    itemViewModel.oldNumber = it.number
+//                    itemViewModel.model = it.model
+//                    itemViewModel.name = it.name
+//                    itemViewModel.deploymentState = it.deploymentState
+//                    itemViewModel.serialNumber = it.serialNumber
+//                    itemViewModel.vendor = it.vendor
+//                    itemViewModel.model = it.model
+//                    itemViewModel.type = it.type
+//                    itemViewModel.description = it.description
+//
+//                    this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+//                    itemViewModel.doneNavigating()
+//                } ?: run {
+//                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
+////                    println('a')
+////                    println(itemViewModel)
+////                    println(itemViewModel.oldNumber)
+////                    println(itemViewModel.serialNumber)
+////                    if (itemViewModel.oldNumber == "") {
+////                        Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
+////                    }
+//                }
             })
 
             return binding.root

@@ -46,8 +46,6 @@ class FinalDetailFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.final_detail, container, false)
 
-        //val dropDown = Array(100, { i -> (i + 1).toString() })
-
         val dialog = AlertDialog.Builder(context)
         dialog.setMessage("Seu item foi registrado com sucesso!")
         dialog.setPositiveButton("Finalizar") { dialog, which->
@@ -60,9 +58,10 @@ class FinalDetailFragment : Fragment() {
         binding.t3FinishButton.setOnClickListener { view ->
             binding.t3FinishButton.text = "Aguarde..."
             itemViewModel.qualityState = binding.seekBar.progress
+            itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
             //createCSV()
             //writeCSV()
-            // Toast.makeText(context, binding.t3DropdownList.selectedItem.toString(), Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, itemViewModel.localization, Toast.LENGTH_SHORT).show()
             galleryAddPic()
             dialog.show()
         }
