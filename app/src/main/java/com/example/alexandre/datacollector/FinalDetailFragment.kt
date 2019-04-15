@@ -1,17 +1,12 @@
 package com.example.alexandre.datacollector
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.databinding.DataBindingUtil
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.os.Handler
 import android.provider.MediaStore
 import android.support.v4.app.Fragment
 import android.support.v4.content.FileProvider
@@ -19,19 +14,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.SpinnerAdapter
 import androidx.navigation.fragment.findNavController
 import com.example.alexandre.datacollector.databinding.FinalDetailBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
 import com.example.alexandre.datacollector.item.ItemViewModel
 import com.example.alexandre.datacollector.item.ItemViewModelFactory
-import com.warkiz.widget.IndicatorSeekBar
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 import android.widget.Toast
-import kotlinx.android.synthetic.main.final_detail.*
 import java.text.SimpleDateFormat
 import java.util.*
 
