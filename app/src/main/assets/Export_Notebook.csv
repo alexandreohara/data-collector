@@ -1,0 +1,864 @@
+"Number";"Name";"Deployment State";"Incident State";"Vendor";"Model";"Description";"Type";"Owner";"SerialNumber";"OperatingSystem";"GraphicAdapter";"OtherEquipment";"WarrantyExpirationDate";"InstallDate";"Note"
+"1422000020";"127182";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80F3 i7";"EQUIPAMENTO USADO EM BOM ESTADO
+
+- RACHADO NA LATERAL ESQUERDA INFERIOR DA TELA;
+- RACHADO NA SAÍDA DE AR(ESQUERDO);
+- FALTA PARAFUSO PRÓXIMO A CONEXÃO DE REDE;";"Laptop";"28820_marco";"PE01R5X3";"";"";;"2017-12-29";"2018-04-13";
+"1422000025";"128946";"Production";"Equipamento Novo";"LENOVO";"V310 i5";"NOTEBOOK FOI PASSADO NOVO PARA O COLABORADOR.";"Laptop";"lucas_nasciment";"PEO2J1A9";"x";"";;"2017-12-29";"2017-05-23";
+"1422000026";"128944";"Production";"Equipamento Novo";"LENOVO";"LENOVO V310";"EQUIPAMENTO NOVO.";"Laptop";"heiter_lima";"PE02J1B2";"";"";;"2017-12-29";"2017-05-23";
+"1422000027";"122918";"Production";"Equipamento Novo";"LENOVO";"LENOVO V310";"EQUIPAMENTO NOVO";"Laptop";"diego_rocha";"PE021AG";"";"";;"2017-12-29";"2017-05-25";
+"1422000028";"122919";"Production";"Equipamento Novo";"LENOVO";"LENOVO V310";"EQUIPAMENTO NOVO";"Laptop";"ana_lopes";"PE02J1BZ";"";"";;"2017-12-29";"2018-03-14";
+"1422000029";"131158";"Production";"Equipamento Novo";"SAMSUNG";"SAMSUMG EXPERT";"NOTEBOOK NOVO.";"Laptop";"diogo_carvalho";"07GD9QAJ100995W";"";"";;"2017-12-29";"2017-05-26";
+"1422000030";"121163";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"NOTEBOOK USADO EM PERFEITO ESTADO, SEM NENHUMA AVARIA.";"Laptop";"luiz_stanquevis";"PEDZL91";"";"X";;"2018-01-04";"2018-01-10";
+"1422000031";"127168";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO.";"Laptop";"alexsander_avil";"PEDZP86";"";"";;"2018-01-04";"2018-01-10";
+"1422000032";"108278";"Inactive";"Equipamento Usado - com avarias";"HP";"4320s i3";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG128FHX9";"";"";;"2018-01-08";"2018-01-08";
+"1422000033";"131430";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"denize_nunes";"PE02ZB0C";"";"";;"2018-01-11";"2018-01-11";
+"1422000034";"130333";"Production";"Equipamento Usado - em bom estado";"DELL";"LATITUDE";"NOTEBOOK SEMINOVO EM PERFEITO ESTADO DE CONSERVAÇÃO,SEM NENHUM TIPO DE AVARIA.";"Laptop";"fernanda_demetr";"43VGSL2";"X";"X";;"2018-01-12";"2018-01-12";
+"1422000035";"112263";"Production";"Equipamento Usado - em bom estado";"HP";"ELITEBOOK";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO COM DOIS AMASSADOS NA TAMPA,1 AMASSADO PRÓXIMO DO BOTÃO DE ABRIR E ESTÁ FALTANDO UMA TAMPINHA DE ACABAMENTO DA FRENTE.
+
+NOTEBOOK ESTAVA COM ADENILTON DONIZETE.";"Laptop";"thiago_faria";"BRG234F480";"X";"";;"2018-01-12";"2018-01-12";
+"1422000036";"122924";"Production";"Equipamento Usado - em bom estado";"SANSUNG";"SAMSUNG NP300E5K i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"Francisco_Netto";"07GD9QAJ200328Z";"";"";;"2018-01-15";"2018-01-15";
+"1422000037";"126105";"Production";"Equipamento Usado - com avarias";"HP";"HP 240/PT3290";"NOTEBOOK COM UM(1) QUEBRADO NA TAMPA DO LADO ESQUERDO E EM BAIXO, DOIS(2)QUEBRADOS NA MOLDURA DA TELA.";"Laptop";"viviane_castro";"BRJ4373XVH";"";"";;"2018-01-16";"2018-01-16";
+"1422000038";"114794";"Production";"Equipamento Usado - com avarias";"HP";"440 G1 i5";"NOTEBOOK USADO COM CARCAÇA E MOLDURA APRESENTANDO QUEBRADO DO LADO ESQUERDO, MOLDURA TAMBÉM ESTÁ SOLTANDO DO LADO DIREITO NA PARTE DE BAIXO.";"Laptop";"barbara_ferre";"BRJ41860XT";"";"";;"2018-01-17";"2018-01-17";
+"1422000039";"131525";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"juliana_mp";"PE03625K";"";"";;"2018-01-19";"2018-01-19";
+"1422000040";"131523";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"david_preciozo";"PE0363VH";"";"";;"2018-01-19";"2018-01-19";
+"1422000041";"115669";"Maintenance";"Equipamento Usado - com avarias";"LENOVO";"E431";"NOTEBOOK FALTANDO BOTÃO VERMELHO DO TECLADO, QUEBRADO NA ESTRUTURA DA TAMPA DO LADO ESQUERDO,
+TAMPA DA GRAVADORA SOLTANDO E FALTANDO TAMPA DO COOLER.";"Laptop";"estoque@callink.com.br";"PE-DNR34";"";"";;"2018-01-20";"2018-01-20";
+"1422000042";"114128";"Production";"Equipamento Usado - em bom estado";"HP";"HP 440G1";"NOTEBOOK USADO COM TRINCADO NA LATERAL DA TELA E PROBLEMA NO CABO FLAT.";"Laptop";"ademir_pereira";"BRJ4040STV";"";"";;"2018-01-20";"2018-01-20";
+"1422000043";"112899";"Estoque";"Equipamento Usado - em bom estado";"HP";"PROBOOK 4440s i5";"Notebook usado em bom estado
+- AMASSADOR NOS CANTOS E PRÓX AO BOTÃO ON/OFF;
+- SINAIS DE DESGASTE;";"Laptop";"estoque@callink.com.br";"BRG333F721";"";"";"X";"2018-01-20";;"X"
+"1422000044";"111804";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S i5";"EQUIPAMENTO USADO COM AVARIAS:
+
+- BASE SEM PÉS DE BORRACHA; 
+- QUEBRADO PRÓXIMO A ENTRADA USB DIREITA; 
+- QUEBRADO PRÓXIMO DOBRADIÇA DIREITA; 
+- NOTEBOOK COM SINAIS DE DESGASTE DO TEMPO;
+- BATERIA NÃO SEGURA CARGA";"Laptop";"estoque@callink.com.br";"BRG239FL0B";"";"";;"2018-01-20";"2018-01-20";"X"
+"1422000045";"122605";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i5";"EQUIPAMENTO USADO EM BOM ESTADO, SEM AVARIAS.";"Laptop";"30172_murilo";"PE-FAE09";"";"";;"2018-01-20";"2018-01-20";
+"1422000046";"115987";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO.";"Laptop";"alexandre_mendes";"PE-DZL51";"";"";;"2018-01-20";"2018-01-20";"X"
+"1422000047";"114787";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO.";"Laptop";"adams_zago";"PE-CNL01";"";"";;"2018-01-20";"2018-01-20";
+"1422000048";"108853";"Production";"Equipamento Usado - em bom estado";"HP";"4430s";"EQUIPAMENTO USADO EM BOM ESTADO SOMENTE COM PEQUENO QUEBRADO NA LATERAL DIREITA.";"Laptop";"alisson_sousa";"BRG145F71T";"";"";;"2018-01-20";"2018-01-20";
+"1422000049";"131526";"Production";"Equipamento Novo";"lenovo";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"fernanda_serafi";"PE0362AT";"";"";;"2018-01-24";"2018-01-24";
+"1422000050";"131522";"Production";"Equipamento Novo";"LENOVO";"B320";"SEMINOVO EM PERFEITO ESTADO.";"Laptop";"camila_zandonadi";"PE-036281";"";"";;"2018-01-24";"2018-01-24";
+"1422000051";"122616";"Production";"Equipamento Usado - em bom estado";"HP";"4440s";"NOTEBOOK EM BOM ESTADO DE CONSERVAÇÃO COM ALGUNS ESFOLADOS NAS LATERAIS CAUSADOS POR DESGASTE DO TEMPO.";"Laptop";"tatiana_vecchi";"BRG316F2GW";"";"";;"2018-01-30";"2018-01-30";
+"1422000052";"114160";"Inactive";"Equipamento Usado - com avarias";"HP";"HP 440 G1 i5";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA
+
+- PEQUENO TRINCADO NA CARCAÇA;
+- CABO FLAT COM PROBLEMA CONFORME IMAGEM;
+- QUEBRADOS PRÓXIMA A TELA(SUPERIOR/INFERIOR);
+- QUEBRADOS PRÓX AO CANTOS DAS CARCAÇAS;
+- AMASSADO PRÓX AOS BOTOES DE WI-FI/MUTE;";"Laptop";"estoque@callink.com.br";"BRJ4144XLL";"";"";;"2018-02-03";"2018-02-03";
+"1422000053";"111106";"Production";"Equipamento Usado - em bom estado";"HP";"PAVILLION DM4";"NOTEBOOK EM BOM ESTADO DE CONSERVAÇÃO,SEM NENHUM AMASSADO.
+BATERIA NÃO ESTÁ ENCAIXANDO E ESTÁ CAINDO COM FACILIDADE.";"Laptop";"vinicius.janone";"BRG221FF21";"";"";;"2018-02-05";"2018-02-05";
+"1422000054";"131524";"Production";"Equipamento Usado - em bom estado";"LENOVO";"B320 i5";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"30590_lais";"PED3629B";"";"";;"2018-02-06";"2018-02-06";
+"1422000055";"131534";"Production";"Equipamento Novo";"LENOVO";"81CC";"NOTEBOOK NOVO.";"Laptop";"maria_silva";"PE0362AZ";"";"";;"2018-02-08";"2018-04-28";
+"1422000056";"113221";"Production";"Equipamento Usado - em bom estado";"HP";"HP T430";"NOTEBOOK EM BOM ESTADO DE CONSERVAÇÃO,SEM NENHUM AMASSADO,APRESENTANDO SOMENTE DESGASTE DO TEMPO DE USO  SENSOR TOUCH.";"Laptop";"gilson_vitor";"PE-XG784";"";"";;"2018-02-08";"2018-05-11";
+"1422000057";"111844";"Production";"Equipamento Usado - com avarias";"HP";"4430s";"NOTEBOOK USADO COM QUEBRADO DO LADO DIREITO ONDE ABRE A TAMPA, FALTANDO UMA TRAVA DA BATERIA.
+TELA E APARÊNCIA EM BOM ESTADO.";"Laptop";"fernando_alme";"BRG239FKYL";"";"";;"2018-02-09";"2018-02-09";
+"1422000058";"131563";"Production";"Equipamento Usado - em bom estado";"LENOVO";"B320 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"poliana_pereira";"PE0362BK";"";"";;"2018-02-09";"2018-03-26";
+"1422000059";"131565";"Production";"Equipamento Usado - em bom estado";"LENOVO";"81CC";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"28153_clarissa";"PE0363VS";"";"";;"2018-02-09";"2018-02-09";
+"1422000060";"131569";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"22984_daniela";"PE0362BQ";"";"";;"2018-02-12";"2018-02-12";
+"1422000061";"131558";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"28139_cassia";"PE03625A";"";"";;"2018-02-12";"2018-02-12";
+"1422000062";"131570";"Production";"Equipamento Novo";"LENOVO";"B320 i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"30580_daniela";"PE0363VZ";"";"";;"2018-02-12";"2018-02-12";
+"1422000063";"131566";"Production";"Equipamento Usado - em bom estado";"LENOVO";"B320 i5";"NOTEBOOK SEMI-NOVO";"Laptop";"4830pc_luis";"PE03625E";"";"";;"2018-02-12";"2018-02-12";
+"1422000064";"131564";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"28147_renata";"PE0362AJ";"";"";;"2018-02-12";"2018-02-12";
+"1422000065";"131571";"Production";"Equipamento Novo";"LENOVO";"B320 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO.
+
+
+PROPRIETÁRIO: matheus.filipe@callink.com.br";"Laptop";"";"PE0362AM";"";"";;"2018-02-14";"2018-02-14";
+"1422000066";"131521";"Production";"Equipamento Novo";"";"LENOVO B320 81CC";"NOTEBOOK NOVO.";"Laptop";"28383_julio";"PE02Z67N";"";"";;"2018-02-16";"2018-02-16";
+"1422000067";"112588";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"NOTEBOOK USADO EM BOM ESTADO SEM NENHUMA AVARIA.";"Laptop";"alyson_nunes";"BRG302FG78";"";"";;"2018-02-20";"2018-02-20";"X"
+"1422000068";"112265";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"EQUIPAMENTO EM ÓTIMO ESTADO DE CONSERVAÇÃO.";"Laptop";"luiz_tadeu";"BRG238F9F5";"";"";;"2018-02-20";"2018-02-20";
+"1422000069";"112493";"Production";"Equipamento Usado - em bom estado";"HP";"4440s";"EQUIPAMENTO USADO EM BOM ESTADO.";"Laptop";"alysson_sousa";"BRG302FG64";"";"";;"2018-02-20";"2018-02-20";
+"1422000070";"110046";"Production";"Equipamento Usado - em bom estado";"HP";"4430s";"EQUIPAMENTO USADO EM BOM ESTADO.";"Laptop";"aline_penha";"BRG217FDWF";"";"";;"2018-02-20";;
+"1422000071";"131438";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO.";"Laptop";"nayara_luzia";"PE02ZB2X";"";"";;"2018-02-20";"2018-02-20";
+"1422000072";"124932";"Production";"Equipamento Usado - em bom estado";"HP";"640";"EQUIPAMENTO EM BOM ESTADO.";"Laptop";"antonio_cesar";"BRJ5492SPX";"";"";;"2018-02-20";"2018-02-20";
+"1422000073";"130332";"Production";"Equipamento Usado - em bom estado";"DELL";"LATITUDE 3480";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO.";"Laptop";"carlos_martins";"452JSL2";"";"";;"2018-02-21";;
+"1422000074";"108849";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S i3";"PROBLEMA PARA ENCAIXAR A BATERIA .";"Laptop";"estoque@callink.com.br";"BRG14SF7GN";"";"";;"2018-02-21";"2018-02-21";
+"1422000075";"111821";"Production";"Equipamento Usado - em bom estado";"HP";"4430s";"Equipamento Usado - em bom estado.";"Laptop";"raiane_maria";"BRG239FKWP";"";"";;"2018-02-21";"2018-02-21";
+"1422000076";"134925";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"NOTEBOOK USADO EM BOM ESTADO DE CONVERSAÇÃO:
+
+
+ANTIGO PATRIMÔNIO 115664, ALTERADO APÓS TROCA DE CARCAÇA.";"Laptop";"washington_jun";"PEDPT67";"";"";;"2018-02-21";"2018-02-21";
+"1422000077";"13566";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"Equipamento Usado - em bom estado";"Laptop";"carlos_martins";"PE0362SE";"";"";;"2018-02-26";"2018-02-26";
+"1422000078";"131456";"Production";"Equipamento Novo";"LENOVO";"V310 i7";"Equipamento novo em bom estado";"Laptop";"29225_marta";"PE02ECRG";"";"";;"2018-02-26";"2018-02-26";
+"1422000079";"122612";"Maintenance";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado
+
+NOTEBOOK EM AVALIAÇÃO DE DANOS, ULTIMO USUÁRIO Vitor Leandro Franco de Paula";"Laptop";"estoque@callink.com.br";"PEDZR76";"";"";;"2018-02-26";"2018-02-26";
+"1422000080";"127100";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado
+
+
+* Equipamento em manutenção - Enviado para Fontes
+
+
+Equipamento com Carlos Leite";"Laptop";"diego_franco";"PEDZR61";"";"";;"2018-02-26";"2018-02-26";
+"1422000081";"121235";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"31731_nilza";"PEDRD53";"";"";;"2018-02-26";"2018-02-26";
+"1422000082";"112617";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"Equipamento novo em bom estado";"Laptop";"lucas_marchesoti";"BRG229F02C";"";"";;"2018-02-26";"2018-02-26";
+"1422000083";"121161";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"linique_santos";"PEDZL85";"";"";;"2018-02-26";"2018-02-26";
+"1422000084";"122056";"Production";"Equipamento Usado - com avarias";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"eduardo_souza";"PEDZR69";"";"";;"2018-02-26";"2018-02-26";
+"1422000085";"122606";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"marcelo_dutra";"PEFDB64";"";"";;"2018-02-26";"2018-02-26";
+"1422000086";"129956";"Production";"Equipamento Novo";"DELL";"P69G";"Equipamento novo em bom estado";"Laptop";"junior";"BB4PHJ2";"";"";;"2018-02-26";"2018-02-26";
+"1422000087";"111798";"Production";"Equipamento Novo";"HP";"DM4";"Equipamento novo em bom estado";"Laptop";"juliano_alves";"BRG228FD4V";"";"";;"2018-02-26";"2018-02-26";
+"1422000088";"122630";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"juliana_oli";"PEDZL59";"";"";;"2018-02-26";"2018-02-26";
+"1422000089";"120046";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"fernanda_tavar";"PEERN01";"";"";;"2018-02-26";"2018-02-26";
+"1422000090";"121469";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"danilo_borges";"PEEPL02";"";"";;"2018-02-27";"2018-02-27";
+"1422000091";"114139";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"mariane_cortes";"PEBPL60";"";"";;"2018-02-27";"2018-02-27";
+"1422000092";"121465";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"";"PEEPG79";"";"";;"2018-02-27";"2018-02-27";
+"1422000093";"112269";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"Equipamento novo em bom estado";"Laptop";"enderson_silva";"BRG234F4DQ";"";"";;"2018-02-27";;
+"1422000094";"115985";"Production";"Equipamento Usado - com avarias";"HP";"E431";"VERSO- SAIDA DE AR COM A CARCASSA QUEBRADA";"Laptop";"claudio_lopes";"PEDZL52";"";"";;"2018-02-27";"2018-02-27";
+"1422000095";"122625";"Production";"Equipamento Novo";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"eduardo_borges";"PEDZR81";"";"";;"2018-02-27";"2018-02-27";
+"1422000096";"126868";"Production";"Equipamento Usado - em bom estado";"HP";"440";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"estoque@callink.com.br";"BRJ512NG10";"";"";;"2018-02-27";"2018-02-27";
+"1422000097";"131442";"Production";"Equipamento Novo";"LENOVO";"V310";"Equipamento novo em bom estado";"Laptop";"bruno_santos";"PE02ZCQX";"";"";;"2018-02-27";"2018-02-27";
+"1422000098";"131364";"Production";"Equipamento Novo";"DELL";"LATITUDE 3480";"Equipamento novo em bom estado";"Laptop";"dilson_junior";"43DJSL2";"";"";;"2018-02-27";"2018-02-27";
+"1422000099";"131413";"Production";"Equipamento Usado - em bom estado";"DELL";"P69G";"Notebook usado em bom estado, acompanha os seguintes equipamentos:
+
+- Adaptador Display Link - Patrimônio 136150;
+- Fonte para Notebook - Patrimônio 136151;";"Laptop";"denis_macedo";"6NJKHJ2";"";"";;"2018-02-27";"2018-02-27";
+"1422000100";"131458";"Production";"Equipamento Novo";"LENOVO";"V310";"Equipamento novo em bom estado";"Laptop";"dean_gough";"PE02ZG6D";"";"";;"2018-02-27";"2018-02-27";
+"1422000101";"114792";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"guilherme_andra";"PECNL32";"";"";;"2018-02-27";"2018-02-27";
+"1422000102";"131362";"Production";"Equipamento Novo";"DELL";"LATITUDE 3840";"Equipamento novo em bom estado";"Laptop";"sely_costa";"42YJ8L2";"";"";;"2018-02-27";"2018-02-27";
+"1422000103";"112267";"Maintenance";"Equipamento Usado - com avarias";"HP";"8460P i7";"Equipamento usado com avarias:
+
+- TECLA ""´P"" SOLTANDO;
+- EQUIPAMENTO ESQUENTANDO E DESLIGANDO;";"Laptop";"estoque@callink.com.br";"BRG238F9MG";"";"";;"2018-02-27";"2018-02-27";
+"1422000104";"112589";"Production";"Equipamento Usado - em bom estado";"HP";"4440S i5";"Equipamento novo em bom estado";"Laptop";"fabricio_desouz";"BRG302FG4K";"";"";;"2018-02-28";"2018-02-28";
+"1422000105";"115063";"Production";"Equipamento Usado - em bom estado";"HP";"440";"Equipamento USADO em bom estado";"Laptop";"30288_marco";"BRJ4229F9S";"";"";;"2018-02-28";"2018-09-18";
+"1422000106";"121470";"Production";"Equipamento Novo";"LENOVO";"E431";"Equipamento novo em bom estado  OBS:FALTANDO BOTAO CENTRAL DO MOUSE PAD";"Laptop";"neiva_rabelo";"PEEPG97";"";"";;"2018-02-28";"2018-02-28";
+"1422000107";"131159";"Production";"Equipamento Usado - com avarias";"SANSUNG";"NP300ESK";"Equipamento novo em bom estado";"Laptop";"wagner_peixoto";"0G7D9QAJ100994";"";"";;"2018-02-28";"2018-02-28";
+"1422000108";"114146";"Production";"Equipamento Usado - em bom estado";"HP";"440";"Equipamento usado em bom estado";"Laptop";"ricardo_olive";"BRJ4020BPB";"";"";;"2018-02-28";"2018-02-28";
+"1422000109";"121468";"Production";"Equipamento Novo";"LENOVO";"E431";"Equipamento usado em bom estado";"Laptop";"cassio_alcantara";"PEEPG93";"";"";;"2018-02-28";"2018-02-28";
+"1422000110";"114790";"Production";"Equipamento Novo";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"elias_policena";"PECNL71";"";"";;"2018-02-28";"2018-02-28";
+"1422000111";"122916";"Production";"Equipamento Usado - em bom estado";"ASUS";"K46CB";"Equipamento usado em bom estado";"Laptop";"";"EBNOB2O30548139";"";"";;"2018-02-28";"2018-02-28";
+"1422000112";"121162";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"Equipamento novo em bom estado
+
+- FALTA BOTÃO CENTRAL DO TECLADO;
+- QUEBRADO PRÓX A SAÍDA DE AR;";"Laptop";"31725_joao";"PEDZM58";"";"";;"2018-02-28";"2018-02-28";
+"1422000113";"131431";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310 i7";"Equipamento usado em bom estado";"Laptop";"samuel_leite";"PE02ZG67";"";"";;"2018-02-28";"2018-02-28";
+"1422000114";"131443";"Production";"Equipamento Novo";"LENOVO";"V310";"Equipamento novo em bom estado";"Laptop";"gleison_almeida";"PE02ZG60";"";"";;"2018-02-28";"2018-02-28";
+"1422000115";"107766";"Maintenance";"Equipamento Usado - com avarias";"HP";"8440P ELITBOOK";"Notebook usado com avarias
+
+- Tecla H Soltando;
+- Sinais de desgaste do tempo";"Laptop";"estoque@callink.com.br";"BRG13OF01J";"";"";;"2018-02-28";"2018-02-28";
+"1422000116";"112264";"Production";"Equipamento Novo";"HP";"8460P";"Equipamento novo em bom estado";"";"";"";"";"";;"2018-02-28";"2018-02-28";
+"1422000117";"108852";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"Equipamento usado em bom estado";"Laptop";"ismael_jesus";"BRG145F7GH";"";"";;"2018-02-28";"2018-02-28";
+"1422000118";"111815";"Inactive";"Equipamento Usado - com avarias";"HP";"4430S i5";"DUPLICIDADE DE CADASTRO
+
+PATRIMÔNIO CORRETO DO EQUIPAMENTO É 111818";"Laptop";"artur_moura";"BRG234FDL0";"";"";;"2018-02-28";"2018-02-28";
+"1422000119";"112268";"Maintenance";"Equipamento Usado - em bom estado";"HP";"8460P";"Equipamento usado em bom estado
+
+*NOTEBOOK ENCAMINHADO PARA ANALISE DE AVARIAS, ESTAVA COM FUNCIONÁRIO: Hebert Moreira De Castro Alves";"Laptop";"estoque@callink.com.br";"BRG234F4F1";"";"";;"2018-02-28";"2018-02-28";
+"1422000120";"115592";"Production";"Equipamento Novo";"LENOVO";"E431";"Equipamento novo em bom estado";"Laptop";"diego_alves";"PECBV06";"";"";;"2018-02-28";"2018-02-28";
+"1422000121";"111085";"Production";"Equipamento Usado - em bom estado";"HP";"4430s";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"luliane_silva";"A7H37LT#AC4";"";"";;"2018-03-01";"2018-03-01";
+"1422000122";"131555";"Production";"Equipamento Novo";"LENOVO";"81CC";"EQUIPAMENTO NOVO";"Laptop";"28496_bruno";"PE036PMY";"";"";;"2018-03-01";"2018-03-01";
+"1422000123";"114131";"Production";"Equipamento Usado - em bom estado";"HP";"4440G1";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"fabricio_cecilio";"BRJ4020B51";"";"";;"2018-03-01";"2018-03-01";
+"1422000124";"131542";"Production";"Equipamento Novo";"LENOVO";"81CC";"EQUIPAMENTO NOVO";"Laptop";"75fd_nathalia";"PE-02ZKAF";"";"";;"2018-03-06";"2018-03-06";
+"1422000125";"111094";"Estoque";"Equipamento Usado - em bom estado";"HP";"PROBOOK 4430s i3";"EQUIPAMENTO USADO EM BOM ESTADO
+
+- QUEBRADO LATERAL PRÓXIMO AO LEITOR DE DVD;
+- QUEBRADO PRÓXIMO A TELA LATERAL ESQUERDA;";"Laptop";"estoque@callink.com.br";"BR6225926D";"";"";;"2018-03-06";"2018-03-06";
+"1422000126";"131553";"Production";"Equipamento Usado - em bom estado";"HP";"4440 s";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"guilherme_neves";"BRG316F8LH";"";"";;"2018-03-07";"2018-03-07";
+"1422000127";"112063";"Production";"Equipamento Usado - em bom estado";"HP";"4440s";"NOTEBOOK EM BOM ESTADO";"Laptop";"jefferson_teo";"BRG250F3FM";"";"";;"2018-03-07";"2018-03-07";
+"1422000128";"128912";"Production";"Equipamento Novo";"LENOVO";"310";"EQUIPAMENTO NOVO";"Laptop";"cristiano_andra";"PE02CUR6";"";"";;"2018-03-07";"2018-03-07";
+"1422000129";"112125";"Production";"Equipamento Usado - em bom estado";"HP";"4440 S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"4730pc_ligia";"BRG250F3K2";"";"";;"2018-03-07";"2018-03-07";
+"1422000130";"111816";"Production";"Equipamento Usado - em bom estado";"HP";"4430 S";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"28950_marcia";"BRG239FL1K";"";"";;"2018-03-07";"2018-03-07";
+"1422000131";"131437";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO";"Laptop";"lorenna_costa";"PE02XOKN";"";"";;"2018-03-07";"2018-03-07";
+"1422000132";"131427";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO";"Laptop";"elen_braga";"PE02ZB2V";"";"";;"2018-03-07";"2018-03-07";
+"1422000133";"106361";"Production";"Equipamento Usado - em bom estado";"HP";"4320S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"danielle_moura";"BRG113F6DL";"";"";;"2018-03-07";"2018-03-07";
+"1422000134";"131171";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO";"Laptop";"mauro_taveira";"PE02J1A2";"";"";;"2018-03-07";"2018-03-07";
+"1422000135";"131164";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO";"Laptop";"gabriel_fer";"PE02JIBA";"";"";;"2018-03-07";"2018-03-07";
+"1422000136";"111792";"Production";"Equipamento Usado - em bom estado";"HP";"4430 S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"fernanda_felix";"BRG238F4WC";"";"";;"2018-03-07";"2018-03-07";
+"1422000137";"105895";"Production";"Equipamento Usado - em bom estado";"HP";"4320 S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"pedro_neto";"BRGO40F3K1";"";"";;"2018-03-07";"2018-03-07";
+"1422000138";"111095";"Production";"Equipamento Novo";"HP";"4430 S";"NOTEBOOK NOVO";"Laptop";"dandara_alves";"BRG22SF2G2";"";"";;"2018-03-07";"2018-03-07";
+"1422000139";"106998";"Inactive";"Equipamento Usado - com avarias";"HP";"4320 S";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG113F6FY";"";"98-4B-E1-AC-85-BA";;"2018-03-07";"2018-03-07";
+"1422000140";"122602";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO
+
+- FALTA BOTÃO CENTRAL DO MOUSE;";"Laptop";"28706_thiago";"PEERF37";"";"";;"2018-03-07";"2018-03-07";
+"1422000141";"131554";"Production";"Equipamento Novo";"LENOVO";"81CC";"NOTEBOOK NOVO";"Laptop";"28708_maria";"PE036P9E";"";"";;"2018-03-07";"2018-03-07";
+"1422000142";"107552";"Production";"Equipamento Usado - em bom estado";"HP";"PROBOOK HP 4320s i5";"EQUIPAMENTO USADO -EM BOM ESTADO";"Laptop";"30503_jonatan";"BRG113F6F5";"";"";;"2018-03-08";"2018-03-08";
+"1422000143";"109757";"Production";"Equipamento Usado - em bom estado";"HP";"4430 S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"kelara_pires";"BRG212F0VF";"";"";;"2018-03-08";"2018-03-08";
+"1422000144";"124927";"Production";"Equipamento Novo";"HP";"640";"EQUIPAMENTO NOVO";"Laptop";"lorena_rocha";"BRJ529VDM3";"";"";;"2018-03-08";"2018-03-08";
+"1422000145";"111796";"Production";"Equipamento Usado - em bom estado";"HP";"4430 S";"NOTEBOOK EM PERFEITO ESTADO, EM AVARIAS USADA.";"Laptop";"onorana_rodrigu";"BRG239F9X6";"";"";;"2018-03-08";"2018-03-08";
+"1422000146";"111784";"Production";"Equipamento Usado - em bom estado";"HP";"443O S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"carliany_martin";"BRG231F3TR";"";"";;"2018-03-08";"2018-03-08";
+"1422000147";"110779";"Production";"Equipamento Usado - em bom estado";"HP";"4440 S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"otavio_galvao";"BRG315F86S";"";"";;"2018-03-08";"2018-03-08";
+"1422000148";"114665";"Production";"Equipamento Novo";"HP";"440";"EQUIPAMENTO NOVO";"Laptop";"marcella_ferreir";"BRJ4186QDD";"";"";;"2018-03-08";"2018-03-08";
+"1422000149";"131426";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO";"Laptop";"samantha_amaral";"PE02ZB33";"";"";;"2018-03-08";"2018-03-08";
+"1422000150";"110553";"Production";"Equipamento Usado - em bom estado";"HP";"4430 S";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+OBS: NOTEBOOK PASSADO PARA IGOR CASSIANO FERREIRA NO DIA 14/05/2018, EM BOM ESTADO APRESENTANDO UM QUEBRADO NO CANTO DO LADO DIREITO PRÓXIMO A BATERIA.";"Laptop";"28062_igor";"BRG232FHXY";"";"";;"2018-03-08";"2018-03-08";
+"1422000151";"113222";"Production";"Equipamento Usado - com avarias";"LENOVO";"T430";"FALTA BOTÃO CENTRAL DO MOUSE.
+TAMPA DO ALTO FALANTE.";"Laptop";"filipe_ferreira";"PEXF351";"";"";;"2018-03-08";"2018-03-08";
+"1422000152";"131167";"Production";"Equipamento Novo";"SANSUNG";"NP300ESK";"EQUIPAMENTO NOVO";"Laptop";"leonardo_victor";"07GD9QAJ200048";"";"";;"2018-03-08";"2018-03-08";
+"1422000153";"123328";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"hilton_tsukide";"BRG302FGOW";"";"";;"2018-03-08";"2018-03-08";
+"1422000154";"131163";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO.";"Laptop";"sergio_prestes";"PEO2JIC5";"";"";;"2018-03-08";"2018-03-08";
+"1422000155";"131552";"Production";"Equipamento Usado - em bom estado";"HP";"4440S i5";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"wender_prado";"BRG315F84X";"";"";;"2018-03-08";"2018-03-08";
+"1422000156";"124578";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"helio_sassioto";"PE024DSM";"";"";;"2018-03-09";"2018-03-09";
+"1422000157";"124558";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+NOTEBOOK ERA DATEMPO SERVICOS";"Laptop";"30381_fabiano";"PE024DUE";"";"";;"2018-03-09";"2018-03-09";
+"1422000158";"124539";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"30558_carlos";"PE024DS2";"";"";;"2018-03-09";"2018-03-09";
+"1422000159";"124584";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+
+NOTEBOOK ERA TEMPO SERVICOS";"Laptop";"marcela_pimenta";"PE024DWR";"";"";;"2018-03-09";"2018-03-09";
+"1422000160";"124444";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"fernando_kenji";"PE024DVZ";"";"";;"2018-03-09";"2018-03-09";
+"1422000161";"124542";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+SOLICITO PELO Rodrigo Storti de Arantes EM 17/07/2018.";"Laptop";"rodrigo_silveira";"PE024DS9";"";"";;"2018-03-09";"2018-03-09";
+"1422000162";"124541";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"raphael";"PE024DTQ";"";"";;"2018-03-09";"2018-03-09";
+"1422000163";"124451";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"artur_moura";"PE024DXP";"";"";;"2018-03-09";"2018-03-09";
+"1422000164";"124529";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+NOTEBOOK TEMPO SERVICOS
+
+NOTEBOOK ENCAMINHADO PARA PREPARAÇÃO - BÁRBARA MENDES ALVES";"Laptop";"30277_barbara";"PE024DY2";"";"";;"2018-03-09";"2018-03-09";
+"1422000165";"124545";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"renato_teixeira";"PE024DTX";"";"";;"2018-03-09";"2018-03-09";
+"1422000166";"124550";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"gloria_tanferre";"PE024DSB";"";"";;"2018-03-09";"2018-03-09";
+"1422000167";"124570";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"marcelo_resende";"PE024DS0";"";"";;"2018-03-09";"2018-03-09";
+"1422000168";"124551";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"28061_petherson";"PE024DTM";"";"";;"2018-03-09";"2018-03-09";
+"1422000169";"124714";"Estoque";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"estoque@callink.com.br";"PE024DSK";"";"";;"2018-03-09";"2018-03-09";
+"1422000170";"124719";"Estoque";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"estoque@callink.com.br";"PE024DS8";"";"";;"2018-03-09";"2018-03-09";
+"1422000171";"124555";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"luciano_moura";"PE024DSJ";"";"";;"2018-03-09";"2018-03-09";
+"1422000172";"124573";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"30639_everton";"PE024DUL";"";"";;"2018-03-09";"2018-03-09";
+"1422000173";"124410";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO -EM BOM ESTADO";"Laptop";"bruna_verissimo";"PE024DSX";"";"";;"2018-03-10";"2018-03-10";
+"1422000174";"124784";"Estoque";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM EM BOM ESTADO
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"estoque@callink.com.br";"PE024DTT";"";"";;"2018-03-10";"2018-03-10";
+"1422000175";"124454";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM ESTADO
+
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"28498_romulo";"PE024DXM";"";"";;"2018-10-01";"2018-10-01";
+"1422000176";"124524";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DX2";"";"";;"2018-03-10";"2018-03-10";
+"1422000177";"124673";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+*NOTEBOOK EM TESTE - RETIRADO PELA MARTA MATOS";"Laptop";"29225_marta";"PE024DSH";"";"";;"2018-03-10";"2018-03-10";
+"1422000178";"124517";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"gesse_lore";"PE024DXV";"";"";;"2018-03-10";"2018-03-10";
+"1422000179";"124412";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"filogenio_neto";"PE024DY6";"";"";;"2018-03-10";"2018-03-10";
+"1422000180";"124587";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"29141_gabriel";"PE024DT1";"";"";;"2018-03-10";"2018-03-10";
+"1422000181";"124443";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"30752_rodrigo";"PE024DYH";"";"";;"2018-03-10";"2018-03-10";
+"1422000182";"124557";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"sheila_fideles";"PE024DTC";"";"";;"2018-03-10";;
+"1422000183";"124547";"Estoque";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"estoque@callink.com.br";"PE024DW7";"";"";;"2018-03-10";"2018-03-10";
+"1422000184";"124553";"Maintenance";"Equipamento Usado - em bom estado";"LENOVO";"T440";"EQUIPAMENTO USADO - EM BOM ESTADO
+
+
+
+NOTEBOOK TEMPO SERVICOS";"Laptop";"estoque@callink.com.br";"PE024DU0";"";"";;"2018-03-10";"2018-03-10";
+"1422000185";"124527";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"leonardo_camilo";"PE024DXB";"";"";;"2018-03-10";"2018-03-10";
+"1422000186";"131436";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"davi_valukas";"PE02ZB31";"";"";;"2018-03-14";"2018-03-14";
+"1422000187";"131344";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO";"Laptop";"lucas_giani";"PE02J1AP";"";"";;"2018-03-14";"2018-03-14";
+"1422000188";"131452";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO;
+
+- SEM O PÉ DE BORRACHA SUPERIOR ESQUERDO;
+- teclas ""W"", ""S"" e ""B"" estão soltando;";"Laptop";"maika_medeiros";"PE02ZB1A";"";"";;"2018-03-14";"2018-03-14";
+"1422000189";"114662";"Estoque";"Equipamento Usado - com avarias";"HP";"HP 440 G1 i5";"- BATERIA COM DEFEITO";"Laptop";"estoque@callink.com.br";"BRJ4155C3K";"";"";;"2018-03-14";"2018-03-14";
+"1422000190";"112616";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO - EM BOM ESTADO";"Laptop";"tatiana_vecchi";"BRG316F2GW";"";"";;"2018-03-14";"2018-03-14";
+"1422000191";"114127";"Production";"Equipamento Usado - em bom estado";"HP";"440 i5";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"amanda_rafaela";"BRJ4040SP6";"";"";;"2018-03-14";"2018-03-14";
+"1422000192";"131556";"Production";"Equipamento Usado - em bom estado";"LENOVO";"B320 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"31616_matheus";"PE036P9S";"";"";;"2018-03-14";"2018-03-14";
+"1422000193";"127575";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"TRAVAS DA BATERIA QUEBRADAS";"Laptop";"pedro_hen";"BRC239F9G6";"";"";;"2018-03-26";"2018-03-26";
+"1422000194";"114336";"Production";"Equipamento Usado - com avarias";"HP";"440";"TELA FALHANDO";"Laptop";"arthur_franc";"BRJ41558DR";"";"";;"2018-03-26";"2018-03-26";
+"1422000195";"122624";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"larissa_abdanur";"PEDZR54";"";"";;"2018-03-26";"2018-03-26";
+"1422000196";"124931";"Production";"Equipamento Novo";"HP";"640";"EQUIPAMENTO NOVO.";"Laptop";"kele_braga";"BRJ529VDM2";"";"";;"2018-03-26";"2018-03-26";
+"1422000197";"124917";"Production";"Equipamento Usado - em bom estado";"HP";"640 i5";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"claudia_maria";"BRJ529VDLX";"";"";;"2018-03-26";"2018-03-26";
+"1422000198";"108851";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"HP";"Laptop";"lucas_li";"BRG145F7GD";"";"";;"2018-03-26";"2018-03-26";
+"1422000199";"124933";"Production";"Equipamento Usado - em bom estado";"HP";"640 i5";"EQUIPAMENTO USADO EM BOM ESTADO
+
+- AMASSADO NO CANTO DIREITO DA CARCAÇA.";"Laptop";"31159_lorrayne";"BRJ529VDLV";"";"";;"2018-03-26";"2018-03-26";
+"1422000200";"109062";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO, com quebrado no canto da tampa do lado direito e um quebrado na moldura.";"Laptop";"amanda_fernan";"BRG152F34Y";"";"";;"2018-03-26";"2018-03-26";
+"1422000201";"115591";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"roger_lima";"PECBR23";"";"";;"2018-03-26";"2018-03-26";
+"1422000202";"115625";"Production";"Equipamento Usado - com avarias";"LENOVO";"E431 i5";"NOTEBOOK USADO COM AVARIAS:
+
+- BOTAO CENTRAL DO MOUSE;
+- QUEBRADO PRÓX A SAÍDA DE AR DO COOLER;";"Laptop";"amanda_costa";"PEDZM98";"";"";;"2018-03-27";"2018-03-27";
+"1422000203";"115590";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"158fd_keilamar";"PECBR60";"";"";;"2018-03-27";"2018-03-27";
+"1422000204";"114138";"Production";"Equipamento Novo";"LENOVO";"E431";"EQUIPAMENTO NOVO.";"Laptop";"livio_herdade";"PEBPK65";"";"";;"2018-03-27";"2018-03-27";
+"1422000205";"114791";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"paulo_vieira";"PECNL87";"";"";;"2018-03-27";"2018-03-27";
+"1422000206";"131428";"Production";"Equipamento Novo";"LENOVO";"N310";"EQUIPAMENTO NOVO";"Laptop";"lorena_peixoto";"PE02ZB2H";"";"";;"2018-03-27";"2018-03-27";
+"1422000207";"131445";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"analu_santos";"PE027BZP";"";"";;"2018-03-27";"2018-03-27";
+"1422000208";"111096";"Production";"Equipamento Usado - em bom estado";"HP";"4430S i3";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"rayane_dasilva";"BRG225F2HV";"";"";;"2018-03-27";"2018-03-27";
+"1422000209";"111092";"Production";"Equipamento Novo";"PROBOOK";"4430513";"NOTEBOOK USADO EM BOM ESTADO SEM NENHUMA AVARIA";"Laptop";"gabriel_dantas";"BRG225F2CW";"";"";;"2018-03-27";"2018-03-27";
+"1422000210";"112614";"Production";"Equipamento Usado - em bom estado";"HP";"TP-LINK";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"vinicius_carrijo";"01789355201020";"";"";;"2018-03-27";"2018-03-27";
+"1422000211";"105896";"Production";"Equipamento Usado - em bom estado";"HP";"4320s i5";"EQUIPAMENTO USADO EM BOM ESTADO
+
+- DOBRADIÇA ESQUERDA QUEBRADA;
+- QUEBRADO NA LATERAL DIREITA;
+- DESGASTE DO TEMPO;";"Laptop";"douglas_silva";"BRG040F3MJ";"";"";;"2018-03-28";"2018-03-28";
+"1422000212";"136371";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S i3";"NOTEBOOK USADO COM AVARIAS:
+- Canto direito superior, esquerdo superior e inferior quebrados;
+- Moldura do gravador de dvd quebrado;
+- Moldura de tela sem parafuso e tampa de parafuso;
+- Tampa de telas com marcas profundas de arranhão;
+- Notebook em geral com várias marcas de desgaste;
+
+
+
+Patrimônio Antigo(111633) apagado, novo PT 136371";"Laptop";"estoque@callink.com.br";"BRG229F5J8";"";"";;"2018-03-28";"2018-03-28";
+"1422000213";"114140";"Production";"Equipamento Usado - com avarias";"HP";"440";"TAMPA FRONTAL QUEBRADA";"Laptop";"roberta_hipolita";"BRJ404055Y";"";"";;"2018-03-28";"2018-03-28";
+"1422000214";"122599";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"victor_heringer";"PEEPR64";"";"";;"2018-03-28";"2018-03-28";
+"1422000215";"114159";"Production";"Equipamento Novo";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"christiane_canut";"BRJ4144XKY";"";"";;"2018-03-28";"2018-03-28";
+"1422000216";"106469";"Production";"Equipamento Usado - com avarias";"HP";"4320S";"CAPA SOLTANDO";"Laptop";"edson_dantas";"BRG113F6FG";"";"";;"2018-03-28";"2018-03-28";
+"1422000217";"108780";"Production";"Equipamento Novo";"HP";"4430S";"EQUIPAMENTO NOVO.";"Laptop";"eduardo_reis";"BRG145F77B";"";"";;"2018-03-28";"2018-03-28";
+"1422000218";"114130";"Production";"Equipamento Novo";"HP";"440";"EQUIPAMENTO NOVO.";"Laptop";"lucio_sousa";"BRJ4020BNN";"";"";;"2018-03-28";"2018-03-28";
+"1422000219";"127690";"Production";"Equipamento Novo";"T440";"LENOVO";"EQUIPAMENTO NOVO.";"Laptop";"lylianara_franca";"PE0224DSY";"";"";;"2018-03-28";"2018-03-28";
+"1422000220";"111814";"Production";"Equipamento Novo";"HP";"4430S";"EQUIPAMENTO NOVO.";"Laptop";"frederico_alvar";"BRG239FKVT";"";"";;"2018-03-28";"2018-03-28";
+"1422000221";"104773";"Production";"Equipamento Usado - em bom estado";"HP";"4320S";"NOTEBOOK USADO EM BOM ESTADO
+
+- FALTANDO A TAMPA DO CARTÃO SD;
+- RACHADO LATERIAS(ESQUERDA/DIREITA);";"Laptop";"italo_fernandes";"BLG049F0X5";"";"";;"2018-03-28";"2018-03-28";
+"1422000222";"109759";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"DOBRADIÇA DANIFICADA";"Laptop";"rodrigo_po";"BRG212F0VH";"";"";;"2018-03-28";"2018-03-28";
+"1422000223";"109173";"Production";"Equipamento Usado - com avarias";"HP";"430";"NOTEBOOK USADO COM AVARIA:
+
+- TRAVA DA BATERIA QUEBRADA;
+- DESGASTE DO TEMPO;";"Laptop";"ana_michele";"BRG203F5QW";"";"";;"2018-03-28";"2018-03-28";
+"1422000224";"131333";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO.";"Laptop";"ana_sil";"PE02J1B3";"";"";;"2018-03-28";"2018-03-28";
+"1422000225";"131331";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310 i5";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO
+
+- DANO NA CARCAÇA INFERIOR DIREITA(CANTO), PEQUENO RACHADO.";"Laptop";"luza_borg";"PE02J19U";"";"";;"2018-03-28";"2018-03-28";
+"1422000226";"136248";"Production";"Equipamento Usado - em bom estado";"HP";"4440";"EQUIPAMENTO USADO EM BOM ESTADO
+
+- TRINCADOS NA TAMPA;";"Laptop";"ian_aguiar";"BRG250F3K1";"";"";;"2018-03-28";"2018-03-28";
+"1422000227";"131160";"Production";"Equipamento Novo";"DELL";"P74G";"EQUIPAMENTO NOVO.";"Laptop";"elielson_santos";"J1J5HJ2";"";"";;"2018-03-28";"2018-03-28";
+"1422000228";"N/A";"Production";"Equipamento Novo";"LENOVO";"E431";"EQUIPAMENTO NOVO.";"Laptop";"lara_freitas";"PEERH87";"";"";;"2018-03-28";"2018-03-28";
+"1422000229";"131432";"Production";"Equipamento Novo";"LENOVO";"V310";"EQUIPAMENTO NOVO.";"Laptop";"erika_vieira";"PE02ZB05";"";"";;"2018-03-28";"2018-03-28";
+"1422000230";"110208";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"FALTA TECLA L";"Laptop";"thauana_ferre";"BRG217FDWZ";"";"";;"2018-03-28";"2018-03-28";
+"1422000231";"114335";"Production";"Equipamento Novo";"HP";"440";"EQUIPAMENTO NOVO.";"Laptop";"lucas_jose";"BRJ41558CX";"";"";;"2018-03-28";"2018-03-28";
+"1422000232";"111093";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"igor_motta";"BRG225F2F8";"";"";;"2018-03-29";"2018-03-29";
+"1422000233";"110355";"Production";"Equipamento Novo";"HP";"4430S";"EQUIPAMENTO NOVO.";"Laptop";"ranulfo_neto";"BRG225F2GP";"";"";;"2018-03-29";"2018-03-29";
+"1422000234";"107003";"Production";"Equipamento Usado - com avarias";"HP";"4320S";"NOTEBOOK EM BOM ESTADO , APRESENTANDO AMASSADO NO CANTO DIREITO E ESQUERDO , TAMPA DE SAIDA DE SOM UM POUCO SOLTA.";"Laptop";"cleber_cleme";"BRG113F693";"";"";;"2018-03-29";"2018-03-29";
+"1422000235";"131705";"Production";"Equipamento Usado - em bom estado";"LENOVO";"B320";"NOTEBOOK SEMINOVO EM PERFEITO ESTADO DE CONSERVAÇÃO";"Laptop";"28952.fernanda";"PE02ZKA1";"";"";;"2018-04-10";"2018-04-10";
+"1422000236";"112492";"Production";"Equipamento Usado - em bom estado";"HP";"4440S i5";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"linique_santos";"BRG302FG1H";"";"";;"2018-04-13";"2018-04-13";
+"1422000237";"122045";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"jardel_silva";"64-1C-67-6F-73-D9";"";"";;"2018-04-13";"2018-04-13";
+"1422000238";"111811";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"Equipamento usado com avarias - Pequeno amassado na tampa, lateral direita trincada.";"Laptop";"paulla_freitas";"BRG239F95M";"";"";;"2018-04-13";"2018-04-13";
+"1422000239";"130331";"Production";"Equipamento Usado - em bom estado";"DELL";"LATITUDE 3480 i7";"EQUIPAMENTO NOVO
+
+NOTEBOOK EM PREPARAÇÃO P/ Leandro Maximiano Gomes";"Laptop";"leandro_gomes";"437G5L2";"";"";;"2018-04-13";"2018-04-13";
+"1422000240";"121234";"Production";"Equipamento Usado - com avarias";"LENOVO";"E431";"Equipamento usado com avarias - Lateral esquerda trincada";"Laptop";"guilherme_sales";"PEDZL25";"";"";;"2018-04-13";"2018-04-13";
+"1422000241";"110812";"Production";"Equipamento Usado - em bom estado";"HP";"ELITEBOOK 8460P i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"fabricio.souza@temposervicos.com.br";"BRG228FJJV";"";"";;"2018-04-13";"2018-04-13";
+"1422000242";"106991";"Production";"Equipamento Usado - em bom estado";"HP";"4320S";"NOTEBOOK USADO EM BOM ESTADO - APENAS SINAIS DE DESGASTE DO TEMPO";"Laptop";"maria_neves";"LE508LT#AC4";"";"";;"2018-04-13";"2018-04-13";
+"1422000243";"85266";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"michelle_rosa";"BRG23FJ56";"";"";;"2018-04-13";"2018-04-13";
+"1422000244";"128927";"Production";"Equipamento Usado - em bom estado";"LENOVO";"310";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"leandro_lamou";"PE02CUM1";"";"";;"2018-04-13";"2018-04-13";
+"1422000245";"129019";"Production";"Equipamento Usado - em bom estado";"LENOVO";"X250";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"thiago_ferreira";"PE02ALYK";"";"";;"2018-04-13";"2018-04-13";
+"1422000246";"111825";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S i5";"-QUEBRADO NA LATERAL INFERIOR ESQUERDA;
+-QUEBRADO NO CANTO INFERIOR DIREITO.";"Laptop";"estoque@callink.com.br";"BRG239FL11B";"";"";;"2018-04-13";"2018-04-13";
+"1422000247";"131433";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"selma_franco";"PE02ZB1R";"";"";;"2018-04-13";;
+"1422000248";"109473";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"mabio_galiza";"BRG212F0TL";"";"";;"2018-04-13";"2018-04-13";
+"1422000249";"S/N";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"CARCAÇA DESGASTADA E DVD-ROM INCONSOLADA FITA A DEVISA
+
+Foi enviado emai solicitando o comparecimento da colaboradora ao Estoque para patrimoniar o notebook, FAZER termo padrão e verificar se está utilizando MOUSE e MOCHILA.";"Laptop";"fernanda_santos";"BRG212F86K";"";"";;"2018-04-13";"2018-04-13";
+"1422000250";"S/N.";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"Equipamento usado com várias avarias conforme sinalizado no formulário (dobradiças, ethernet, borda, tampa)";"Laptop";"nadia_canuto";"XU013LT#AC4";"";"";;"2018-04-13";"2018-04-13";
+"1422000251";"112531";"Production";"Equipamento Usado - em bom estado";"HP";"4440 S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"leonardo_marque";"BRG302FG15";"";"";;"2018-04-13";"2018-04-13";
+"1422000252";"122047";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"31351_walquira";"PEERM4O";"";"";;"2018-04-13";"2018-04-13";
+"1422000253";"112601";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"";"Laptop";"jose_rubens";"BRG315F848";"";"";;"2018-04-13";"2018-04-13";
+"1422000254";"121677";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"willian_hen";"BRJ502JCKF";"";"";;"2018-04-13";"2018-04-13";
+"1422000255";"125448";"Production";"Equipamento Usado - com avarias";"LENOVO";"80V8";"Equipamento usado com avarias - Dobradiça danificada";"Laptop";"igor_argondizo";"PE02J1AN";"";"";;"2018-04-13";"2018-04-13";
+"1422000256";"110778";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"jefferson_souza";"BRG315F84D";"";"";;"2018-04-13";"2018-04-13";
+"1422000257";"106468";"Estoque";"Equipamento Usado - em bom estado";"HP";"4320S i3";"Equipamento usado com vários sinais de desgaste:
+
+- Moldura da Tela rachada, lado inferior esquerdo;
+- Bateria rachada;";"Laptop";"estoque@callink.com.br";"BRG113F6FX";"";"";;"2018-04-13";"2018-04-13";
+"1422000258";"109758";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Desktop";"marco_gervasio";"BRG212F0VR";"";"";;"2018-04-13";"2018-04-13";
+"1422000259";"11098";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"janeel_teles";"BRG225F2FW";"";"";;"2018-04-13";"2018-04-13";
+"1422000260";"110799";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"saulo_costa";"BRG228FJFP";"";"";;"2018-04-13";"2018-04-13";
+"1422000261";"110547";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"Notebook usado em bom estado de conservação.";"Laptop";"geovanna_carla";"BRG23FJ56";"";"";;"2018-04-13";"2018-04-13";
+"1422000262";"126866";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"manoel_junior";"BRJ512NG1M";"";"";;"2018-04-13";"2018-04-13";
+"1422000263";"115058";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"izilmar_martins";"BRJ4229F7C";"";"";;"2018-04-13";"2018-04-13";
+"1422000264";"112266";"Production";"Equipamento Usado - em bom estado";"HP";"8460P i7";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"ghabrielle_alba";"BRG234F4F3";"";"";;"2018-04-13";"2018-04-13";
+"1422000265";"121906";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"ricardo_cascao";"PEDZL62";"";"";;"2018-04-13";"2018-04-13";
+"1422000266";"131659";"Production";"Equipamento Novo";"LENOVO";"81CC";"EQUIPAMENTO NOVO";"Laptop";"28670_stephanny";"PE02ZY24";"";"";;"2018-04-13";"2018-04-13";
+"1422000267";"112602";"Production";"Equipamento Usado - em bom estado";"HP";"4440s i5";"Equipamento Usado";"Laptop";"31350_thifani";"BRG315F84G";"";"";;"2018-04-13";"2018-04-13";
+"1422000268";"109065";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"altamiro_neto";"BRG152F2ND";"";"";;"2018-04-14";"2018-04-14";
+"1422000269";"109064";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"Equipamento usado com avarias - Quina esquerda trincada, tampa frontal arranhada .";"Laptop";"wesley_vicente";"BRG152F2N7";"";"";;"2018-04-14";"2018-04-14";
+"1422000270";"126865";"Production";"Equipamento Usado - com avarias";"HP";"440G2";"Equipamento usado com avarias - Quina direita trincada";"Laptop";"leticia_araujo";"BRJ512NG0S";"";"";;"2018-04-14";"2018-04-14";
+"1422000271";"131166";"Inactive";"Equipamento Novo";"LENOVO";"80V8";"EQUIPAMENTO DANIFICADO PELO USUÁRIO:
+""Larissa Nayara De Souza"" <larissa.souza@callink.com.br>
+
+SEM RECUPERAÇÃO: ENCAMINHADO PARA DESCONTO EM FOLHA CONFORME ANEXO.";"Laptop";"larissa_souza";"PE02J1B1";"";"";;"2018-04-14";"2018-04-14";
+"1422000272";"121907";"Production";"Equipamento Usado - com avarias";"LENOVO";"E431";"Equipamento usado com avarias - Falta o pino central";"Laptop";"william_vieira";"PEDZR771";"";"";;"2018-04-14";"2018-04-14";
+"1422000273";"115986";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"carlos_marega";"PEDZN25";"";"";;"2018-04-14";"2018-04-14";
+"1422000274";"114788";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"luiz_oliveira";"PEBPK93";"";"";;"2018-04-14";"2018-04-14";
+"1422000275";"121661";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"marcelo_rafael";"PEEPG85";"";"";;"2018-04-14";"2018-04-14";
+"1422000276";"111107";"Estoque";"Equipamento Usado - em bom estado";"HP";"PavilionDM4 i7";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"estoque@callink.com.br";"BRG223FJGR";"";"";;"2018-04-14";"2018-04-14";
+"1422000277";"131334";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80UH";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"swb_samuel";"PE02P0PA";"";"";;"2018-04-14";"2018-04-14";
+"1422000278";"115627";"Production";"Equipamento Usado - com avarias";"LENOVO";"E431";"FALTANDO PINO CENTRAL";"Laptop";"bruno.martins";"PEDZR53";"";"";;"2018-04-14";"2018-04-14";
+"1422000279";"131412";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"marina_borges";"PE02ZB17";"";"";;"2018-04-14";"2018-04-14";
+"1422000280";"131161";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"joyce_marinho";"PE02J1AY";"";"";;"2018-04-14";"2018-04-14";
+"1422000281";"21374";"Production";"Equipamento Usado - com avarias";"HP";"4440 S";"Equipamento usado com avarias - Trincado na tampa frontal do laptop .";"Laptop";"ketllen_carol";"BRG250F3G9";"";"";;"2018-04-14";"2018-04-14";
+"1422000282";"131162";"Production";"Equipamento Usado - com avarias";"LENOVO";"V310";"QUEBRADO NA DOBRADIÇA DO LADO DIREITO";"Laptop";"rodolfo_duarte";"PE02KHAJ";"";"";;"2018-04-17";"2018-04-17";
+"1422000283";"131439";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"luis_gusta";"PE02ZB2T";"";"";;"2018-04-17";"2018-04-17";
+"1422000284";"121662";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"";"PEEPL80";"";"";;"2018-04-17";"2018-04-17";
+"1422000285";"111084";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S";"- NOTEBOOK USADO APRESENTANDO SOMENTE TRÊS TRINCADOS NO BACK COVER . 
+- BATERIA NÃO SEGURA CARGA";"Laptop";"estoque@callink.com.br";"BRG225F2BF";"";"";;"2018-04-18";"2018-04-18";
+"1422000286";"111817";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"NOTEBOOK USADO COM AVARIAS:
+
+- QUEBRADO PRÓXIMO NA PORTA DO CD;
+- UM TRINCADO PRÓXIMO A ENTRADA DO USB;
+- FALTA UM PEDAÇO DE BORDA PRÓXIMO O BOTÃO DE LIGAR;
+
+ÚLTIMO USUÁRIO: RAPHAEL AUGUSTO DA SILVA-27037/PCP";"Laptop";"gabriel_buen";"BRG239FKX3";"";"";;"2018-04-18";"2018-04-18";
+"1422000287";"97295";"Production";"Equipamento Usado - em bom estado";"HP";"640";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"andre_goncalves";"BRJ5440YTS";"";"";;"2018-04-23";"2018-04-23";
+"1422000288";"ILEGIVEL";"Production";"Equipamento Usado - com avarias";"HP";"4440S";"Equipamento usado com avarias, 02 USB's direitas avariadas, carcaça desgastada, 02 dobradiças quebradas.";"Laptop";"vinicius_carrijo";"BRG302FG5X";"";"";;"2018-04-23";"2018-04-23";
+"1422000289";"25591";"Inactive";"Equipamento Usado - em bom estado";"LENOVO";"E431";"######## ATENÇÃO ##########
+
+- FAVOR DESCONSIDERAR ESTE CADASTRO -
+
+EQUIPAMENTO CADASTRADO COM PATRIMÔNIO:121467";"Laptop";"";"PEG88";"";"";;"2018-04-23";"2018-04-23";
+"1422000290";"25954";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"Equipamento usado com a carcaça desgastada com pequenas avarias conforme formulário .";"Laptop";"carlos_alb";"BRG217FDV2";"";"";;"2018-04-23";"2018-04-23";
+"1422000291";"107762";"Production";"Equipamento Usado - em bom estado";"HP";"4320S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"nubia_vieira";"ILEGIVEL";"";"";;"2018-04-23";"2018-04-23";
+"1422000292";"109177";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"EQUIPAMENTO BASTANTE DESGASTADO NA CARCAÇA";"Laptop";"lyvia_oliveira";"BRG203F5TC";"";"";;"2018-04-28";"2018-04-28";
+"1422000293";"121935";"Production";"Equipamento Usado - em bom estado";"HP";"240G2";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"matheus_rocha";"BRJ445BC5H";"";"";;"2018-04-28";"2018-04-28";
+"1422000294";"112900";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"FALTA PINO CENTRAL DO TECLADO";"Laptop";"gustavo_urias";"BRG234F49R";"";"";;"2018-04-28";"2018-04-28";
+"1422000295";"126107";"Production";"Equipamento Usado - em bom estado";"HP";"ILEGIVEL";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"luccas_lisboa";"ILEGIVEL";"";"";;"2018-04-28";"2018-04-28";
+"1422000296";"131410";"Production";"Equipamento Usado - em bom estado";"HP";"4430S i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"fernando_apare";"BRG239FKWX";"";"";;"2018-04-28";"2018-04-28";
+"1422000297";"126874";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"camila_menghini";"BRG325F078";"";"";;"2018-04-28";"2018-04-28";
+"1422000298";"114786";"Maintenance";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"NOTEBOOK USADO EM PERFEITO ESTADO, SEM AVARIAS.";"Laptop";"estoque@callink.com.br";"PECNL63";"";"";;"2018-04-28";"2018-04-28";
+"1422000299";"124926";"Production";"Equipamento Usado - em bom estado";"HP";"640";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"rafael_pontual";"BRJ529VDM5";"";"";;"2018-04-28";"2018-04-28";
+"1422000300";"114152";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"";"BRJ4045B0";"";"";;"2018-04-28";"2018-04-28";
+"1422000301";"121434";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"leonardo_cunha";"BRJ4448T3N";"";"";;"2018-04-28";"2018-04-28";
+"1422000302";"111097";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"roberta_damazio";"BRG225F2GX";"";"";;"2018-04-28";"2018-04-28";
+"1422000303";"112495";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"kamila_carrijo";"BRG302FG16";"";"";;"2018-04-28";"2018-04-28";
+"1422000304";"111091";"Production";"Equipamento Usado - em bom estado";"HP";"4430S i3";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"baltazar_neto";"BRG225F29V";"";"";;"2018-04-28";"2018-04-28";
+"1422000305";"131444";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"ana_ferraresi";"PE02ZB23";"";"";;"2018-04-28";"2018-04-28";
+"1422000306";"131424";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"gustavo_henr";"PE02ZB11";"";"";;"2018-04-28";"2018-04-28";
+"1422000307";"111684";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"cesar_felipe";"BRG229F5R6";"";"";;"2018-04-28";"2018-04-28";
+"1422000308";"129972";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"douglas_fer";"PE02J1BC";"";"";;"2018-04-28";"2018-04-28";
+"1422000309";"107004";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO DE CONSERVAÇÃO, SEM AVARIAS; BATERIA DANIFICADA, FUNCIONAMENTO SOMENTE NA TOMADA;";"Laptop";"28855_fabricio";"BRG113F6D9";"";"";;"2018-04-28";"2018-04-28";
+"1422000310";"121435";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"hallysson_fer";"BRJ4448T30";"";"";;"2018-04-28";"2018-04-28";
+"1422000311";"130502";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"EQUIPAMENTO USADO COM A CARCAÇA DESGASTADA COM PEQUENAS AVARIAS .";"Laptop";"carlos_alb";"BRG217FDV2";"";"";;"2018-04-28";"2018-04-28";
+"1422000312";"121467";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"31316_carlos";"PEG88";"";"";;"2018-04-28";"2018-04-28";
+"1422000313";"131391";"Production";"Equipamento Usado - em bom estado";"HP";"640";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"andre_goncalves";"BRJ5440YTS";"";"";;"2018-04-28";"2018-04-28";
+"1422000314";"108782";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"jose_rubens";"BRG790145F";"";"";;"2018-04-28";"2018-04-28";
+"1422000315";"12935";"Production";"Equipamento Usado - em bom estado";"HP";"HP640";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"mariana_virgilio";"BRJ545492SQS";"";"";;"2018-04-30";"2018-04-30";
+"1422000316";"122611";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"muriel_lima";"PEDZR41";"";"";;"2018-04-30";"2018-04-30";
+"1422000317";"114664";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"maria_castanheira";"BRJ4155B58";"";"";;"2018-04-30";"2018-04-30";
+"1422000318";"124930";"Production";"Equipamento Usado - em bom estado";"HP";"640";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"guilherme_galard";"BRJ529VDLB";"";"";;"2018-04-30";"2018-04-30";
+"1422000319";"126106";"Production";"Equipamento Usado - em bom estado";"HP";"24063";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"kelen_gomes";"BRJ 4373Y0R";"";"";;"2018-04-30";"2018-04-30";
+"1422000320";"131447";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"guilherme_paula";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000321";"126869";"Production";"Equipamento Usado - com avarias";"HP";"440";"LATERAIS ESQUERDA E DIREITA ESTA QUEBRADA .";"Laptop";"cristiane_maria";"BRJ512N1H";"";"";;"2018-04-30";"2018-04-30";
+"1422000322";"131357";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"mayke_vinnicius";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000323";"122909";"Production";"Equipamento Usado - com avarias";"HP";"4430S i3";"NOTEBOOK USADO COM AVARIAS:
+
+- DESGASTES NA CARCAÇA;
+- FECHAMENTO DIREITO DE TELA QUEBRADO;
+- FALTA DO PARAFUSO DE TELA INFERIOR DIREITO;
+- TRINCADO LATERAL ESQUERDA;";"Laptop";"wellington_sou";"BRG232FJ59";"";"";;"2018-04-30";"2018-04-30";
+"1422000324";"111797";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"bartasson";"BRG239F9TQ";"";"";;"2018-04-30";"2018-04-30";
+"1422000325";"104767";"Production";"Equipamento Usado - em bom estado";"HP";"4320S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"gustavo_inacio";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000326";"131429";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310 i5";"EQUIPAMENTO USADO COM UM TRINCADO NA ENTRADA DO CARREGADOR.
+
+
+
+NOTEBOOK EM PREPARAÇÃO PARA:
+JULIAN TEXTOR SCHMITT";"Laptop";"";"PEQ2ZB1E";"";"";;"2018-04-30";"2018-04-30";
+"1422000327";"108779";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"EQUIPAMENTO POSSUI UM TRINCADO NA LATERAL ESQUERDA";"Laptop";"sullen_gabrielle";"BRG145F735";"";"";;"2018-04-30";"2018-04-30";
+"1422000328";"111819";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO APRESENTANDO DESGASTE NA CARCAÇA.";"Laptop";"luiz_renato";"BRG239FKVX";"";"";;"2018-04-30";"2018-04-30";
+"1422000329";"111818";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"EQUIPAMENTO USADO COM AVARIAS:
+
+-TRINCADO NO CANTO DIREITO PRÓX AO LEITOR DE DVD;
+-GRADE DA SAÍDA DE AR QUEBRADA;
+-QUEBRADO E AMASSADO NO CANTO ESQUERDO;";"Laptop";"gisdeidz_alves";"BRG239FL10";"";"";;"2018-04-30";"2018-04-30";
+"1422000330";"110207";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"NOTEBOOK USADO COM AVARIAS:
+
+- SINAIS DE DESGASTE DO TEMPO;
+- QUEBRADO PROXIMO A PÉ SUPERIOR ESQUERDO E PROX AO CONEXÃO DE REDE;";"Laptop";"danielly_lopes";"BRG217FF00";"";"";;"2018-04-30";"2018-04-30";
+"1422000331";"131169";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Phone";"isabella_maga";"PE02J1BM";"";"";;"2018-04-30";"2018-04-30";
+"1422000332";"136209";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO EM BOM ESTADO , APRESENTA APENAS DESGASTE NA CARCAÇA .";"Laptop";"31158_luis";"BRG302FG2F";"";"";;"2018-04-30";"2018-04-30";
+"1422000333";"122601";"Production";"Equipamento Usado - com avarias";"LENOVO";"E431";"FALTA O PINO CENTRAL DO TECLADO";"Laptop";"diana_santos";"PGEPX30";"";"";;"2018-04-30";"2018-04-30";
+"1422000334";"121657";"Production";"Equipamento Usado - em bom estado";"HP";"440";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"lilian_dutra";"BRJ43960GN";"";"";;"2018-04-30";"2018-04-30";
+"1422000335";"111823";"Production";"Equipamento Usado - em bom estado";"HP";"PAVILION DM4 i7";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"adalberto_junior";"BRG231F6V8";"";"";;"2018-04-30";"2018-04-30";
+"1422000336";"111794";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"joao_costa";"BRG239F9L3";"";"";;"2018-04-30";"2018-04-30";
+"1422000337";"110798";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"carlos_andre";"BRG228FHXK";"";"";;"2018-04-30";"2018-04-30";
+"1422000338";"104766";"Production";"Equipamento Usado - com avarias";"HP";"4320S i5";"NOTEBOOK USADO:
+
+- CARCAÇA DESGASTADA;
+- AMASSADOS NA SAÍDA DE ÁUDIO;
+- QUEBRADO PRÓXIMO A TECLA ""ESC"";";"Laptop";"felipe_beze";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000339";"106994";"Production";"Equipamento Usado - em bom estado";"HP";"4320S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"nayara_eduarda";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000340";"112067";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"camila_zandonadi";"BRG250FNZ6";"";"";;"2018-04-30";"2018-04-30";
+"1422000341";"111793";"Production";"Equipamento Usado - em bom estado";"HP";"4430S i5";"NOTEBOOK USADO EM BOM ESTADO:
+
+- RACHADO CANTO SUPERIOR DIREITO;
+- DESGASTE DO TEMPO/
+- RACHADO TELA INFERIOR ESQUERDA;";"Laptop";"pamela_suelen";"BRG239F9VB";"";"";;"2018-04-30";"2018-04-30";
+"1422000342";"110785";"Production";"Equipamento Usado - em bom estado";"HP";"8460P";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"luis_martins";"BRG234F4JV";"";"";;"2018-04-30";"2018-04-30";
+"1422000343";"111688";"Estoque";"Equipamento Usado - em bom estado";"HP";"4430S i3";"EQUIPAMENTO USADO EM BOM ESTADO
+
+- QUEBRADO NO CANTO SUPERIOR DIREITO;
+- NOTEBOOK COM SINAIS DE DESGATE;";"Laptop";"estoque@callink.com.br";"BRG229F5NK";"";"";;"2018-04-30";"2018-04-30";
+"1422000344";"111607";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s i3";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA.
+
+
+ENCAMINHADO PARA SUCATA, REAPROVEITAMENTO DE PEÇAS E CARCAÇA";"Laptop";"estoque@callink.com.br";"BRG229F5P0";"";"";;"2018-06-29";"2018-06-29";
+"1422000345";"110354";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S";"EQUIPAMENTO USADO COM AVARIAS:
+
+- TRINCADO NA BATERIA;
+- QUEBRADO NO CANTO DIREITO;
+- LEITOR DE DVD SOLTANDO;
+- QUEBRADO NOS CANTOS DE TELA;";"Laptop";"estoque@callink.com.br";"BRG225F2FL";"";"";;"2018-04-30";"2018-04-30";
+"1422000346";"107557";"Maintenance";"Equipamento Usado - com avarias";"HP";"4320s i5";"DESGASTE NA CARCANÇA";"Laptop";"estoque@callink.com.br";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000347";"131446";"Production";"Equipamento Novo";"LENOVO";"80V8";"EQUIPAMENTO NOVO";"Laptop";"barbara_ferre";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000348";"111099";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S i3";"- TRINCADO NA CARCAÇA DO LADO DIREITO; 
+- DVD COM MARCAS DE COLA;
+- LATERAL DA MOLDURA TRINCADA SUPERIOR/INFERIOR ESQUERDA;";"Laptop";"estoque@callink.com.br";"BRG225F2HR";"";"";;"2018-04-30";"2018-04-30";
+"1422000349";"131361";"Production";"Equipamento Usado - com avarias";"DELL";"3480";"EQUIPAMENTO EM MANUTENÇÃO , CARLOS SE ENCONTRA COM O EQUIPAMENTO PROVISÓRIO .";"Laptop";"carlos_leite";"41QLSL2";"";"";;"2018-04-30";"2018-04-30";
+"1422000350";"107556";"Estoque";"Equipamento Usado - em bom estado";"HP";"4320S";"- NOTEBOOK COM SINAIS DE DESGASTE; 
+- QUEBRADO PRÓXIMO A SAÍDA DE AR; 
+- RACHADO NA LATERAL DIREITA E ESQUERDA; 
+- BORDAS DA TELA RACHADAS;
+- BATERIA NÃO SEGURA CARGA""";"Laptop";"estoque@callink.com.br";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000351";"115624";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"rodrigo_duarte";"PEDVR56";"";"";;"2018-04-30";"2018-04-30";
+"1422000352";"115594";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"carlos_augusto";"ILEGIVEL";"";"";;"2018-04-30";"2018-04-30";
+"1422000353";"122603";"Production";"Equipamento Usado - com avarias";"HP";"LENOVO";"";"Laptop";"juliana_azev";"PEERF33";"";"";;"2018-04-30";"2018-04-30";
+"1422000354";"110790";"Production";"Equipamento Usado - em bom estado";"HP";"4440S";"EQUIPAMENTO USADO EM BOM ESTADO, SEM AVARIAS.
+
+
+* ESTAVA COM ""TASSIANA RODRIGUES COSTA - MT 6937""";"Laptop";"30327_lucas";"BRG316F8KN";"";"";;"2018-04-30";"2018-04-30";
+"1422000355";"136204";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"*DESGASTE DA CARCAÇA.
+*TRINCADOS NA CARCAÇA.
+*USB´S DO LADO DIREITO ESTA COM MAL CONTATO .
+*DOBRADIÇA DO LADO ESQUERDO ESTREGADA .";"Laptop";"fernando_campos";"BRG217FF02";"";"";;"2018-04-30";"2018-04-30";
+"1422000356";"110086";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"LCD QUEBRADO";"Laptop";"aline_marques";"BRG217FDMY";"";"";;"2018-04-30";"2018-04-30";
+"1422000357";"112615";"Estoque";"Equipamento Usado - com avarias";"HP";"4440S i5";"FALTA TECLA ""PRINT"" NO TECLADO";"Laptop";"estoque@callink.com.br";"BRG315F867";"";"";;"2018-04-30";"2018-04-30";
+"1422000358";"111813";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"DOBRADIÇA DIREITA QUEBRADA";"Laptop";"camila_santos";"BRG239F9WW";"";"";;"2018-04-30";"2018-04-30";
+"1422000359";"131455";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"bruna_nati";"PE02ZB20";"";"";;"2018-04-30";"2018-04-30";
+"1422000360";"110353";"Production";"Equipamento Usado - em bom estado";"HP";"4430S";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"gustavo_santos";"BRG225F2HM";"";"";;"2018-04-30";"2018-04-30";
+"1422000361";"111087";"Production";"Equipamento Usado - com avarias";"HP";"4430S i3";"NOTEBOOK USADO COM AVARIAS:
+
+- FALTA TAMPA DO DVD;
+- TRAVA DA BATERIA DIREITA QUEBRADA;
+- BORDA DA TELA COM QUEBRADOS;";"Laptop";"aurora_mello";"BRG225F2J2";"";"";;"2018-04-30";"2018-04-30";
+"1422000362";"131454";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"elismario_bor";"PG02ZB1Y";"";"";;"2018-04-30";"2018-04-30";
+"1422000363";"131453";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"thamara_samor";"PE02ZB16";"";"";;"2018-04-30";"2018-04-30";
+"1422000364";"131450";"Production";"Equipamento Usado - em bom estado";"LENOVO";"80V8";"EQUIPAMENTO USADO EM BOM ESTADO";"Laptop";"paulo_santana";"PE02ZB21";"";"";;"2018-04-30";"2018-04-30";
+"1422000365";"132534";"Production";"Equipamento Novo";"LENOVO";"B320-81CC";"NOTEBOOK NOVO.";"Laptop";"29168_diego";"PE030K1W";"";"";;"2018-05-03";"2018-05-03";
+"1422000366";"126877";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431";"NOTEBOOK USADO EM PREFEITO ESTADO, SEM AVARIAS.";"Laptop";"29187_cristiano";"PE-ERK60";"";"";;"2018-05-09";"2018-05-09";
+"1422000367";"131359";"Production";"Equipamento Usado - em bom estado";"LENOVO";"v310";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO SEM AVARIAS.";"Laptop";"29098_fabiana";"PE02J19E";"";"";;"2018-05-14";"2018-05-14";
+"1422000368";"122922";"Production";"Equipamento Usado - com avarias";"LENOVO";"V310";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO, CARCAÇA QUEBRADA(TRINCADA) LADO INFERIOR E SUPERIOR ESQUERDO.
+- NOTEBOOK ESTAVA COM ""LETICIA CRISTINA SILVA"", AGUARDANDO DEFINIÇÃO DA COBRANÇA DOS DANOS/AVARIAS OCORRIDOS DURANTE O PERÍODO ESTAVA COM A MESMA.";"Laptop";"yago_dasilva";"PE02J1AR";"";"";;"2018-05-16";;
+"1422000369";"132763";"Production";"Equipamento Usado - com avarias";"HP";"PROBOOK 4430s";"NOTEBOOK USADO COM AMASSADO NO ALTO FALANTE, QUEBRADO NO CANTO DIREITO PRÓXIMO A BATERIA, QUEBRADO NA TRAVA DA BATERIA E APRESENTANDO DESGASTE DE USO NO TOUCH.";"Laptop";"29226_antonio";"BRG14BF739";"";"";;"2018-05-17";"2018-05-17";
+"1422000370";"2930";"Production";"Equipamento Usado - em bom estado";"";"HP G40";"NOTEBOOK USADO EM BOM ESTADO, SEM NENHUMA AVARIA.";"Laptop";"29230_vinicius";"BR5529VOKN";"";"";;"2018-05-21";;
+"1422000371";"112600";"Production";"Equipamento Usado - em bom estado";"HP";"FOLIO 9470M i5";"NOTEBOOK USADO EM BOM ESTADO:
+
+- TAMPA ADESIVADA;
+- TECLADO SEM O BOTÃO CENTRAL;
+- PEQUENO QUEBRADO NA PARTE DE BAIXO 
+- APRESENTANDO DESGASTE DO TEMPO";"Laptop";"daniel_nunes";"CNU251CJKQ";"";"";;"2018-05-22";"2018-05-22";
+"1422000372";"127620";"Production";"Equipamento Usado - com avarias";"DELL";"Vostro P41G i5";"- LEVE FROUXIDÃO NO CONECTOR DE REDE;
+- FALTA UM PARAFUSO NA CARCAÇA INFERIOR;";"Laptop";"31775_roberto";"4KLYVC2";"";"";;"2018-05-22";"2018-05-30";
+"1422000373";"105875";"Production";"Equipamento Usado - em bom estado";"HP";"HP 4430s i3";"Notebook usado porém em bom estado de conservação.";"Laptop";"camilla_paula";"BRQ040F3J8";"";"";;"2018-05-30";;
+"1422000374";"124572";"Inactive";"Equipamento Usado - em bom estado";"LENOVO";"THINKPAD T440";"NOTEBOOK USADO EM BOM ESTADO SEM AVARIAS.
+
+OBS:NOTEBOOK FOI ROUBADO, BOLETIM DE OCORRÊNCIA ARQUIVADO NA PASTA DO COLABORADOR.";"Laptop";"rodrigo_silveira";"PE024DT9";"";"";;"2018-05-30";"2018-05-30";
+"1422000375";"134736";"Production";"Equipamento Novo";"LENOVO";"LENOVO B320 i7";"NOTEBOOK NOVO / FONTE NOVA
+MAC: PENDENTE";"Laptop";"29276_paulo";"PE03C355";"";"";;"2018-06-01";;
+"1422000376";"134893";"Production";"Equipamento Usado - em bom estado";"LENOVO";"Lenovo B320 i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"29783_bruno";"PE03C3RH";"";"";;"2018-06-01";;
+"1422000377";"134737";"Production";"Equipamento Novo";"LENOVO";"LENOVO B320 i7";"NOTEBOOK NOVO
+
+MAC: PENDENTE";"Laptop";"29275_diogo";"PE03C3RS";"";"";;"2018-06-01";;
+"1422000378";"134894";"Production";"Equipamento Novo";"LENOVO";"LENOVO B3320 i5";"NOTEBOOK NOVO";"Laptop";"leonardo_mendes";"PE036302";"";"";;"2018-06-04";;
+"1422000379";"131568";"Production";"Equipamento Usado - em bom estado";"LENOVO";"B320 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"31615_anderson";"PE0362AG";"";"";;"2018-06-05";;
+"1422000380";"127550";"Inactive";"Equipamento Usado - em bom estado";"HP";"HP PROBOOK 4440S";"NOTEBOOK USADO COM UMA AVARIA NA JUNÇÃO DA TELA
+
+
+
+ATENÇÃO NOTEBOOK FOI ROUBADO, BO APRESENTADO PELA FUNCIONÁRIA EM ANEXO";"Laptop";"";"";"";"";;"2018-06-08";;
+"1422000381";"115626";"Production";"Equipamento Usado - em bom estado";"Lenovo";"Lenovo E431 i7";"Notebook usado em bom estado de conservação, teclado sem o botão central do mouse e parte superior esquerda quebrada no local de saída de ar.";"Laptop";"fabio_nunes";"";"";"";;"2018-06-11";;
+"1422000382";"134896";"Production";"Equipamento Usado - em bom estado";"Lenovo";"Lenovo B320 i5";"Notebook Usado";"Laptop";"leonardo_souza";"PE03622T";"";"";;"2018-06-11";;
+"1422000383";"106362";"Estoque";"Equipamento Usado - com avarias";"HP";"PROBOOK HP 4320s";"-TRAVA DA BATERIA QUEBRADA
+-APRESENTANDO DESGASTE DE USO ACEITÁVEL PARA PRODUÇÃO.";"Laptop";"estoque@callink.com.br";"BRG113FQFV";"";"";;"2018-06-23";;
+"1422000384";"104973";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG113F8FF";"";"";;"2018-06-29";;
+"1422000385";"106993";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG113F60W";"";"";;"2018-06-29";;
+"1422000386";"106459";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"";"BRG113F5FN";"";"";;"2018-06-29";;
+"1422000387";"104774";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s i5";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG102FP86";"";"";;"2018-06-29";;
+"1422000388";"104769";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s i3";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG102FNL5";"";"";;"2018-06-29";;
+"1422000389";"104770";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG102FNN3";"";"";;"2018-06-29";;
+"1422000390";"104974";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG102FNLD";"";"";;"2018-06-29";;
+"1422000391";"106992";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG113F6FW";"";"";;"2018-06-29";;
+"1422000392";"107000";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG113F6DG";"";"";;"2018-06-29";;
+"1422000393";"104772";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG002FNMR";"";"";;"2018-06-29";;
+"1422000394";"104768";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"INELEGÍVEL";"";"";;"2018-06-29";;
+"1422000395";"111824";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4430s";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG239FKVX";"";"";;"2018-06-29";;
+"1422000396";"128915";"Production";"Equipamento Novo";"Lenovo";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"marcelo_oliveir";"PE03DLXV";"";"";;"2018-07-05";;
+"1422000397";"128914";"Production";"Equipamento Novo";"Lenovo";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"douglas_franca";"PE03DLYU";"";"";;"2018-07-05";;
+"1422000398";"106997";"Estoque";"Equipamento Usado - em bom estado";"HP";"HP ProBook 4320s";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO.
+
+- Apresenta quebrado próximo a lateral esquerda ao lado da entrada HDMI.";"Laptop";"estoque@callink.com.br";"BRG113F6D4";"";"";;"2018-07-05";;
+"1422000399";"110774";"Production";"Equipamento Usado - em bom estado";"HP";"HP Envy 41150BR i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"fernanda_andra";"BRG248FQ54";"";"";;"2018-07-11";;
+"1422000400";"130295";"Maintenance";"Equipamento Usado - com avarias";"HP";"PROBOOK 4440s";"NOTEBOOK USADO COM AVARIAS:
+
+- NOTEBOOK COM SINAIS DE DESGASTE DO TEMPO
+- MOUSE PAD NÃO FUNCIONA;
+- AMASSADOS NA TAMPA DA TELA;
+- DOBRADIÇAS DA TELA COM O PLASTICO QUEBRADO;
+- ENTRADAS USB DIRETA DANIFICADAS;";"Laptop";"estoque@callink.com.br";"BRG302FG5X";"";"";;"2018-07-11";;
+"1422000401";"122683";"Production";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"EQUIPAMENTO USADO:
+
+- ABERTURA A BATERIA DO LADO ESQUERDO ESTA SEM TRAVA;
+- TAMPA DA DOBRADIÇA DO LADO ESQUERDO ESTA QUEBRADA;";"Laptop";"chaster_camara";"BRG040F3KG";"";"";;"2018-07-12";;
+"1422000402";"124910";"Production";"Equipamento Novo";"Lenovo";"LENOVO B320";"NOTEBOOK NOVO";"Laptop";"rodrigo_martins";"PE03681G";"";"";;"2018-07-19";;
+"1422000403";"128925";"Production";"Equipamento Novo";"Lenovo";"LENOVO B320";"NOTEBOOK NOVO";"Laptop";"kleber_roberto";"PE03680F";"";"";;"2018-07-19";;
+"1422000404";"128923";"Production";"Equipamento Usado - em bom estado";"Lenovo";"LENOVO B320 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"frederico_alvar";"PE0367Z2";"";"";;"2018-07-19";;
+"1422000405";"135648";"Production";"Equipamento Novo";"Lenovo";"LENOVO B320";"NOTEBOOK NOVO";"Laptop";"adriana_cardoso";"PE03ALS5";"";"";;"2018-07-19";;
+"1422000406";"128918";"Production";"Equipamento Novo";"Lenovo";"LENOVO B320";"NOTEBOOK NOVO";"Laptop";"marcelo_paris";"PE03C3QC";"";"";;"2018-07-19";;
+"1422000407";"135646";"Production";"Equipamento Usado - em bom estado";"Lenovo";"LENOVO B320";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"renato_teixeira";"PE038FU2";"";"";;"2018-07-19";;
+"1422000408";"135651";"Production";"Equipamento Novo";"DELL";"DELL LATITUDE 3480 i7";"NOTEBOOK NOVO";"Laptop";"carlos_leite";"CNTWWQ2";"";"";;"2018-07-26";;
+"1422000409";"128916";"Production";"Equipamento Novo";"Lenovo";"LENOVO B320";"NOTEBOOK NOVO";"Laptop";"michael_vinhal";"PE03681H";"";"";;"2018-07-26";;
+"1422000410";"104972";"Inactive";"Equipamento Usado - com avarias";"HP";"PROBOOK 4320s i5";"SUCATA - NOTEBOOK SEM RECUPERAÇÃO
+
+
+NOTEBOOK USADO COM AVARIAS:
+
+- FECHAMENTO DE BATERIA ESQUERDO QUEBRADO;
+- QUEBRADO NA DIREITA E ESQUERDA DA BASE;
+- SINAS DE DESGASTE DO TENPO;
+
+
+NOTEBOOK ESTAVA COM: LINIQUE DE SOUZA SANTOS";"Laptop";"estoque@callink.com.br";"BRG113F6FH";"";"";;"2018-07-27";;
+"1422000411";"107007";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s";"SUCATA - NOTEBOOK SEM RECUPERAÇÃO
+
+
+
+NOTEBOOK USADO COM AVARIAS:
+
+-SEM HD;
+-QUEBRADO PRÓXIMO A SAÍDA DE AR;
+-QUEBRADO NAS LATERAIS ESQUERDA SUPERIOR E INFERIOR DA BASE;
+
+NOTEBOOK ESTAVA COM: EDNALDO KAIQUE";"Laptop";"estoque@callink.com.br";"BRG113F6F0";"";"";;"2018-07-27";;
+"1422000412";"104776";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s i5";"SUCATA - NOTEBOOK SEM RECUPERAÇÃO
+
+
+NOTEBOOK USADO COM AVARIAS:
+
+- PARAFUSOS(2) EXPOSTOS NA TELA;
+- TAMPA DE ÁUDIO AMASSADA;
+- MOUSE PAD SOUTO;
+- SINAIS DE DESGASTE COM O TEMPO;
+
+NOTEBOOK ESTAVA COM: MARIA CRISTINA-BRADESCO CAC, SERÁ ENCAMINHADO PARA ANÁLISE TÉCNICA";"Laptop";"estoque@callink.com.br";"BRG049F0WW";"";"";;"2018-07-27";;
+"1422000413";"136136";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s i3";"SUCATA - NOTEBOOK SEM RECUPERAÇÃO
+
+
+
+NOTEBOOK USADO COM AVARIAS:
+
+-SO CORROMPIDO;
+-SINAIS DE DESGASTE DO TEMPO
+
+
+NOTEBOOK ESTAVA COM: DANIEL REZENDE";"Laptop";"estoque@callink.com.br";"BRC1043";"";"";;"2018-07-27";;
+"1422000414";"105427";"Inactive";"Equipamento Usado - com avarias";"HP";"HP ProBook 4320s i3";"SUCATA - NOTEBOOK SEM RECUPERAÇÃO
+
+
+
+NOTEBOOK USADO COM AVARIAS:
+
+- HD NÃO FUNCIONA;
+- QUEBRADO PRÓXIMO A SAÍDA DE AR;
+- SINAIS DE DESGASTE DO TEMPO;
+
+NOTEBOOK ESTAVA COM: PEDRO HENRIQUE PEREIRA, SERÁ ENCAMINHADO PARA ANÁLISE TÉCNICA";"Laptop";"estoque@callink.com.br";"BRG025FWMK";"";"";;"2018-07-27";;
+"1422000415";"129032";"Production";"Equipamento Novo";"Lenovo";"X250";"NOTEBOOK NOVO - OPERAÇÃO SCOPUS";"Laptop";"";"PE02FZGT";"";"";;"2018-07-28";;
+"1422000416";"124567";"Production";"Equipamento Novo";"Lenovo";"LENOVO T440";"NOTEBOOK NOVO -TEMPO SERVICOS
+
+
+NOTEBOOK EM PRODUÇÃO NA TEMPO SERVIÇOS - 21/01/2019
+CHAMADO: 14191809";"Laptop";"";"PE024DW2";"";"";;"2018-07-28";;
+"1422000417";"124404";"Production";"Equipamento Novo";"Lenovo";"LENOVO T440 i5";"NOTEBOOK NOVO";"Laptop";"elbson_alves";"PE024DXA";"";"";;"2018-07-28";;
+"1422000418";"136148";"Production";"Equipamento Novo";"LENOVO";"LENOVO IDEAPAD 320 i7";"NOTEBOOK NOVO
+
+
+FONTE NOTEBOOK PT: 136160";"Laptop";"guilherme_monte";"PE036J81";"";"";;"2018-08-06";;
+"1422000419";"136140";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"ramon_sousa";"PE03C3Q9";"";"";;"2018-08-07";;
+"1422000420";"136142";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"rubia_caroline";"PE03C3R0";"";"";;"2018-08-07";;
+"1422000421";"136144";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO
+
+
+NOTEBOOK ESTA COM O PRESTADOR DE SERVIÇO:
+THIAGO BIANEH CAVALHERI";"Laptop";"denis_macedo";"PE03C3QD";"";"";;"2018-08-07";;
+"1422000422";"136146";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"30953_rogerio";"PE03C3R8";"";"";;"2018-08-07";;
+"1422000423";"131267";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"30710_kellen";"PE03C2Q0";"";"";;"2018-08-07";;
+"1422000425";"131271";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO
+
+
+FONTE PT 131270
+
+
+PRÉ-PREPARAÇÃO - MARCUS";"Laptop";"30283_matheus";"PE03C3R1";"";"";;"2018-08-07";;
+"1422000426";"131273";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO
+
+
+
+FONTE PT 131272
+
+
+PRÉ-PREPARAÇÃO - MARCUS";"Laptop";"wesley_silva";"PE03C3QP";"";"";;"2018-08-07";;
+"1422000427";"131275";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"30508_tales";"PE03C3EL";"";"";;"2018-08-07";;
+"1422000428";"131363";"Production";"Equipamento Usado - em bom estado";"DELL";"VOSTRO 14 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"31750_romulo";"JCLT862";"";"";;"2018-08-16";;
+"1422000429";"108778";"Production";"Equipamento Usado - com avarias";"HP";"4430S i3";"NOTEBOOK USADO COM AVARIAS
+
+-TRAVA ESQUERDA DA BATERIA QUEBRADA;
+- RACHADO LATERAL INFERIOR ESQUERDA;";"Laptop";"thamara_san";"BEG145F6YF";"";"";;"2018-08-25";"2018-08-25";
+"1422000430";"0000";"Production";"Equipamento Usado - com avarias";"HP";"4430S";"NOTEBOOK USADO COM AVARIAS, NA TAMPA, NOS CANTOS E NAS DOBRADIÇAS DA TAMPA.
+
+OBS. Aguardando a vinda da colaboradora no Estoque para colocar patrimônio no Notebook.";"Laptop";"nadia_canuto";"XV013LEAC4";"";"";;"2018-08-25";"2018-08-25";
+"1422000431";"110210";"Estoque";"Equipamento Usado - com avarias";"HP";"PROBOOK 4430s i5";"NOTEBOOK USADO COM AVARIAS
+-2 AMASSADOS NA TAMPA, 
+-QUEBRADOS NA MOLDURA DA TELA,
+-2 TRINCADOS NA CARCAÇA DO LADO ESQUERDO E DO LADO DIREITO.";"Laptop";"estoque@callink.com.br";"BRG219F12G";"";"";;"2018-08-27";;
+"1422000432";"121236";"Inactive";"Equipamento Usado - com avarias";"LENOVO";"E431 i5";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"PEDRD7114/06";"";"";;"2018-08-28";;
+"1422000433";"114125";"Inactive";"Equipamento Usado - com avarias";"HP";"PROBOOK 440 G1 i5";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRJ4040SVP";"";"";;"2018-08-28";;
+"1422000434";"136203";"Inactive";"Equipamento Usado - com avarias";"HP";"HP PAVILION G4";"NOTEBOOK SEM RECUPERAÇÃO - SUCATA";"Laptop";"estoque@callink.com.br";"BRG224F55W";"";"";;"2018-08-28";;
+"1422000435";"111086";"Inactive";"Equipamento Usado - com avarias";"HP";"PROBOOK 4430s i3";"NOTEBOOK USADO COM AVARIAS:
+
+- BATERIA NÃO SEGURA CARGA;
+- SINAIS DE DESGASTE DO TEMPO;
+- BATERIA NÃO FIXA TOTALMENTE NA CARCAÇA;
+- TAMPA DA CARCAÇA NÃO FECHA TOTALMENTE;
+- QUEBRADO PRÓXIMO AO FECHAMENTO DE TELA DIREITO E ESQUERDO;
+
+*NOTEBOOK SEM RECUPEÇÃO ENCAMINHADO PARA SUCATA";"Laptop";"estoque@callink.com.br";"BRG225F2JM";"";"";;"2018-08-30";;
+"1422000436";"131269";"Production";"Equipamento Novo";"LENOVO";"Lenovo B320 i7";"NOTEBOOK NOVO";"Laptop";"rodrigo_storti";"PE03C3S1";"i7";"";;"2018-08-07";;
+"1422000437";"105428";"Production";"Equipamento Usado - em bom estado";"HP";"HP ProBook 4320s i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO, APENAS COM DESGASTE DO TEMPO;";"Laptop";"silvia_gracas";"BRG030F3VM";"";"";;"2018-09-06";;
+"1422000438";"121438";"Production";"Equipamento Usado - em bom estado";"HP";"ELITEBOOK 840 G1";"NOTEBOOK USADO EM BOM ESTADO, SEM AVARIAS.";"Laptop";"marcelo_fonseca";"BRG449FV9W";"";"";;"2018-09-13";"2018-09-13";
+"1422000439";"136229";"Inactive";"Equipamento Usado - em bom estado";"DELL";"VOSTRO 5470 i7";"NOTEBOOK DANIFICADO/SERÁ UTILIZADO PARA APROVEITAMENTO DE PEÇAS E COMPONENTES PELA OFICINA DE HARDWARE.";"Laptop";"";"2N5ZZ02";"";"";;"2018-10-01";;
+"1422000440";"115668";"Production";"Equipamento Usado - com avarias";"LENOVO";"LENOVO E431 i7";"NOTEBOOK USADO COM AVARIAS:
+
+-SINAIS DE DESGASTE DO TEMPO;
+-FALTANDO TECLA CENTRAL DO TECLADO;
+-USB DANIFICADA PRÓXIMO AO LEITOR DE DVD;
+-QUEBRADO PRÓXIMO A SAÍDA DE AR DO COOLER;";"Laptop";"denner_campelo";"PEDPT81";"";"";;"2018-10-01";;
+"1422000441";"113703";"Production";"Equipamento Usado - em bom estado";"HP";"HP ProBook 440 G1";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVACÃO
+- AMASSADO PRÓXIMO AO MOUSE PAD;
+- QUEBRADO PRÓXIMO A TELA SUPERIOR E INFERIOR ESQUERDA.";"Laptop";"carolina_prado";"BRJ4020CJJ";"";"";;"2018-10-03";;
+"1422000442";"115620";"Maintenance";"Equipamento Usado - com avarias";"DELL";"P41G i7";"NOTEBOOK USADO COM AVARIAS:
+
+- CARCAÇA RACHADA PRÓXIMO AO SUPORTE DE TELA, GERANDO COM ISSO INTERFERÊNCIA NA TELA;
+
+- NOTEBOOK ENVIADO P/ SUPORTE TÉCNICO EM 19/10/2018 PARA AVALIAÇÃO E LAUDO.";"Laptop";"";"3QFRZ02";"";"";;"2018-10-04";;
+"1422000443";"129030";"Production";"Equipamento Usado - em bom estado";"LENOVO";"X250 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"4878pc_luiz";"PE02FGU";"";"";;"2018-10-18";;
+"1422000444";"124929";"Production";"Equipamento Usado - em bom estado";"HP";"HP 640 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO
+
+- TECLADO SEM O BOTÃO CENTRAL;";"Laptop";"31812_gleyce";"BRJ529VDKN";"";"";;"2018-10-26";;
+"1422000445";"136254";"Maintenance";"Equipamento Usado - em bom estado";"LENOVO";"LENOVO E431 i5";"";"Laptop";"estoque@callink.com.br";"PEERK43";"";"";;"2018-11-05";;
+"1422000446";"109347";"Production";"Equipamento Usado - em bom estado";"HP";"PROBOOK 4430s";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"belchior_neto";"BRG207FQHW";"";"";;"2018-11-07";;
+"1422000447";"111090";"Estoque";"Equipamento Usado - com avarias";"HP";"HP ProBook 4430S i3";"NOTEBOOK USADO COM AVARIAS:
+
+- QUEBRADOS NO CANTO DIREITO PRÓXIMO AO DVD; 
+- SINAIS DE DESGASTE DO TEMPO;
+- BATERIA NÃO SEGURA CARGA.";"Laptop";"estoque@callink.com.br";"BRG223FG9P";"";"";;"2018-11-12";;
+"1422000448";"115606";"Production";"Equipamento Usado - em bom estado";"DELL";"DELL ULTRABOOK P41G i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"gustavo_aqui";"9ZSVZ02";"";"";;"2018-11-12";;
+"1422000449";"136287";"Estoque";"Equipamento Usado - com avarias";"MAC";"Macbook A1181";"NOTEBOOK USADO SEM FONTE";"Laptop";"estoque@callink.com.br";"S/N";"";"";;"2018-11-29";;
+"1422000450";"124928";"Production";"Equipamento Usado - em bom estado";"HP";"440 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"28888_jose";"BRJ529VDM6";"";"";;"2018-11-29";;
+"1422000451";"136289";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO.
+
+- FALTA TECLA DO BOTÃO CENTRAL DO TECLADO;";"Laptop";"jeeferson_miguel";"PECNL8814/04";"";"";;"2018-11-30";;
+"1422000452";"131165";"Production";"Equipamento Usado - em bom estado";"LENOVO";"V310 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"flavia_rizzo";"";"";"";;"2018-12-03";;
+"1422000453";"136296";"Production";"Equipamento Usado - em bom estado";"HP";"PROBOOK 4430s i3";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"30837_paula";"BRG225F2J4";"";"";;"2018-12-05";;
+"1422000454";"124576";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DSD";"";"";;"2018-12-11";"2018-12-11";
+"1422000455";"124582";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DX5";"";"";;"2018-12-11";"2018-12-11";
+"1422000456";"124780";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DYA";"";"";;"2018-12-11";"2018-12-11";
+"1422000457";"124575";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DS3";"";"";;"2018-12-11";"2018-12-11";
+"1422000458";"124525";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXX";"";"";;"2018-12-11";"2018-12-11";
+"1422000459";"124711";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DT6";"";"";;"2018-12-11";"2018-12-11";
+"1422000460";"124549";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DWB";"";"";;"2018-12-13";"2018-12-13";
+"1422000461";"124413";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE023R1S";"";"";;"2018-12-13";"2018-12-13";
+"1422000462";"136312";"Production";"Equipamento Usado - em bom estado";"Lenovo";"E431 i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVACAO";"Laptop";"248fd_flander";"PEER0114/12";"";"";;"2018-12-17";;
+"1422000463";"136325";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO";"Laptop";"vitor_franco";"PE03EMHZ";"";"";;"2018-12-26";;
+"1422000464";"136324";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO.
+
+Porem segundo o colaborador,ele recebeu o notebook com muitos sinais de dedos e contendo informações internas aparte do foi solicitado na instalação.";"Laptop";"31130_rosario";"PE03EMHS";"";"";;"2018-12-26";;
+"1422000465";"136323";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO";"Laptop";"31068_samuel";"PE03EMJ3";"";"";;"2018-12-26";;
+"1422000466";"136322";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO";"Laptop";"30967_rodrigo";"PE03EWU9";"";"";;"2018-12-26";;
+"1422000467";"136318";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO";"Laptop";"ricardo_teixeira";"PE03EMJ1";"";"";;"2018-12-26";;
+"1422000468";"136308";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOTEBOOK";"Laptop";"31260_vander";"PE03EMJ0";"";"";;"2018-12-26";;
+"1422000469";"136306";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO";"Laptop";"guilherme_guima";"PE03EWUC";"";"";;"2018-12-26";;
+"1422000470";"136305";"Production";"Equipamento Novo";"LENOVO";"T470 i7";"NOTEBOOK NOVO";"Laptop";"31023_igor";"PE03FPRY";"";"";;"2018-12-26";;
+"1422000471";"124717";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440 i5";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Laptop";"hebert_alves";"PE024DU6";"";"";;"2019-01-04";;
+"1422000472";"131560";"Production";"Equipamento Usado - em bom estado";"DELL";"P69G i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO";"Other";"sandro_dozono";"44463N2";"";"";;"2019-01-21";;
+"1422000473";"110066";"Estoque";"Equipamento Usado - com avarias";"HP";"4430S i3";"NOTEBOOK USADO EM BOM ESTADO
+
+- QUEBRADO NAS BORDAS DE TELAS;
+- DOBRADIÇA DE TELA ESQUERDA QUEBRADA;
+- RACHADO NO CANTO SUPERIOR DIREITO DA CARCAÇA(PRÓX AO DVD);";"Laptop";"estoque@callink.com.br";"BRG217FDMY";"";"";;"2019-01-31";;
+"1422000474";"126616";"Production";"Equipamento Usado - em bom estado";"LENOVO";"E431 i5";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"ana_machad";"PEFAF03";"";"";;"2019-02-04";;
+"1422000475";"110811";"Maintenance";"Equipamento Usado - em bom estado";"HP";"ELITEBOOK 8460P i7";"NOTEBOOK USADO EM BOM ESTADO DE CONSERVAÇÃO:
+-AMASSADO NA LATERAL DIREITA;";"Laptop";"estoque@callink.com.br";"BRG234F42X";"";"";;"2019-02-07";;
+"1422000476";"122913";"Production";"Equipamento Usado - em bom estado";"DELL";"Vostro 14-5480 i5";"NOTEBOOK USADO EM BOM ESTADO
+
+- FALTANDO ALGUNS PARAFUSOS NA CARCAÇA INFERIOR.";"Laptop";"31776_rodrigo";"4KKXVC2";"";"";;"2019-02-13";;
+"1422000477";"136369";"Production";"Equipamento Usado - em bom estado";"MSI";"MS-16K2";"NOTEBOOK USADO EM BOM ESTADO";"Laptop";"luan_jose";"K1709N0043397";"";"";;"2019-02-15";;
+"1422000478";"124716";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTK";"";"";;"2019-02-18";"2019-02-18";
+"1422000479";"124519";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DJ7";"";"";;"2019-02-18";"2019-02-18";
+"1422000480";"124715";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRQ";"";"";;"2019-02-18";"2019-02-18";
+"1422000481";"124718";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTF";"";"";;"2019-02-18";"2019-02-18";
+"1422000482";"124579";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DSG";"";"";;"2019-02-18";"2019-02-18";
+"1422000483";"124791";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DUG";"";"";;"2019-02-18";"2019-02-18";
+"1422000484";"124565";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DY1";"";"";;"2019-02-18";"2019-02-18";
+"1422000485";"124518";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DUQ";"";"";;"2019-02-18";"2019-02-18";
+"1422000486";"124562";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTY";"";"";;"2019-02-18";"2019-02-18";
+"1422000487";"124537";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DWU";"";"";;"2019-02-18";"2019-02-18";
+"1422000488";"124411";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DW9";"";"";;"2019-02-18";"2019-02-18";
+"1422000489";"128869";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S40A1M2B0KLKZ";"";"";;"2019-02-18";"2019-02-18";
+"1422000490";"124571";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTB";"";"";;"2019-02-18";"2019-02-18";
+"1422000491";"124540";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DWC";"";"";;"2019-02-18";"2019-02-18";
+"1422000492";"124528";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DY5";"";"";;"2019-02-18";"2019-02-18";
+"1422000493";"124566";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXG";"";"";;"2019-02-18";"2019-02-18";
+"1422000494";"124560";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DT8";"";"";;"2019-02-18";"2019-02-18";
+"1422000495";"124538";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DT4";"";"";;"2019-02-18";"2019-02-18";
+"1422000496";"124789";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTL";"";"";;"2019-02-18";"2019-02-18";
+"1422000497";"124713";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRP";"";"";;"2019-02-18";"2019-02-18";
+"1422000498";"127688";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXK";"";"";;"2019-02-18";"2019-02-18";
+"1422000499";"124788";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DV2";"";"";;"2019-02-18";"2019-02-18";
+"1422000500";"124783";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTG";"";"";;"2019-02-22";"2019-02-22";
+"1422000501";"124405";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DX0";"";"";;"2019-02-22";"2019-02-22";
+"1422000502";"124564";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRX";"";"";;"2019-02-22";"2019-02-22";
+"1422000503";"124522";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DUC";"";"";;"2019-02-22";"2019-02-22";
+"1422000504";"124402";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXD";"";"";;"2019-02-22";"2019-02-22";
+"1422000505";"124569";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DS6";"";"";;"2019-02-22";"2019-02-22";
+"1422000506";"124561";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTJ";"";"";;"2019-02-22";"2019-02-22";
+"1422000507";"124556";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRS";"";"";;"2019-02-22";"2019-02-22";
+"1422000508";"124786";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DU3";"";"";;"2019-02-22";"2019-02-22";
+"1422000509";"124563";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRT";"";"";;"2019-02-22";"2019-02-22";
+"1422000510";"124781";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTW";"";"";;"2019-02-22";"2019-02-22";
+"1422000511";"124523";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DY0";"";"";;"2019-02-22";"2019-02-22";
+"1422000512";"124709";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DS5";"";"";;"2019-02-22";"2019-02-22";
+"1422000513";"124574";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DSR";"";"";;"2019-02-22";"2019-02-22";
+"1422000514";"124568";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DX4";"";"";;"2019-03-01";"2019-03-01";
+"1422000515";"124543";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DYB";"";"";;"2019-03-01";"2019-03-01";
+"1422000516";"124526";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DSZ";"";"";;"2019-03-01";"2019-03-01";
+"1422000517";"124403";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXY";"";"";;"2019-03-08";"2019-03-08";
+"1422000518";"124580";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DST";"";"";;"2019-03-08";"2019-03-08";
+"1422000519";"124586";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXR";"";"";;"2019-03-08";"2019-03-08";
+"1422000520";"124785";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DU4";"";"";;"2019-03-08";"2019-03-08";
+"1422000521";"124534";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DY9";"";"";;"2019-03-08";"2019-03-08";
+"1422000522";"124536";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXW";"";"";;"2019-03-08";"2019-03-08";
+"1422000523";"124408";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DSC";"";"";;"2019-03-08";"2019-03-08";
+"1422000524";"124520";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DTU";"";"";;"2019-03-08";"2019-03-08";
+"1422000525";"124552";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRV";"";"";;"2019-03-08";"2019-03-08";
+"1422000526";"124585";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXH";"";"";;"2019-03-08";"2019-03-08";
+"1422000527";"124559";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRZ";"";"";;"2019-03-08";"2019-03-08";
+"1422000528";"124544";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DXF";"";"";;"2019-03-08";"2019-03-08";
+"1422000529";"124446";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DRR";"";"";;"2019-03-08";"2019-03-08";
+"1422000530";"124712";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DJ4";"";"";;"2019-03-08";"2019-03-08";
+"1422000531";"124439";"Production";"Equipamento Usado - em bom estado";"LENOVO";"T440";"";"Laptop";"tempo.cmdb@callink.com.br";"1S20B7S26602PE024DX8";"";"";;"2019-03-08";"2019-03-08";
