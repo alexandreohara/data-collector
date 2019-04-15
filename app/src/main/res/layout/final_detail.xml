@@ -24,7 +24,7 @@
                 android:layout_width="339dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
                 app:isb_indicator_text_size="20sp"
                 app:isb_max="75"
@@ -48,20 +48,20 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/item_status_text"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
                 android:id="@+id/t3_dropdown_list"
-                android:layout_width="203dp"
-                android:layout_height="29dp"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="8dp"
                 android:background="@color/colorTextField"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -73,7 +73,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/item_location"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/seek_bar" />
 
@@ -85,7 +85,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/observation_text"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/t3_dropdown_list" />
 
@@ -94,12 +94,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:inputType="textMultiLine"
                 android:text="@={itemViewModel.observation}"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -109,9 +110,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="36dp"
                 android:text="@string/add_picture_text"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/t3_observation_text" />
 
@@ -120,31 +121,33 @@
                 android:layout_width="71dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/secondary_button"
                 android:contentDescription="@string/content_description_camera"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.944"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.877"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
                 app:layout_constraintTop_toBottomOf="@+id/t3_observation_text"
                 app:srcCompat="@android:drawable/ic_menu_camera" />
 
             <Button
                 android:id="@+id/t3_finish_button"
-                android:layout_width="360dp"
-                android:layout_height="45dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="26dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/primary_button"
                 android:text="@string/finish"
                 android:textColor="@color/white"
                 android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.485"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintVertical_bias="0.0" />
             <!--app:layout_constraintTop_toBottomOf="@+id/imageView2"/> -->
 
             <!--<ImageView-->

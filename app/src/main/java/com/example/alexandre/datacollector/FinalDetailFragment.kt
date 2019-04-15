@@ -59,9 +59,8 @@ class FinalDetailFragment : Fragment() {
             binding.t3FinishButton.text = "Aguarde..."
             itemViewModel.qualityState = binding.seekBar.progress
             itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
-            //createCSV()
-            //writeCSV()
-            //Toast.makeText(context, itemViewModel.localization, Toast.LENGTH_SHORT).show()
+            createCSV()
+            writeCSV()
             galleryAddPic()
             dialog.show()
         }
@@ -197,9 +196,6 @@ class FinalDetailFragment : Fragment() {
             fileWriter.append('\n')
 
             fileWriter.close()
-
-            //val os = FileOutputStream()
-            //os.write(data)
 
             println("Write CSV successfully!")
         } catch (e: Exception) {
