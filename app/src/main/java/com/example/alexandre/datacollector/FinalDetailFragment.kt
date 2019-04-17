@@ -106,7 +106,7 @@ class FinalDetailFragment : Fragment() {
 
         var photoPrefixName: String
 
-        if (itemViewModel.number != null) {
+        if (itemViewModel.number.trim() != "") {
             photoPrefixName = itemViewModel.number
         } else {
             photoPrefixName = "IMG"
