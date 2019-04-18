@@ -145,7 +145,6 @@ class NewItemFragment : Fragment() {
         } else if (findSelected() == "SERIAL_NUMBER") {
             binding.t1SerialText.visibility = View.VISIBLE
         }
-        itemViewModel?.typeSelected = findSelected()
     }
 
     private fun findSelected(): String {

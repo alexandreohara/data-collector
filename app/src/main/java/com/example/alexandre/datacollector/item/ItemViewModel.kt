@@ -12,6 +12,7 @@ import kotlinx.coroutines.*
  * Created by alexandre on 04/04/19.
  */
 
+
 class ItemViewModel(val database: ItemDao, application: Application) : AndroidViewModel(application) {
 
     // variaveis e metodos para o coroutine
@@ -46,7 +47,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     fun onButtonClicked() {
         uiScope.launch {
-            _navigateToDetails.value = getItemFromDatabase("NUMBER")
+            _navigateToDetails.value = getItemFromDatabase(typeSelected)
 
         }
     }
@@ -54,13 +55,16 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     //executa a acao de buscar no database em outra thread.
     private suspend fun getItemFromDatabase(typeSelected: String): Item? {
         return withContext(Dispatchers.IO) {
-            val rows = database.getRowsCount()
-            println("ROWS: " + rows)
+            //val rows = database.getRowsCount()
+            println("TYPE SELECTED: "+ typeSelected)
+            println(serialNumber)
             var item: Item?
+            var serialNumber = serialNumber ?: ""
             if (typeSelected == "NUMBER") {
                 item = database.getItem(oldNumber)
             } else if (typeSelected == "SERIAL_NUMBER") {
-                item = database.getItemBySerialNumber(serialNumber!!)
+                println("SERIAL_NUMBER: " + serialNumber)
+                item = database.getItemBySerialNumber(serialNumber)
             } else {
                 item = null
             }
@@ -90,4 +94,5 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         typeSelected = ""
         localization = ""
     }
+
 }
