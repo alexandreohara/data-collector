@@ -42,7 +42,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:visibility="gone"
                 android:text="@={itemViewModel.oldNumber}"/>
             <RadioButton
@@ -79,9 +79,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="60dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/continue_button"
                 android:textAlignment="center"
                 android:textSize="18sp" />

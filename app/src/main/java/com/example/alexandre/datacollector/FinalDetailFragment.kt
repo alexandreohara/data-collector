@@ -1,29 +1,24 @@
 package com.example.alexandre.datacollector
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.databinding.DataBindingUtil
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.os.Handler
 import android.provider.MediaStore
 import android.support.v4.app.Fragment
-import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
 import com.example.alexandre.datacollector.databinding.FinalDetailBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
 import com.example.alexandre.datacollector.item.ItemViewModel
 import com.example.alexandre.datacollector.item.ItemViewModelFactory
-import com.warkiz.widget.IndicatorSeekBar
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
@@ -37,46 +32,38 @@ import java.util.*
  */
 class FinalDetailFragment : Fragment() {
 
-    val REQUEST_IMAGE_CAPTURE = 1
-    val REQUEST_TAKE_PHOTO = 1
-    var currentPhotoPath: String = ""
-
+    private var photoFile: File? = null
+    private val CAPTURE_IMAGE_REQUEST = 1
+    private val IMAGE_DIRECTORY_NAME = "Itens"
     private lateinit var binding: FinalDetailBinding
     private lateinit var itemViewModel: ItemViewModel
-    //private lateinit var currentPhotoPath: String
-
-    // PRECISO CONSEGUIR DE VOLTA O NUM DE SERIE:
-    private var serialNum = "1234"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.final_detail, container, false)
-        var seekBar: IndicatorSeekBar? = view?.findViewById(R.id.seek_bar)
 
 
-        val dialog = AlertDialog.Builder(context)
-        dialog.setMessage("Seu item foi registrado com sucesso!")
-        dialog.setPositiveButton("Finalizar") { dialog, which->
-            navigateHome()
-        }
-        dialog.setNegativeButton("Adicionar novo item") { dialog, which ->
-            navigateNewItem()
-        }
-
-        binding.t3FinishButton.setOnClickListener { view ->
-            binding.t3FinishButton.text = "Aguarde..."
-            createCSV()
-            writeCSV()
-            galleryAddPic()
-            dialog.show()
-        }
 
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
         val viewModelFactory = ItemViewModelFactory(dataSource, application)
         itemViewModel = activity!!.run{
             ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
+
+        val dialog = createFinalDialog()
+
+        binding.t3FinishButton.setOnClickListener { view ->
+//            binding.t3FinishButton.text = "Aguarde..."
+            itemViewModel.qualityState = binding.seekBar.progress
+            itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
+            itemViewModel.observation = binding.t3ObservationText.text.toString()
+            // movidas para quando confirmar os dados novos
+//            createCSV()
+//            writeCSV()
+            val confirmationDialog = createDialogConfirmation(dialog)
+            confirmationDialog.show()
         }
 
         binding.itemViewModel = itemViewModel
@@ -87,75 +74,109 @@ class FinalDetailFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        val dropDown = Array(100, { i -> "Localização " + (i + 1).toString() })
+        val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, dropDown)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.t3DropdownList.adapter = adapter
         binding.t3CameraButton.setOnClickListener {
-            dispatchTakePictureIntent()
+            captureImage()
         }
     }
 
-    private fun galleryAddPic() {
-        Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { mediaScanIntent ->
-            val f = File(currentPhotoPath)
-            mediaScanIntent.data = Uri.fromFile(f)
-            context!!.sendBroadcast(mediaScanIntent)
+    private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
+        val confirmationDialog = AlertDialog.Builder(context)
+        confirmationDialog.setTitle("Confirme os dados preenchidos:")
+        val str = "Número: " + itemViewModel.oldNumber +
+                "\nNovo Número: " + itemViewModel.number +
+                "\nNúmero: " + itemViewModel.number +
+                "\nNúmero de Série: " + itemViewModel.serialNumber +
+                "\nNome: " + itemViewModel.name +
+                "\nFornecedor: " + itemViewModel.vendor +
+                "\nModelo: " + itemViewModel.model +
+                "\nTipo: " + itemViewModel.type +
+                "\nDescrição: " + itemViewModel.description +
+                "\nEstado: " + binding.seekBar.progress +
+                "\n" + binding.t3DropdownList.selectedItem.toString() +
+                "\nObservações: " + binding.t3ObservationText.text.toString()
+
+        confirmationDialog.setMessage(str)
+        confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
+            dialogInterface.dismiss()
         }
+        confirmationDialog.setPositiveButton("Ok") { dialogInterface, i ->
+            binding.t3FinishButton.text = "Aguarde..."
+            dialog.show()
+        }
+        return confirmationDialog
     }
 
-
-    @Throws(IOException::class)
-    private fun createImageFile(): File {
-        // Create an image file name
-        val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-        println(timeStamp)
-        val storageDir: File =  activity!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-        println(storageDir)
-        return File.createTempFile(
-                "JPEG_${timeStamp}_", /* prefix */
-                ".jpg", /* suffix */
-                storageDir /* directory */
-        ).apply {
-            // Save a file: path for use with ACTION_VIEW intents
-            currentPhotoPath = absolutePath
+    private fun createFinalDialog(): AlertDialog.Builder {
+        val dialog = AlertDialog.Builder(context)
+        dialog.setMessage("Seu item foi registrado com sucesso!")
+        dialog.setPositiveButton("Finalizar") { dialog: DialogInterface, which->
+            createCSV()
+            writeCSV()
+            navigateHome()
         }
+        dialog.setNeutralButton("Adicionar novo item") { dialog, which ->
+            createCSV()
+            writeCSV()
+            navigateNewItem()
+        }
+        return dialog
     }
 
-    private fun dispatchTakePictureIntent() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-            // Ensure that there's a camera activity to handle the intent
-            takePictureIntent.resolveActivity(activity!!.packageManager)?.also {
-                // Create the File where the photo should go
-                val photoFile: File? = try {
-                    createImageFile()
-                } catch (ex: IOException) {
-                    // Error occurred while creating the File
-                    Toast.makeText(context, currentPhotoPath, Toast.LENGTH_SHORT).show()
-                    null
-                }
-                // Continue only if the File was successfully created
-                photoFile?.also {
-                    val photoURI: Uri = FileProvider.getUriForFile(
-                            context!!,
-                            "com.example.android.fileprovider",
-                            it
-                    )
-                    println(photoURI)
-                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                    startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
-                    println('f')
-
-                }
+    private fun createImageFile(): File? {
+        // External sdcard location
+        val mediaStorageDir = File(
+                Environment
+                        .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                IMAGE_DIRECTORY_NAME)
+        // Create the storage directory if it does not exist
+        if (!mediaStorageDir.exists()) {
+            if (!mediaStorageDir.mkdirs()) {
+                return null
             }
         }
+
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss",
+                Locale.getDefault()).format(Date())
+
+        var photoPrefixName: String
+
+        if (itemViewModel.number.trim() != "") {
+            photoPrefixName = itemViewModel.number
+        } else {
+            photoPrefixName = "IMG"
+        }
+
+        return File(mediaStorageDir.path + File.separator
+                + photoPrefixName + "_" + timeStamp + ".jpg")
+
     }
 
+    private fun captureImage() {
+
+        try {
+            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            photoFile = createImageFile()
+            if (photoFile != null) {
+                val photoURI = Uri.fromFile(photoFile)
+                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+                startActivityForResult(cameraIntent, CAPTURE_IMAGE_REQUEST)
+            }
+        } catch (e: Exception) {
+            Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
+        }
+
+    }
 
     private fun navigateHome() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_welcomeFragment)
-        println(itemViewModel.qualityState)
     }
 
     private fun navigateNewItem() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
-        println(itemViewModel.qualityState)
     }
 
     private fun createCSV() {
@@ -198,9 +219,6 @@ class FinalDetailFragment : Fragment() {
             fileWriter.append('\n')
 
             fileWriter.close()
-
-            //val os = FileOutputStream()
-            //os.write(data)
 
             println("Write CSV successfully!")
         } catch (e: Exception) {
