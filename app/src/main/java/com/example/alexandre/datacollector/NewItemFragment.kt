@@ -56,16 +56,19 @@ class NewItemFragment : Fragment() {
         binding.t1ScanRadio.setOnClickListener {
             binding.t1ScanText.visibility = View.VISIBLE
             binding.t1SerialText.visibility = View.GONE
+            itemViewModel?.typeSelected = "NUMBER"
         }
 
         binding.t1SerialRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.VISIBLE
             binding.t1ScanText.visibility = View.GONE
+            itemViewModel?.typeSelected = "SERIAL_NUMBER"
         }
 
         binding.t1ManualRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.GONE
             binding.t1ScanText.visibility = View.GONE
+            itemViewModel?.typeSelected = "MANUAL"
         }
 
             binding.itemViewModel = itemViewModel
