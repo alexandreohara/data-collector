@@ -19,10 +19,8 @@ import com.example.alexandre.datacollector.databinding.FinalDetailBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
 import com.example.alexandre.datacollector.item.ItemViewModel
 import com.example.alexandre.datacollector.item.ItemViewModelFactory
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
 import android.widget.Toast
+import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -180,12 +178,13 @@ class FinalDetailFragment : Fragment() {
     }
 
     private fun createCSV() {
-        val CSV_HEADER = "id,name"
+        val CSV_HEADER = "Number,Old Number,Name,Deployment State,Incident State,Vendor,Model,Description,Type,Owner,Serial Number,Location"
         var dir = Environment.getExternalStorageDirectory()
-        var file: File = File(dir, "/teste4.csv")
+        var file = File(dir, "/teste_3.csv")
         print(file.exists())
         if (!file.exists()) {
-            var fileWriter = FileWriter(file)
+            var fileOutputStream = FileOutputStream(file, true)
+            var fileWriter = OutputStreamWriter(fileOutputStream, "UTF-8")
             try {
                 fileWriter.append(CSV_HEADER)
                 fileWriter.append('\n')
@@ -208,14 +207,31 @@ class FinalDetailFragment : Fragment() {
 
         // var fileWriter: FileWriter? = null
         var dir = Environment.getExternalStorageDirectory()
-        var file: File = File(dir, "/teste4.csv")
-        var fileWriter = FileWriter(file, true)
-        var random = Random()
-        var int: Int = random.nextInt()
+        var file = File(dir, "/teste_3.csv")
+        var fileOutputStream = FileOutputStream(file, true)
+        var fileWriter = BufferedWriter(OutputStreamWriter(fileOutputStream, "UTF8"))
         try {
-            fileWriter.append("teste")
+            fileWriter.append("\"" + itemViewModel.number + "\"")
             fileWriter.append(",")
-            fileWriter.append(int.toString())
+            fileWriter.append("\"" + itemViewModel.oldNumber + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.name + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.deploymentState + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.qualityState.toString() + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.vendor + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.model + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.description + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.type + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.serialNumber + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.localization + "\"")
             fileWriter.append('\n')
 
             fileWriter.close()
