@@ -178,7 +178,7 @@ class FinalDetailFragment : Fragment() {
     }
 
     private fun createCSV() {
-        val CSV_HEADER = "Number,Old Number,Name,Deployment State,Incident State,Vendor,Model,Description,Type,Owner,Serial Number,Location"
+        val CSV_HEADER = "\"Number\",\"Old Number\",\"Name\",\"Deployment State\",\"Incident State\",\"Vendor\",\"Model\",\"Description\",\"Type\",\"Owner\",\"Serial Number\",\"Location\""
         var dir = Environment.getExternalStorageDirectory()
         var file = File(dir, "/teste_3.csv")
         print(file.exists())
