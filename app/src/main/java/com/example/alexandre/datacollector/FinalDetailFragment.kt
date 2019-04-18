@@ -1,7 +1,9 @@
 package com.example.alexandre.datacollector
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.arch.lifecycle.ViewModelProviders
+import android.content.DialogInterface
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.net.Uri
@@ -9,7 +11,6 @@ import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.support.v4.app.Fragment
-import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,37 +39,31 @@ class FinalDetailFragment : Fragment() {
     private lateinit var binding: FinalDetailBinding
     private lateinit var itemViewModel: ItemViewModel
 
-    // TODO: numero de serie fake. Apagar
-    private var serialNum = "1234"
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.final_detail, container, false)
 
-        val dialog = AlertDialog.Builder(context)
-        dialog.setMessage("Seu item foi registrado com sucesso!")
-        dialog.setPositiveButton("Finalizar") { dialog, which->
-            navigateHome()
-        }
-        dialog.setNegativeButton("Adicionar novo item") { dialog, which ->
-            navigateNewItem()
-        }
 
-        binding.t3FinishButton.setOnClickListener { view ->
-            binding.t3FinishButton.text = "Aguarde..."
-            itemViewModel.qualityState = binding.seekBar.progress
-            itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
-            createCSV()
-            writeCSV()
-            dialog.show()
-        }
 
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
         val viewModelFactory = ItemViewModelFactory(dataSource, application)
         itemViewModel = activity!!.run{
             ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
+        }
+
+        val dialog = createFinalDialog()
+        val confirmationDialog = createDialogConfirmation(dialog)
+
+        binding.t3FinishButton.setOnClickListener { view ->
+//            binding.t3FinishButton.text = "Aguarde..."
+            itemViewModel.qualityState = binding.seekBar.progress
+            itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
+            // movidas para quando confirmar os dados novos
+//            createCSV()
+//            writeCSV()
+            confirmationDialog.show()
         }
 
         binding.itemViewModel = itemViewModel
@@ -86,6 +81,37 @@ class FinalDetailFragment : Fragment() {
         binding.t3CameraButton.setOnClickListener {
             captureImage()
         }
+    }
+
+    private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
+        val confirmationDialog = AlertDialog.Builder(context)
+        confirmationDialog.setTitle("Confirme os dados preenchidos:")
+        val str = "Número: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model+ "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model
+        confirmationDialog.setMessage(str)
+        confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
+            dialogInterface.dismiss()
+        }
+        confirmationDialog.setPositiveButton("Ok") { dialogInterface, i ->
+            binding.t3FinishButton.text = "Aguarde..."
+            dialog.show()
+        }
+        return confirmationDialog
+    }
+
+    private fun createFinalDialog(): AlertDialog.Builder {
+        val dialog = AlertDialog.Builder(context)
+        dialog.setMessage("Seu item foi registrado com sucesso!")
+        dialog.setPositiveButton("Finalizar") { dialog: DialogInterface, which->
+            createCSV()
+            writeCSV()
+            navigateHome()
+        }
+        dialog.setNeutralButton("Adicionar novo item") { dialog, which ->
+            createCSV()
+            writeCSV()
+            navigateNewItem()
+        }
+        return dialog
     }
 
     private fun createImageFile(): File? {

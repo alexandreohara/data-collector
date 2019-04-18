@@ -61,7 +61,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="number"
+                android:inputType="textPersonName"
                 android:visibility="gone"
                 android:text="@={itemViewModel.serialNumber}"/>
 
