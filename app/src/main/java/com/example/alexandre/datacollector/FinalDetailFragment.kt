@@ -1,7 +1,6 @@
 package com.example.alexandre.datacollector
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.arch.lifecycle.ViewModelProviders
 import android.content.DialogInterface
 import android.content.Intent
@@ -54,15 +53,16 @@ class FinalDetailFragment : Fragment() {
         }
 
         val dialog = createFinalDialog()
-        val confirmationDialog = createDialogConfirmation(dialog)
 
         binding.t3FinishButton.setOnClickListener { view ->
 //            binding.t3FinishButton.text = "Aguarde..."
             itemViewModel.qualityState = binding.seekBar.progress
             itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
+            itemViewModel.observation = binding.t3ObservationText.text.toString()
             // movidas para quando confirmar os dados novos
 //            createCSV()
 //            writeCSV()
+            val confirmationDialog = createDialogConfirmation(dialog)
             confirmationDialog.show()
         }
 
@@ -74,7 +74,7 @@ class FinalDetailFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        val dropDown = Array(100, { i -> "localização " + (i + 1).toString() })
+        val dropDown = Array(100, { i -> "Localização " + (i + 1).toString() })
         val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, dropDown)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.t3DropdownList.adapter = adapter
@@ -86,7 +86,19 @@ class FinalDetailFragment : Fragment() {
     private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
         val confirmationDialog = AlertDialog.Builder(context)
         confirmationDialog.setTitle("Confirme os dados preenchidos:")
-        val str = "Número: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model+ "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model + "\nNúmero: " + itemViewModel.number + "\nModelo: " + itemViewModel.model
+        val str = "Número: " + itemViewModel.oldNumber +
+                "\nNovo Número: " + itemViewModel.number +
+                "\nNúmero: " + itemViewModel.number +
+                "\nNúmero de Série: " + itemViewModel.serialNumber +
+                "\nNome: " + itemViewModel.name +
+                "\nFornecedor: " + itemViewModel.vendor +
+                "\nModelo: " + itemViewModel.model +
+                "\nTipo: " + itemViewModel.type +
+                "\nDescrição: " + itemViewModel.description +
+                "\nEstado: " + binding.seekBar.progress +
+                "\n" + binding.t3DropdownList.selectedItem.toString() +
+                "\nObservações: " + binding.t3ObservationText.text.toString()
+
         confirmationDialog.setMessage(str)
         confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
             dialogInterface.dismiss()
