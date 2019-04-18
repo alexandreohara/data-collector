@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.details.*
  */
 class DetailsFragment : Fragment() {
     private lateinit var binding: DetailsBinding
+    private lateinit var itemViewModel: ItemViewModel
 
     //Inflating and Returning the View with DataBindingUtil
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -32,9 +33,10 @@ class DetailsFragment : Fragment() {
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
         val viewModelFactory = ItemViewModelFactory(dataSource, application)
-        var itemViewModel = activity?.run{
+        itemViewModel = activity!!.run{
             ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
         }
+
 
         binding.t2ContinueButton.setOnClickListener { view ->
             if (binding.t2NewNumberText.text.toString().trim() == "") {
