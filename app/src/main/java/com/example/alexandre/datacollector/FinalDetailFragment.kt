@@ -176,9 +176,9 @@ class FinalDetailFragment : Fragment() {
     private fun navigateNewItem() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_newItemFragment)
     }
-
+""
     private fun createCSV() {
-        val CSV_HEADER = "\"Number\",\"Old Number\",\"Name\",\"Deployment State\",\"Incident State\",\"Vendor\",\"Model\",\"Description\",\"Type\",\"Owner\",\"Serial Number\",\"Location\""
+        val CSV_HEADER = "\"Number\",\"Old Number\",\"Name\",\"Deployment State\",\"Incident State\",\"Vendor\",\"Model\",\"Description\",\"Type\",\"Owner\",\"Serial Number\",\"Location\,\"Observation\""
         var dir = Environment.getExternalStorageDirectory()
         var file = File(dir, "/teste_3.csv")
         print(file.exists())
@@ -232,6 +232,8 @@ class FinalDetailFragment : Fragment() {
             fileWriter.append("\"" + itemViewModel.serialNumber + "\"")
             fileWriter.append(",")
             fileWriter.append("\"" + itemViewModel.localization + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.observation + "\"")
             fileWriter.append('\n')
 
             fileWriter.close()
