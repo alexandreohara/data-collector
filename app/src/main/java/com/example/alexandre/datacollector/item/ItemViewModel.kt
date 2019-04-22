@@ -40,6 +40,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var localization: String? = ""
 
     var typeSelected = ""
+    var doneNavigating = false
 
     init {
         //item.value = Item()
@@ -78,6 +79,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     fun doneNavigating() {
         _navigateToDetails.value = null
+        doneNavigating = true
     }
 
     fun clearData() {
@@ -91,6 +93,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         type = ""
         description = ""
         localization = ""
+        doneNavigating = false
     }
 
 }

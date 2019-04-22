@@ -78,9 +78,11 @@ class NewItemFragment : Fragment() {
         itemViewModel?.navigateToDetails?.observe(this, Observer {
             item ->
             println("NAVIGATETODETAILS: " + item)
-            if (item == null) { // de qualquer jeito ele cai aqui, acho que pq a principio ainda nao tem o item e so dps ele chega
-                Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
-                binding.t1ContinueButton.text = "Continuar"
+            if (item == null) {
+                if (itemViewModel.doneNavigating == false) {
+                    Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
+                    binding.t1ContinueButton.text = "Continuar"
+                }
             } else {
                 itemViewModel.description = item.description
                 itemViewModel.number = item.number
