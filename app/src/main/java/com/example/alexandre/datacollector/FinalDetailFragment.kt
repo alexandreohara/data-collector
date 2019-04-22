@@ -156,7 +156,9 @@ class FinalDetailFragment : Fragment() {
             if (photoFile != null) {
                 val photoURI = Uri.fromFile(photoFile)
                 cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                startActivityForResult(cameraIntent, CAPTURE_IMAGE_REQUEST)
+                activity?.run {
+                    startActivityForResult(cameraIntent, CAPTURE_IMAGE_REQUEST)
+                }
             }
         } catch (e: Exception) {
             Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
