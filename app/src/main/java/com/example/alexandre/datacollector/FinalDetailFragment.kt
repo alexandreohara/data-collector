@@ -84,7 +84,7 @@ class FinalDetailFragment : Fragment() {
     private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
         val confirmationDialog = AlertDialog.Builder(context)
         confirmationDialog.setTitle("Confirme os dados preenchidos:")
-        val str = "Placa Antiga: " + itemViewModel.oldName +
+        val str = "Placa Antiga: " + itemViewModel.oldName.value +
                 "\nNova Placa: " + itemViewModel.name +
                 "\nNúmero de Série: " + itemViewModel.serialNumber +
                 "\nFornecedor: " + itemViewModel.vendor +

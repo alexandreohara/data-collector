@@ -25,10 +25,10 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    var item = MutableLiveData<Item?>()
+    //var item = MutableLiveData<Item?>()
     var number: String = ""
     var name: String = ""
-    var oldName: String = ""
+    var oldName = MutableLiveData<String>()
     var deploymentState: String? = ""
     var serialNumber: String? = ""
     var vendor: String? = ""
@@ -42,7 +42,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var typeSelected = ""
 
     init {
-        item.value = Item()
+        //item.value = Item()
     }
 
     fun onButtonClicked() {
@@ -58,8 +58,9 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
             //val rows = database.getRowsCount()
             var item: Item?
             var serialNumber = serialNumber ?: ""
+            val name = oldName.value ?: ""
             if (typeSelected == "NUMBER") {
-                item = database.getItem(oldName)
+                item = database.getItem(name)
             } else if (typeSelected == "SERIAL_NUMBER") {
                 println("SERIAL_NUMBER: " + serialNumber)
                 item = database.getItemBySerialNumber(serialNumber)
@@ -82,14 +83,13 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     fun clearData() {
         number = ""
         name = ""
-        oldName = ""
+        oldName.value = ""
         deploymentState = ""
         serialNumber = ""
         vendor = ""
         model = ""
         type = ""
         description = ""
-        typeSelected = ""
         localization = ""
     }
 

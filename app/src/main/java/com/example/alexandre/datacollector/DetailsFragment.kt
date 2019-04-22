@@ -58,4 +58,9 @@ class DetailsFragment : Fragment() {
         binding.t2ContinueButton.text = "CONTINUAR"
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        itemViewModel.clearData()
+    }
+
 }
