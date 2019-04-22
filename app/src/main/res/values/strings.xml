@@ -22,12 +22,12 @@
     <string name="finish">Concluir</string>
     <string name="content_description_camera">Acessa a câmera do dispositivo</string>
     <string name="t2_information_text">Preencha ou altere os dados encontrados abaixo</string>
-    <string name="number">Número:</string>
+    <string name="number">Número da Placa Antiga:</string>
     <string name="product_name_text">Nome do item:</string>
     <string name="vendor_text">Fornecedor:</string>
     <string name="serial_information_text">Número de Série:</string>
     <string name="model_text">Modelo:</string>
     <string name="type_text">Tipo:</string>
     <string name="description_text">Descrição:</string>
-    <string name="new_number_text">Novo Número:</string>
+    <string name="new_number_text">Nova Placa:</string>
 </resources>

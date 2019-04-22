@@ -84,11 +84,9 @@ class FinalDetailFragment : Fragment() {
     private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
         val confirmationDialog = AlertDialog.Builder(context)
         confirmationDialog.setTitle("Confirme os dados preenchidos:")
-        val str = "Número: " + itemViewModel.oldNumber +
-                "\nNovo Número: " + itemViewModel.number +
-                "\nNúmero: " + itemViewModel.number +
+        val str = "Placa Antiga: " + itemViewModel.oldName +
+                "\nNova Placa: " + itemViewModel.name +
                 "\nNúmero de Série: " + itemViewModel.serialNumber +
-                "\nNome: " + itemViewModel.name +
                 "\nFornecedor: " + itemViewModel.vendor +
                 "\nModelo: " + itemViewModel.model +
                 "\nTipo: " + itemViewModel.type +
@@ -142,8 +140,8 @@ class FinalDetailFragment : Fragment() {
 
         var photoPrefixName: String
 
-        if (itemViewModel.number.trim() != "") {
-            photoPrefixName = itemViewModel.number
+        if (itemViewModel.name.trim() != "") {
+            photoPrefixName = itemViewModel.name
         } else {
             photoPrefixName = "IMG"
         }
@@ -211,9 +209,9 @@ class FinalDetailFragment : Fragment() {
         var fileOutputStream = FileOutputStream(file, true)
         var fileWriter = BufferedWriter(OutputStreamWriter(fileOutputStream, "UTF8"))
         try {
-            fileWriter.append("\"" + itemViewModel.number + "\"")
+            fileWriter.append("\"" + itemViewModel.name + "\"")
             fileWriter.append(",")
-            fileWriter.append("\"" + itemViewModel.oldNumber + "\"")
+            fileWriter.append("\"" + itemViewModel.number + "\"")
             fileWriter.append(",")
             fileWriter.append("\"" + itemViewModel.name + "\"")
             fileWriter.append(",")

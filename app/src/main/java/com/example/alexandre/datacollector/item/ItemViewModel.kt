@@ -26,9 +26,9 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
     var item = MutableLiveData<Item?>()
-    var oldNumber: String = ""
     var number: String = ""
-    var name: String? = ""
+    var name: String = ""
+    var oldName: String = ""
     var deploymentState: String? = ""
     var serialNumber: String? = ""
     var vendor: String? = ""
@@ -56,12 +56,10 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     private suspend fun getItemFromDatabase(typeSelected: String): Item? {
         return withContext(Dispatchers.IO) {
             //val rows = database.getRowsCount()
-            println("TYPE SELECTED: "+ typeSelected)
-            println(serialNumber)
             var item: Item?
             var serialNumber = serialNumber ?: ""
             if (typeSelected == "NUMBER") {
-                item = database.getItem(oldNumber)
+                item = database.getItem(oldName)
             } else if (typeSelected == "SERIAL_NUMBER") {
                 println("SERIAL_NUMBER: " + serialNumber)
                 item = database.getItemBySerialNumber(serialNumber)
@@ -82,9 +80,9 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     }
 
     fun clearData() {
-        oldNumber = ""
         number = ""
         name = ""
+        oldName = ""
         deploymentState = ""
         serialNumber = ""
         vendor = ""

@@ -81,9 +81,9 @@ class NewItemFragment : Fragment() {
                     binding.t1ContinueButton.text = "Continuar"
                 } else {
                     itemViewModel.description = item.description
-                    itemViewModel.oldNumber = item.number
+                    itemViewModel.number = item.number
                     itemViewModel.model = item.model
-                    itemViewModel.name = item.name
+                    itemViewModel.oldName = item.name
                     itemViewModel.deploymentState = item.deploymentState
                     itemViewModel.serialNumber = item.serialNumber
                     itemViewModel.vendor = item.vendor
@@ -99,9 +99,9 @@ class NewItemFragment : Fragment() {
 //                item?.let {
 //                    //println(it)
 //                    itemViewModel.description = it.description
-//                    itemViewModel.oldNumber = it.number
+//                    itemViewModel.number = it.number
 //                    itemViewModel.model = it.model
-//                    itemViewModel.name = it.name
+//                    itemViewModel.oldName = it.name
 //                    itemViewModel.deploymentState = it.deploymentState
 //                    itemViewModel.serialNumber = it.serialNumber
 //                    itemViewModel.vendor = it.vendor
@@ -115,9 +115,9 @@ class NewItemFragment : Fragment() {
 //                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
 ////                    println('a')
 ////                    println(itemViewModel)
-////                    println(itemViewModel.oldNumber)
+////                    println(itemViewModel.number)
 ////                    println(itemViewModel.serialNumber)
-////                    if (itemViewModel.oldNumber == "") {
+////                    if (itemViewModel.number == "") {
 ////                        Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
 ////                    }
 //                }

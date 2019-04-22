@@ -22,7 +22,7 @@ interface ItemDao {
     @Query("SELECT * FROM item_table")
     fun getAllItems(): List<Item>
 
-    @Query("SELECT * from item_table WHERE number = :key")
+    @Query("SELECT * from item_table WHERE name = :key")
     fun getItem(key: String): Item?
 
     @Query("SELECT * FROM item_table WHERE serialNumber = :serialNumber")
