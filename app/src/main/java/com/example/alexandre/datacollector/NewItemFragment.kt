@@ -38,7 +38,7 @@ class NewItemFragment : Fragment() {
         }
 
         // validacao dos campos antes da navegacao
-        binding.t1ContinueButton.setOnClickListener { v ->
+        binding.t1ContinueButton.setOnClickListener {
             if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
                 Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
             } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
@@ -49,7 +49,6 @@ class NewItemFragment : Fragment() {
                 binding.t1ContinueButton.text = "Aguarde..."
                 println(itemViewModel?.oldName?.value)
                 itemViewModel?.onButtonClicked()
-                //v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
             }
         }
 
@@ -77,7 +76,6 @@ class NewItemFragment : Fragment() {
 
         itemViewModel?.navigateToDetails?.observe(this, Observer {
             item ->
-            println("NAVIGATETODETAILS: " + item)
             if (item == null) {
                 if (itemViewModel.doneNavigating == false) {
                     Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
@@ -98,33 +96,6 @@ class NewItemFragment : Fragment() {
                 findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                 itemViewModel.doneNavigating()
             }
-
-
-//                item?.let {
-//                    //println(it)
-//                    itemViewModel.description = it.description
-//                    itemViewModel.number = it.number
-//                    itemViewModel.model = it.model
-//                    itemViewModel.oldName = it.name
-//                    itemViewModel.deploymentState = it.deploymentState
-//                    itemViewModel.serialNumber = it.serialNumber
-//                    itemViewModel.vendor = it.vendor
-//                    itemViewModel.model = it.model
-//                    itemViewModel.type = it.type
-//                    itemViewModel.description = it.description
-//
-//                    this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-//                    itemViewModel.doneNavigating()
-//                } ?: run {
-//                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
-////                    println('a')
-////                    println(itemViewModel)
-////                    println(itemViewModel.number)
-////                    println(itemViewModel.serialNumber)
-////                    if (itemViewModel.number == "") {
-////                        Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
-////                    }
-//                }
         })
 
         return binding.root

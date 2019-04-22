@@ -42,10 +42,6 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var typeSelected = ""
     var doneNavigating = false
 
-    init {
-        //item.value = Item()
-    }
-
     fun onButtonClicked() {
         uiScope.launch {
             _navigateToDetails.value = getItemFromDatabase(typeSelected)
@@ -63,7 +59,6 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
             if (typeSelected == "NUMBER") {
                 item = database.getItem(name)
             } else if (typeSelected == "SERIAL_NUMBER") {
-                println("SERIAL_NUMBER: " + serialNumber)
                 item = database.getItemBySerialNumber(serialNumber)
             } else {
                 item = null

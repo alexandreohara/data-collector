@@ -52,14 +52,11 @@ class FinalDetailFragment : Fragment() {
 
         val dialog = createFinalDialog()
 
-        binding.t3FinishButton.setOnClickListener { view ->
-//            binding.t3FinishButton.text = "Aguarde..."
+        binding.t3FinishButton.setOnClickListener {
+            //            binding.t3FinishButton.text = "Aguarde..."
             itemViewModel.qualityState = binding.seekBar.progress
             itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
             itemViewModel.observation = binding.t3ObservationText.text.toString()
-            // movidas para quando confirmar os dados novos
-//            createCSV()
-//            writeCSV()
             val confirmationDialog = createDialogConfirmation(dialog)
             confirmationDialog.show()
         }
@@ -96,10 +93,10 @@ class FinalDetailFragment : Fragment() {
                 "\nObservações: " + binding.t3ObservationText.text.toString()
 
         confirmationDialog.setMessage(str)
-        confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
+        confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, _ ->
             dialogInterface.dismiss()
         }
-        confirmationDialog.setPositiveButton("Ok") { dialogInterface, i ->
+        confirmationDialog.setPositiveButton("Ok") { _, _ ->
             binding.t3FinishButton.text = "Aguarde..."
             dialog.show()
         }
@@ -109,12 +106,12 @@ class FinalDetailFragment : Fragment() {
     private fun createFinalDialog(): AlertDialog.Builder {
         val dialog = AlertDialog.Builder(context)
         dialog.setMessage("Seu item foi registrado com sucesso!")
-        dialog.setPositiveButton("Finalizar") { dialog: DialogInterface, which->
+        dialog.setPositiveButton("Finalizar") { _: DialogInterface, _->
             createCSV()
             writeCSV()
             navigateHome()
         }
-        dialog.setNeutralButton("Adicionar novo item") { dialog, which ->
+        dialog.setNeutralButton("Adicionar novo item") { _, _ ->
             createCSV()
             writeCSV()
             navigateNewItem()
@@ -191,7 +188,7 @@ class FinalDetailFragment : Fragment() {
                 e.printStackTrace()
             } finally {
                 try {
-                    fileWriter!!.flush()
+                    fileWriter.flush()
                     fileWriter.close()
                 } catch (e: IOException) {
                     println("Flushing/closing error!")
@@ -242,7 +239,7 @@ class FinalDetailFragment : Fragment() {
             e.printStackTrace()
         } finally {
             try {
-                fileWriter!!.flush()
+                fileWriter.flush()
                 fileWriter.close()
             } catch (e: IOException) {
                 println("Flushing/closing error!")
