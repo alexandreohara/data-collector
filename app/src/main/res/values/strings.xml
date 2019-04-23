@@ -30,4 +30,5 @@
     <string name="type_text">Tipo:</string>
     <string name="description_text">Descrição:</string>
     <string name="new_number_text">Nova Placa:</string>
+    <string name="scan_button_text">Escanear Código de Barras</string>
 </resources>

@@ -62,8 +62,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:visibility="gone"
-                android:text="@={itemViewModel.serialNumber}"/>
+                android:text="@={itemViewModel.serialNumber}"
+                android:visibility="gone" />
 
             <RadioButton
                 android:id="@+id/t1_manual_radio"
@@ -86,6 +86,17 @@
                 android:text="@string/continue_button"
                 android:textAlignment="center"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/t1_scan_button"
+                style="@style/SecondaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:text="@string/scan_button_text" />
 
         </RadioGroup>
     </ScrollView>
