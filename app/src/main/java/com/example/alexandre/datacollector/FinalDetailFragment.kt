@@ -19,10 +19,8 @@ import com.example.alexandre.datacollector.databinding.FinalDetailBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
 import com.example.alexandre.datacollector.item.ItemViewModel
 import com.example.alexandre.datacollector.item.ItemViewModelFactory
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
 import android.widget.Toast
+import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -54,14 +52,11 @@ class FinalDetailFragment : Fragment() {
 
         val dialog = createFinalDialog()
 
-        binding.t3FinishButton.setOnClickListener { view ->
-//            binding.t3FinishButton.text = "Aguarde..."
+        binding.t3FinishButton.setOnClickListener {
+            //            binding.t3FinishButton.text = "Aguarde..."
             itemViewModel.qualityState = binding.seekBar.progress
             itemViewModel.localization = binding.t3DropdownList.selectedItem.toString()
             itemViewModel.observation = binding.t3ObservationText.text.toString()
-            // movidas para quando confirmar os dados novos
-//            createCSV()
-//            writeCSV()
             val confirmationDialog = createDialogConfirmation(dialog)
             confirmationDialog.show()
         }
@@ -86,11 +81,9 @@ class FinalDetailFragment : Fragment() {
     private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
         val confirmationDialog = AlertDialog.Builder(context)
         confirmationDialog.setTitle("Confirme os dados preenchidos:")
-        val str = "Número: " + itemViewModel.oldNumber +
-                "\nNovo Número: " + itemViewModel.number +
-                "\nNúmero: " + itemViewModel.number +
+        val str = "Placa Antiga: " + itemViewModel.oldName.value +
+                "\nNova Placa: " + itemViewModel.name +
                 "\nNúmero de Série: " + itemViewModel.serialNumber +
-                "\nNome: " + itemViewModel.name +
                 "\nFornecedor: " + itemViewModel.vendor +
                 "\nModelo: " + itemViewModel.model +
                 "\nTipo: " + itemViewModel.type +
@@ -100,10 +93,10 @@ class FinalDetailFragment : Fragment() {
                 "\nObservações: " + binding.t3ObservationText.text.toString()
 
         confirmationDialog.setMessage(str)
-        confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
+        confirmationDialog.setNegativeButton("Cancelar") { dialogInterface, _ ->
             dialogInterface.dismiss()
         }
-        confirmationDialog.setPositiveButton("Ok") { dialogInterface, i ->
+        confirmationDialog.setPositiveButton("Ok") { _, _ ->
             binding.t3FinishButton.text = "Aguarde..."
             dialog.show()
         }
@@ -113,12 +106,12 @@ class FinalDetailFragment : Fragment() {
     private fun createFinalDialog(): AlertDialog.Builder {
         val dialog = AlertDialog.Builder(context)
         dialog.setMessage("Seu item foi registrado com sucesso!")
-        dialog.setPositiveButton("Finalizar") { dialog: DialogInterface, which->
+        dialog.setPositiveButton("Finalizar") { _: DialogInterface, _->
             createCSV()
             writeCSV()
             navigateHome()
         }
-        dialog.setNeutralButton("Adicionar novo item") { dialog, which ->
+        dialog.setNeutralButton("Adicionar novo item") { _, _ ->
             createCSV()
             writeCSV()
             navigateNewItem()
@@ -144,8 +137,8 @@ class FinalDetailFragment : Fragment() {
 
         var photoPrefixName: String
 
-        if (itemViewModel.number.trim() != "") {
-            photoPrefixName = itemViewModel.number
+        if (itemViewModel.name.trim() != "") {
+            photoPrefixName = itemViewModel.name
         } else {
             photoPrefixName = "IMG"
         }
@@ -163,7 +156,9 @@ class FinalDetailFragment : Fragment() {
             if (photoFile != null) {
                 val photoURI = Uri.fromFile(photoFile)
                 cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                startActivityForResult(cameraIntent, CAPTURE_IMAGE_REQUEST)
+                activity?.run {
+                    startActivityForResult(cameraIntent, CAPTURE_IMAGE_REQUEST)
+                }
             }
         } catch (e: Exception) {
             Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
@@ -180,12 +175,13 @@ class FinalDetailFragment : Fragment() {
     }
 
     private fun createCSV() {
-        val CSV_HEADER = "id,name"
+        val CSV_HEADER = "\"Number\",\"Old Number\",\"Name\",\"Deployment State\",\"Incident State\",\"Vendor\",\"Model\",\"Description\",\"Type\",\"Owner\",\"Serial Number\",\"Location\",\"Observation\""
         var dir = Environment.getExternalStorageDirectory()
-        var file: File = File(dir, "/teste4.csv")
+        var file = File(dir, "/teste_3.csv")
         print(file.exists())
         if (!file.exists()) {
-            var fileWriter = FileWriter(file)
+            var fileOutputStream = FileOutputStream(file, true)
+            var fileWriter = OutputStreamWriter(fileOutputStream, "UTF-8")
             try {
                 fileWriter.append(CSV_HEADER)
                 fileWriter.append('\n')
@@ -194,7 +190,7 @@ class FinalDetailFragment : Fragment() {
                 e.printStackTrace()
             } finally {
                 try {
-                    fileWriter!!.flush()
+                    fileWriter.flush()
                     fileWriter.close()
                 } catch (e: IOException) {
                     println("Flushing/closing error!")
@@ -208,14 +204,33 @@ class FinalDetailFragment : Fragment() {
 
         // var fileWriter: FileWriter? = null
         var dir = Environment.getExternalStorageDirectory()
-        var file: File = File(dir, "/teste4.csv")
-        var fileWriter = FileWriter(file, true)
-        var random = Random()
-        var int: Int = random.nextInt()
+        var file = File(dir, "/teste_3.csv")
+        var fileOutputStream = FileOutputStream(file, true)
+        var fileWriter = BufferedWriter(OutputStreamWriter(fileOutputStream, "UTF8"))
         try {
-            fileWriter.append("teste")
+            fileWriter.append("\"" + itemViewModel.name + "\"")
             fileWriter.append(",")
-            fileWriter.append(int.toString())
+            fileWriter.append("\"" + itemViewModel.number + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.name + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.deploymentState + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.qualityState.toString() + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.vendor + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.model + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.description + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.type + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.serialNumber + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.localization + "\"")
+            fileWriter.append(",")
+            fileWriter.append("\"" + itemViewModel.observation + "\"")
             fileWriter.append('\n')
 
             fileWriter.close()
@@ -226,7 +241,7 @@ class FinalDetailFragment : Fragment() {
             e.printStackTrace()
         } finally {
             try {
-                fileWriter!!.flush()
+                fileWriter.flush()
                 fileWriter.close()
             } catch (e: IOException) {
                 println("Flushing/closing error!")

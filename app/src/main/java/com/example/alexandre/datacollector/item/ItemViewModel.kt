@@ -12,6 +12,7 @@ import kotlinx.coroutines.*
  * Created by alexandre on 04/04/19.
  */
 
+
 class ItemViewModel(val database: ItemDao, application: Application) : AndroidViewModel(application) {
 
     // variaveis e metodos para o coroutine
@@ -24,10 +25,10 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
-    var item = MutableLiveData<Item?>()
-    var oldNumber: String = ""
+    //var item = MutableLiveData<Item?>()
     var number: String = ""
-    var name: String? = ""
+    var name: String = ""
+    var oldName = MutableLiveData<String>()
     var deploymentState: String? = ""
     var serialNumber: String? = ""
     var vendor: String? = ""
@@ -39,14 +40,11 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var localization: String? = ""
 
     var typeSelected = ""
-
-    init {
-        item.value = Item()
-    }
+    var doneNavigating = false
 
     fun onButtonClicked() {
         uiScope.launch {
-            _navigateToDetails.value = getItemFromDatabase("NUMBER")
+            _navigateToDetails.value = getItemFromDatabase(typeSelected)
 
         }
     }
@@ -54,13 +52,14 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     //executa a acao de buscar no database em outra thread.
     private suspend fun getItemFromDatabase(typeSelected: String): Item? {
         return withContext(Dispatchers.IO) {
-            val rows = database.getRowsCount()
-            println("ROWS: " + rows)
+            //val rows = database.getRowsCount()
             var item: Item?
+            var serialNumber = serialNumber ?: ""
+            val name = oldName.value ?: ""
             if (typeSelected == "NUMBER") {
-                item = database.getItem(oldNumber)
+                item = database.getItem(name)
             } else if (typeSelected == "SERIAL_NUMBER") {
-                item = database.getItemBySerialNumber(serialNumber!!)
+                item = database.getItemBySerialNumber(serialNumber)
             } else {
                 item = null
             }
@@ -75,19 +74,21 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
 
     fun doneNavigating() {
         _navigateToDetails.value = null
+        doneNavigating = true
     }
 
     fun clearData() {
-        oldNumber = ""
         number = ""
         name = ""
+        oldName.value = ""
         deploymentState = ""
         serialNumber = ""
         vendor = ""
         model = ""
         type = ""
         description = ""
-        typeSelected = ""
         localization = ""
+        doneNavigating = false
     }
+
 }

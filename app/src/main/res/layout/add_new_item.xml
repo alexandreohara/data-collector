@@ -44,7 +44,7 @@
                 android:ems="10"
                 android:inputType="number"
                 android:visibility="gone"
-                android:text="@={itemViewModel.oldNumber}"/>
+                android:text="@={itemViewModel.oldName}"/>
             <RadioButton
                 android:id="@+id/t1_serial_radio"
                 android:layout_width="wrap_content"

@@ -38,7 +38,7 @@ class NewItemFragment : Fragment() {
         }
 
         // validacao dos campos antes da navegacao
-        binding.t1ContinueButton.setOnClickListener { v ->
+        binding.t1ContinueButton.setOnClickListener {
             if (binding.t1ScanRadio.isChecked && binding.t1ScanText.text.toString().trim() == "") {
                 Toast.makeText(context, "Código de Barras é obrigatório!", Toast.LENGTH_SHORT).show()
             } else if (binding.t1SerialRadio.isChecked && binding.t1SerialText.text.toString().trim() == ""){
@@ -47,8 +47,8 @@ class NewItemFragment : Fragment() {
                 Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
             } else {
                 binding.t1ContinueButton.text = "Aguarde..."
+                println(itemViewModel?.oldName?.value)
                 itemViewModel?.onButtonClicked()
-                //v.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
             }
         }
 
@@ -71,72 +71,38 @@ class NewItemFragment : Fragment() {
             itemViewModel?.typeSelected = "MANUAL"
         }
 
-            binding.itemViewModel = itemViewModel
-            binding.setLifecycleOwner(this)
+        binding.itemViewModel = itemViewModel
+        binding.setLifecycleOwner(this.activity)
 
-            itemViewModel?.navigateToDetails?.observe(this, Observer {
-                item ->
-                if (item == null) { // de qualquer jeito ele cai aqui, acho que pq a principio ainda nao tem o item e so dps ele chega
+        itemViewModel?.navigateToDetails?.observe(this, Observer {
+            item ->
+            if (item == null) {
+                if (itemViewModel.doneNavigating == false) {
                     Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
                     binding.t1ContinueButton.text = "Continuar"
-                } else {
-                    itemViewModel.description = item.description
-                    itemViewModel.oldNumber = item.number
-                    itemViewModel.model = item.model
-                    itemViewModel.name = item.name
-                    itemViewModel.deploymentState = item.deploymentState
-                    itemViewModel.serialNumber = item.serialNumber
-                    itemViewModel.vendor = item.vendor
-                    itemViewModel.model = item.model
-                    itemViewModel.type = item.type
-                    itemViewModel.description = item.description
-
-                    findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-                    itemViewModel.doneNavigating()
                 }
+            } else {
+                itemViewModel.description = item.description
+                itemViewModel.number = item.number
+                itemViewModel.model = item.model
+                itemViewModel.oldName.value = item.name
+                itemViewModel.deploymentState = item.deploymentState
+                itemViewModel.serialNumber = item.serialNumber
+                itemViewModel.vendor = item.vendor
+                itemViewModel.model = item.model
+                itemViewModel.type = item.type
+                itemViewModel.description = item.description
 
+                findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                itemViewModel.doneNavigating()
+            }
+        })
 
-//                item?.let {
-//                    //println(it)
-//                    itemViewModel.description = it.description
-//                    itemViewModel.oldNumber = it.number
-//                    itemViewModel.model = it.model
-//                    itemViewModel.name = it.name
-//                    itemViewModel.deploymentState = it.deploymentState
-//                    itemViewModel.serialNumber = it.serialNumber
-//                    itemViewModel.vendor = it.vendor
-//                    itemViewModel.model = it.model
-//                    itemViewModel.type = it.type
-//                    itemViewModel.description = it.description
-//
-//                    this.findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
-//                    itemViewModel.doneNavigating()
-//                } ?: run {
-//                    //TODO: LEANDRO colocar aviso de: Item nao encontrado!
-////                    println('a')
-////                    println(itemViewModel)
-////                    println(itemViewModel.oldNumber)
-////                    println(itemViewModel.serialNumber)
-////                    if (itemViewModel.oldNumber == "") {
-////                        Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
-////                    }
-//                }
-            })
-
-            return binding.root
-        }
+        return binding.root
+    }
 
     override fun onResume() {
         super.onResume()
-
-        // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
-        val application = requireNotNull(this.activity).application
-        val dataSource = ItemDatabase.getInstance(application).itemDao()
-        val viewModelFactory = ItemViewModelFactory(dataSource, application)
-        var itemViewModel = activity?.run {
-            ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
-        }
-
         binding.t1ContinueButton.text = "CONTINUAR"
 
         // mostra o campo de texto do Radio Button selecionado
@@ -145,7 +111,6 @@ class NewItemFragment : Fragment() {
         } else if (findSelected() == "SERIAL_NUMBER") {
             binding.t1SerialText.visibility = View.VISIBLE
         }
-        itemViewModel?.typeSelected = findSelected()
     }
 
     private fun findSelected(): String {
