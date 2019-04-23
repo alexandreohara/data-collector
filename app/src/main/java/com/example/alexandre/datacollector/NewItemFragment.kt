@@ -3,12 +3,15 @@ package com.example.alexandre.datacollector
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -23,11 +26,23 @@ import com.example.alexandre.datacollector.db.ItemDatabase
  */
 class NewItemFragment : Fragment() {
 
+    companion object {
+
+        var tvresult: EditText? = null
+    }
+
     private lateinit var binding: AddNewItemBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
+
+        tvresult = binding.t1ScanText
+
+        binding.t1ScanButton.setOnClickListener {
+            val intent = Intent(context, ScanActivity::class.java)
+            startActivity(intent)
+        }
 
         // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
         val application = requireNotNull(this.activity).application
