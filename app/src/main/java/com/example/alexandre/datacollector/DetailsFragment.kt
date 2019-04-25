@@ -43,7 +43,7 @@ class DetailsFragment : Fragment() {
                 Toast.makeText(context, "Insira um novo número!", Toast.LENGTH_SHORT).show()
             } else {
                 binding.t2ContinueButton.text = "Aguarde..."
-                itemViewModel?.number = binding.t2NewNumberText.text.toString()
+                itemViewModel.name = binding.t2NewNumberText.text.toString()
                 view.findNavController().navigate(R.id.action_detailsFragment2_to_finalDetailFragment)
             }
         }
