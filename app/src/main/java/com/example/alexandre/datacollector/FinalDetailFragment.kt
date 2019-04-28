@@ -36,6 +36,7 @@ import android.content.pm.PackageManager
  */
 class FinalDetailFragment : Fragment() {
 
+    private var localization: Int = 0
     private var photoFile: File? = null
     private val CAPTURE_IMAGE_REQUEST = 1
     private val IMAGE_DIRECTORY_NAME = "Itens"
@@ -76,18 +77,23 @@ class FinalDetailFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        val dropDown = Array(100, { i -> "Localização " + (i + 1).toString() })
+        val dropDown = Array(100) { i -> "Localização " + (i + 1).toString() }
         val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, dropDown)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.t3DropdownList.adapter = adapter
         binding.t3CameraButton.setOnClickListener {
-//            captureImage()
+            localization = binding.t3DropdownList.selectedItemPosition
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 captureImage()
             } else {
                 captureImage2()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.t3DropdownList.setSelection(localization)
     }
 
     private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
@@ -184,15 +190,8 @@ class FinalDetailFragment : Fragment() {
         } else {
             val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             if (takePictureIntent.resolveActivity(activity!!.packageManager) != null) {
-                // Create the File where the photo should go
                 try {
-                    Toast.makeText(context, "try", Toast.LENGTH_SHORT).show()
                     photoFile = createImageFile()
-                    Toast.makeText(context, "got", Toast.LENGTH_SHORT).show()
-                    //displayMessage(baseContext, photoFile!!.getAbsolutePath())
-                    //Log.i("Mayank", photoFile!!.getAbsolutePath())
-
-                    // Continue only if the File was successfully created
                     if (photoFile != null) {
                         Toast.makeText(context, "not null", Toast.LENGTH_SHORT).show()
 
@@ -206,15 +205,12 @@ class FinalDetailFragment : Fragment() {
 
                     }
                 } catch (ex: Exception) {
-                    // Error occurred while creating the File
-                    //displayMessage(baseContext,"Capture Image Bug: "  + ex.message.toString())
-                    Toast.makeText(context, "Não foi possíiiiiiiiivel realizar a operação", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
                 }
 
 
             } else {
-                //displayMessage(baseContext, "Nullll")
-                Toast.makeText(context, "Nãoooooo foi possível realizar a operação", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -223,8 +219,16 @@ class FinalDetailFragment : Fragment() {
     private fun createImageFile(): File {
         // Create an image file name
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-        val imageFileName = "JPEG_" + timeStamp + "_"
         val storageDir = activity!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        var photoPrefixName: String
+
+        if (itemViewModel.name.trim() != "") {
+            photoPrefixName = itemViewModel.name
+        } else {
+            photoPrefixName = "IMG"
+        }
+        val imageFileName = photoPrefixName + "_" + timeStamp + "_"
+
         val image = File.createTempFile(
                 imageFileName, /* prefix */
                 ".jpg", /* suffix */
@@ -243,7 +247,6 @@ class FinalDetailFragment : Fragment() {
                 captureImage()
             }
         }
-
     }
 
 

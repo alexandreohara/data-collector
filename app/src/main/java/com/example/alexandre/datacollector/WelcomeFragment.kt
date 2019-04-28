@@ -1,13 +1,18 @@
 package com.example.alexandre.datacollector
 
 
+import android.Manifest
 import android.app.Application
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.databinding.DataBindingUtil
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
+import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.example.alexandre.datacollector.databinding.WelcomeBinding
@@ -38,6 +43,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
     //Inflating and Returning the View with DataBindingUtil
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+
         binding = DataBindingUtil.inflate(inflater, R.layout.welcome, container, false)
         binding.addMainButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_welcomeFragment_to_newItemFragment)
@@ -52,6 +58,14 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         }
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        // Pede autorização para usar a camera se ainda não tinha
+        if (ContextCompat.checkSelfPermission(context!!, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity!!, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
+        }
     }
 
     override fun onDestroy() {
@@ -109,6 +123,4 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         }
 
     }
-
-
 }
