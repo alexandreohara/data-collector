@@ -55,6 +55,8 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                 async(Dispatchers.Default) {
                     readCSV(application, "Export_Hardware.csv")
                     readCSV(application, "Export_Notebook.csv")
+                    readCSV(application, "Export_Desktop.csv")
+                    readCSV(application, "Export_Ramal.csv")
                 }
             }
         }
@@ -77,7 +79,6 @@ class WelcomeFragment : Fragment(), CoroutineScope {
     }
 
     private fun readCSV(application: Application, fileName: String) {
-        //println("Lendo arquivo: " + fileName)
 
         var fileReader: BufferedReader? = null
         var csvReader: CSVReader? = null
