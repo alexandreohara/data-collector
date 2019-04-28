@@ -48,14 +48,17 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         binding.addMainButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_welcomeFragment_to_newItemFragment)
         }
-
-        val application = requireNotNull(this.activity).application
-        job = Job()
-        launch {
-            async(Dispatchers.Default) {
-                readCSV(application)
+        binding.dbMainButton.setOnClickListener { view: View ->
+            val application = requireNotNull(this.activity).application
+            job = Job()
+            launch {
+                async(Dispatchers.Default) {
+                    readCSV(application, "Export_Hardware.csv")
+                    readCSV(application, "Export_Notebook.csv")
+                }
             }
         }
+
 
         return binding.root
     }
@@ -73,12 +76,13 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         job.cancel()
     }
 
-    private fun readCSV(application: Application) {
+    private fun readCSV(application: Application, fileName: String) {
+        //println("Lendo arquivo: " + fileName)
 
         var fileReader: BufferedReader? = null
         var csvReader: CSVReader? = null
         try {
-            fileReader = activity?.applicationContext?.assets?.open("Export_Hardware.csv")?.bufferedReader()
+            fileReader = activity?.applicationContext?.assets?.open(fileName)?.bufferedReader()
             csvReader = CSVReaderBuilder(fileReader).
                     withCSVParser(CSVParserBuilder().
                             withSeparator(';').
@@ -102,12 +106,14 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                         serialNumber = line[9]
                 )
                 val dataSource = ItemDatabase.getInstance(application).itemDao()
-                println(dataSource.getRowsCount())
+                //println(dataSource.getRowsCount())
                 //println(item)
                 dataSource.insert(item)
                 //PopulateDbAsync(item, application)
                 line = csvReader.readNext()
             }
+            //val dataSource = ItemDatabase.getInstance(application).itemDao()
+            //println("Numero de itens no BD: " + dataSource.getRowsCount())
             csvReader.close()
         } catch (e: Exception) {
             println("Reading CSV Error!")
