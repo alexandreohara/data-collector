@@ -193,8 +193,6 @@ class FinalDetailFragment : Fragment() {
                 try {
                     photoFile = createImageFile()
                     if (photoFile != null) {
-                        Toast.makeText(context, "not null", Toast.LENGTH_SHORT).show()
-
                         var photoURI = FileProvider.getUriForFile(context!!,
                                 "com.example.android.fileprovider",
                                 photoFile!!)
