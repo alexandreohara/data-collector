@@ -92,9 +92,11 @@ class NewItemFragment : Fragment() {
         itemViewModel?.navigateToDetails?.observe(this, Observer {
             item ->
             if (item == null) {
-                if (itemViewModel.doneNavigating == false) {
+                if (itemViewModel.doneNavigating == false && findSelected() != "MANUAL") {
                     Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
                     binding.t1ContinueButton.text = "Continuar"
+                } else if (findSelected() == "MANUAL") {
+                    findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                 }
             } else {
                 itemViewModel.description = item.description
