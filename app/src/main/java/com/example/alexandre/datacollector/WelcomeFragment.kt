@@ -49,14 +49,23 @@ class WelcomeFragment : Fragment(), CoroutineScope {
             view.findNavController().navigate(R.id.action_welcomeFragment_to_newItemFragment)
         }
         binding.dbMainButton.setOnClickListener { view: View ->
+            binding.dbMainButton.text = "Aguarde..."
+            binding.dbMainButton.isEnabled = false
+            binding.addMainButton.isEnabled = false
+
             val application = requireNotNull(this.activity).application
             job = Job()
             launch {
-                async(Dispatchers.Default) {
+                val finished = async(Dispatchers.Default) {
                     readCSV(application, "Export_Hardware.csv")
                     readCSV(application, "Export_Notebook.csv")
                     readCSV(application, "Export_Desktop.csv")
                     readCSV(application, "Export_Ramal.csv")
+                }
+                if (finished.await() == job.isCompleted) {
+                    binding.dbMainButton.text = "Carregar Banco de Dados"
+                    binding.dbMainButton.isEnabled = true
+                    binding.addMainButton.isEnabled = true
                 }
             }
         }
@@ -78,7 +87,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         job.cancel()
     }
 
-    private fun readCSV(application: Application, fileName: String) {
+    private fun readCSV(application: Application, fileName: String): Boolean {
 
         var fileReader: BufferedReader? = null
         var csvReader: CSVReader? = null
@@ -110,12 +119,12 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                 //println(dataSource.getRowsCount())
                 //println(item)
                 dataSource.insert(item)
-                //PopulateDbAsync(item, application)
                 line = csvReader.readNext()
             }
             //val dataSource = ItemDatabase.getInstance(application).itemDao()
             //println("Numero de itens no BD: " + dataSource.getRowsCount())
             csvReader.close()
+            return true
         } catch (e: Exception) {
             println("Reading CSV Error!")
             e.printStackTrace()
@@ -127,6 +136,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                 println("Closing fileReader/csvParser Error!")
                 e.printStackTrace()
             }
+            return false
         }
 
     }
