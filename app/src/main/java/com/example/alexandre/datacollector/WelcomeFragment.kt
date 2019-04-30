@@ -2,6 +2,7 @@ package com.example.alexandre.datacollector
 
 
 import android.Manifest
+import android.app.AlertDialog
 import android.app.Application
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -44,6 +45,8 @@ class WelcomeFragment : Fragment(), CoroutineScope {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+        val dialog = createSuccessDialog()
+
         binding = DataBindingUtil.inflate(inflater, R.layout.welcome, container, false)
         binding.addMainButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_welcomeFragment_to_newItemFragment)
@@ -63,9 +66,17 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                     readCSV(application, "Export_Ramal.csv")
                 }
                 if (finished.await() == job.isCompleted) {
+                    var dbRows = async(Dispatchers.Default) {
+                        val dataSource = ItemDatabase.getInstance(application).itemDao()
+                        dataSource.getRowsCount()
+                    }
+                    dialog.setMessage("Número de itens carregados: " + dbRows.await())
                     binding.dbMainButton.text = "Carregar Banco de Dados"
                     binding.dbMainButton.isEnabled = true
                     binding.addMainButton.isEnabled = true
+
+                    dialog.show()
+
                 }
             }
         }
@@ -140,4 +151,14 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         }
 
     }
+
+    private fun createSuccessDialog(): AlertDialog.Builder {
+        val confirmationDialog = AlertDialog.Builder(context)
+        confirmationDialog.setTitle("O Banco de Dados foi carregado com sucesso!")
+        confirmationDialog.setPositiveButton("Ok") { dialogInterface, _ ->
+            dialogInterface.dismiss()
+        }
+        return confirmationDialog
+    }
+
 }
