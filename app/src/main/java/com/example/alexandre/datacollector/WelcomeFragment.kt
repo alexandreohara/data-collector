@@ -55,6 +55,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
             binding.dbMainButton.text = "Aguarde..."
             binding.dbMainButton.isEnabled = false
             binding.addMainButton.isEnabled = false
+            binding.progressBar.visibility = View.VISIBLE
 
             val application = requireNotNull(this.activity).application
             job = Job()
@@ -66,6 +67,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                     readCSV(application, "Export_Ramal.csv")
                 }
                 if (finished.await() == job.isCompleted) {
+                    binding.progressBar.progress = 100
                     var dbRows = async(Dispatchers.Default) {
                         val dataSource = ItemDatabase.getInstance(application).itemDao()
                         dataSource.getRowsCount()
@@ -135,6 +137,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
             //val dataSource = ItemDatabase.getInstance(application).itemDao()
             //println("Numero de itens no BD: " + dataSource.getRowsCount())
             csvReader.close()
+            binding.progressBar.progress += 25
             return true
         } catch (e: Exception) {
             println("Reading CSV Error!")
@@ -156,6 +159,8 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         val confirmationDialog = AlertDialog.Builder(context)
         confirmationDialog.setTitle("O Banco de Dados foi carregado com sucesso!")
         confirmationDialog.setPositiveButton("Ok") { dialogInterface, _ ->
+            binding.progressBar.progress = 0
+            binding.progressBar.visibility = View.GONE
             dialogInterface.dismiss()
         }
         return confirmationDialog
