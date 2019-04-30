@@ -2,11 +2,13 @@ package com.example.alexandre.datacollector
 
 
 import android.databinding.DataBindingUtil
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.findNavController
@@ -20,12 +22,8 @@ import kotlinx.android.synthetic.main.password.*
  */
 class PasswordFragment : Fragment() {
 
-    //private lateinit var binding: PasswordFragment
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-
-        //binding = DataBindingUtil.inflate<PasswordFragment>(inflater, R.layout.password, container, false)
 
         var binding = DataBindingUtil.inflate<PasswordBinding>(inflater, R.layout.password, container, false)
 
@@ -35,12 +33,11 @@ class PasswordFragment : Fragment() {
                 it.findNavController().navigate(R.id.action_passwordFragment_to_welcomeFragment)
             } else {
                 binding.password.text = null
-                Toast.makeText(context, "Senha incorreta!", Toast.LENGTH_SHORT).show()
+                binding.password.error = "Senha Incorreta!"
+                //Toast.makeText(context, "Senha incorreta!", Toast.LENGTH_SHORT).show()
             }
         }
 
         return binding.root
     }
-
-
 }
