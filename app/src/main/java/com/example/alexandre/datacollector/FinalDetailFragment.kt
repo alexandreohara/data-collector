@@ -286,7 +286,7 @@ class FinalDetailFragment : Fragment() {
 
         // var fileWriter: FileWriter? = null
         var dir = Environment.getExternalStorageDirectory()
-        var file = File(dir, "/teste_3.csv")
+        var file = File(dir, "/data-collector.csv")
         var fileOutputStream = FileOutputStream(file, true)
         var fileWriter = BufferedWriter(OutputStreamWriter(fileOutputStream, "UTF8"))
         try {
