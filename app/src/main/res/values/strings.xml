@@ -33,4 +33,5 @@
     <string name="scan_button_text">Escanear Código de Barras</string>
     <string name="insert_password_text">Insira a senha:</string>
     <string name="acess_button">Acessar</string>
+    <string name="scan_new_button">Escanear</string>
 </resources>

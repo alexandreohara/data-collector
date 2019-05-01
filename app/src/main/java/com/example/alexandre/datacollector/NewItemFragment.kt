@@ -26,24 +26,12 @@ import com.example.alexandre.datacollector.db.ItemDatabase
  */
 class NewItemFragment : Fragment() {
 
-    companion object {
-
-        var tvresult: EditText? = null
-    }
-
     private lateinit var binding: AddNewItemBinding
     private lateinit var itemViewModel: ItemViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.add_new_item, container, false)
-
-        tvresult = binding.t1ScanText
-
-        binding.t1ScanButton.setOnClickListener {
-            val intent = Intent(context, ScanActivity::class.java)
-            startActivity(intent)
-        }
 
         // referencia do application que este fragmento está ligado para passar pro ViewModelProvider
         val application = requireNotNull(this.activity).application
@@ -117,6 +105,17 @@ class NewItemFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        MainActivity.tvresult = binding.t1ScanText
+
+        binding.t1ScanButton.setOnClickListener {
+            val intent = Intent(activity, ScanActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {
