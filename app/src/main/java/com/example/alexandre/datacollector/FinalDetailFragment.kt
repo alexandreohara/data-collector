@@ -6,10 +6,14 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +27,8 @@ import android.widget.Toast
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
+import android.Manifest
+import android.content.pm.PackageManager
 
 /**
  * A simple [Fragment] subclass.
@@ -30,9 +36,11 @@ import java.util.*
  */
 class FinalDetailFragment : Fragment() {
 
+    private var localization: Int = 0
     private var photoFile: File? = null
     private val CAPTURE_IMAGE_REQUEST = 1
     private val IMAGE_DIRECTORY_NAME = "Itens"
+    private lateinit var mCurrentPhotoPath: String
     private lateinit var binding: FinalDetailBinding
     private lateinit var itemViewModel: ItemViewModel
 
@@ -69,13 +77,23 @@ class FinalDetailFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        val dropDown = Array(100, { i -> "Localização " + (i + 1).toString() })
+        val dropDown = Array(100) { i -> "Localização " + (i + 1).toString() }
         val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item, dropDown)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.t3DropdownList.adapter = adapter
         binding.t3CameraButton.setOnClickListener {
-            captureImage()
+            localization = binding.t3DropdownList.selectedItemPosition
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                captureImage()
+            } else {
+                captureImage2()
+            }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.t3DropdownList.setSelection(localization)
     }
 
     private fun createDialogConfirmation(dialog: AlertDialog.Builder): AlertDialog.Builder {
@@ -119,7 +137,7 @@ class FinalDetailFragment : Fragment() {
         return dialog
     }
 
-    private fun createImageFile(): File? {
+    private fun createImageFile2(): File? {
         // External sdcard location
         val mediaStorageDir = File(
                 Environment
@@ -148,11 +166,11 @@ class FinalDetailFragment : Fragment() {
 
     }
 
-    private fun captureImage() {
+    private fun captureImage2() {
 
         try {
             val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            photoFile = createImageFile()
+            photoFile = createImageFile2()
             if (photoFile != null) {
                 val photoURI = Uri.fromFile(photoFile)
                 cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
@@ -165,6 +183,70 @@ class FinalDetailFragment : Fragment() {
         }
 
     }
+
+    private fun captureImage() {
+        if (ContextCompat.checkSelfPermission(context!!, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity!!, arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
+        } else {
+            val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            if (takePictureIntent.resolveActivity(activity!!.packageManager) != null) {
+                try {
+                    photoFile = createImageFile()
+                    if (photoFile != null) {
+                        var photoURI = FileProvider.getUriForFile(context!!,
+                                "com.example.android.fileprovider",
+                                photoFile!!)
+
+                        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+
+                        startActivityForResult(takePictureIntent, CAPTURE_IMAGE_REQUEST)
+
+                    }
+                } catch (ex: Exception) {
+                    Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
+                }
+
+
+            } else {
+                Toast.makeText(context, "Não foi possível realizar a operação", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    @Throws(IOException::class)
+    private fun createImageFile(): File {
+        // Create an image file name
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        val storageDir = activity!!.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        var photoPrefixName: String
+
+        if (itemViewModel.name.trim() != "") {
+            photoPrefixName = itemViewModel.name
+        } else {
+            photoPrefixName = "IMG"
+        }
+        val imageFileName = photoPrefixName + "_" + timeStamp + "_"
+
+        val image = File.createTempFile(
+                imageFileName, /* prefix */
+                ".jpg", /* suffix */
+                storageDir      /* directory */
+        )
+
+        // Save a file: path for use with ACTION_VIEW intents
+        mCurrentPhotoPath = image.absolutePath
+        return image
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        if (requestCode == 0) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED
+                    && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+                captureImage()
+            }
+        }
+    }
+
 
     private fun navigateHome() {
         findNavController().navigate(R.id.action_finalDetailFragment_to_welcomeFragment)

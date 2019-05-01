@@ -34,8 +34,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="717" />
+                            <option name="y" value="21" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -67,6 +67,27 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_newItemFragment_to_detailsFragment2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="passwordFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-203" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_passwordFragment_to_welcomeFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

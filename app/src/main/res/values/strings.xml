@@ -31,4 +31,6 @@
     <string name="description_text">Descrição:</string>
     <string name="new_number_text">Nova Placa:</string>
     <string name="scan_button_text">Escanear Código de Barras</string>
+    <string name="insert_password_text">Insira a senha:</string>
+    <string name="acess_button">Acessar</string>
 </resources>
