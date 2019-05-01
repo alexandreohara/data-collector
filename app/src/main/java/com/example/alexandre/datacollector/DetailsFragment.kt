@@ -41,7 +41,7 @@ class DetailsFragment : Fragment() {
 
         binding.t2ContinueButton.setOnClickListener { view ->
             if (binding.t2NewNumberText.text.toString().trim() == "") {
-                Toast.makeText(context, "Insira um novo número!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Insira a Nova Placa!", Toast.LENGTH_SHORT).show()
             } else {
                 binding.t2ContinueButton.text = "Aguarde..."
                 itemViewModel.name = binding.t2NewNumberText.text.toString()
