@@ -108,7 +108,6 @@ class NewItemFragment : Fragment() {
                 itemViewModel.vendor = item.vendor
                 itemViewModel.model = item.model
                 itemViewModel.type = item.type
-                itemViewModel.description = item.description
 
                 findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                 itemViewModel.doneNavigating()
@@ -135,8 +134,10 @@ class NewItemFragment : Fragment() {
             return "NUMBER"
         } else if (binding.t1RadioGroup.checkedRadioButtonId == binding.t1SerialRadio.id) {
             return "SERIAL_NUMBER"
-        } else{
+        } else if(binding.t1RadioGroup.checkedRadioButtonId == binding.t1ManualRadio.id){
             return "MANUAL"
+        } else {
+            return ""
         }
     }
 }
