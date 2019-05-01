@@ -34,7 +34,8 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
         // Log.v("tag", rawResult.getText()); // Prints scan results
         // Log.v("tag", rawResult.getBarcodeFormat().toString()); // Prints the scan format (qrcode, pdf417 etc.)
 
-        NewItemFragment.tvresult!!.setText(rawResult.text)
+        //NewItemFragment.tvresult!!.setText(rawResult.text)
+        MainActivity.tvresult!!.setText(rawResult.text)
         onBackPressed()
 
         // If you would like to resume scanning, call this method below:
