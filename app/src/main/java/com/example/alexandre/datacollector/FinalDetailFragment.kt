@@ -101,7 +101,7 @@ class FinalDetailFragment : Fragment() {
         confirmationDialog.setTitle("Confirme os dados preenchidos:")
         val str = "Placa Antiga: " + itemViewModel.oldName.value +
                 "\nNova Placa: " + itemViewModel.name +
-                "\nNúmero de Série: " + itemViewModel.serialNumber +
+                "\nNúmero de Série: " + itemViewModel.serialNumber.value +
                 "\nFornecedor: " + itemViewModel.vendor +
                 "\nModelo: " + itemViewModel.model +
                 "\nTipo: " + itemViewModel.type +
@@ -306,7 +306,7 @@ class FinalDetailFragment : Fragment() {
             fileWriter.append(",")
             fileWriter.append("\"" + itemViewModel.type + "\"")
             fileWriter.append(",")
-            fileWriter.append("\"" + itemViewModel.serialNumber + "\"")
+            fileWriter.append("\"" + itemViewModel.serialNumber.value + "\"")
             fileWriter.append(",")
             fileWriter.append("\"" + itemViewModel.localization + "\"")
             fileWriter.append(",")
