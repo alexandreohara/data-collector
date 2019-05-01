@@ -2,6 +2,7 @@ package com.example.alexandre.datacollector
 
 
 import android.Manifest
+import android.app.AlertDialog
 import android.app.Application
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -44,18 +45,45 @@ class WelcomeFragment : Fragment(), CoroutineScope {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
+        val dialog = createSuccessDialog()
+        job = Job()
+
         binding = DataBindingUtil.inflate(inflater, R.layout.welcome, container, false)
         binding.addMainButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_welcomeFragment_to_newItemFragment)
         }
+        binding.dbMainButton.setOnClickListener { view: View ->
+            binding.dbMainButton.text = "Aguarde..."
+            binding.dbMainButton.isEnabled = false
+            binding.addMainButton.isEnabled = false
+            binding.progressBar.visibility = View.VISIBLE
 
-        val application = requireNotNull(this.activity).application
-        job = Job()
-        launch {
-            async(Dispatchers.Default) {
-                readCSV(application)
+            val application = requireNotNull(this.activity).application
+
+            launch {
+                val finished = async(Dispatchers.Default) {
+                    readCSV(application, "Export_Hardware.csv")
+                    readCSV(application, "Export_Notebook.csv")
+                    readCSV(application, "Export_Desktop.csv")
+                    readCSV(application, "Export_Ramal.csv")
+                }
+                if (finished.await() == job.isCompleted) {
+                    binding.progressBar.progress = 100
+                    var dbRows = async(Dispatchers.Default) {
+                        val dataSource = ItemDatabase.getInstance(application).itemDao()
+                        dataSource.getRowsCount()
+                    }
+                    dialog.setMessage("Número de itens carregados: " + dbRows.await())
+                    binding.dbMainButton.text = "Carregar Banco de Dados"
+                    binding.dbMainButton.isEnabled = true
+                    binding.addMainButton.isEnabled = true
+
+                    dialog.show()
+
+                }
             }
         }
+
 
         return binding.root
     }
@@ -73,12 +101,12 @@ class WelcomeFragment : Fragment(), CoroutineScope {
         job.cancel()
     }
 
-    private fun readCSV(application: Application) {
+    private fun readCSV(application: Application, fileName: String): Boolean {
 
         var fileReader: BufferedReader? = null
         var csvReader: CSVReader? = null
         try {
-            fileReader = activity?.applicationContext?.assets?.open("Export_Hardware.csv")?.bufferedReader()
+            fileReader = activity?.applicationContext?.assets?.open(fileName)?.bufferedReader()
             csvReader = CSVReaderBuilder(fileReader).
                     withCSVParser(CSVParserBuilder().
                             withSeparator(';').
@@ -102,13 +130,16 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                         serialNumber = line[9]
                 )
                 val dataSource = ItemDatabase.getInstance(application).itemDao()
-                println(dataSource.getRowsCount())
+                //println(dataSource.getRowsCount())
                 //println(item)
                 dataSource.insert(item)
-                //PopulateDbAsync(item, application)
                 line = csvReader.readNext()
             }
+            //val dataSource = ItemDatabase.getInstance(application).itemDao()
+            //println("Numero de itens no BD: " + dataSource.getRowsCount())
             csvReader.close()
+            binding.progressBar.progress += 25
+            return true
         } catch (e: Exception) {
             println("Reading CSV Error!")
             e.printStackTrace()
@@ -120,7 +151,20 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                 println("Closing fileReader/csvParser Error!")
                 e.printStackTrace()
             }
+            return false
         }
 
     }
+
+    private fun createSuccessDialog(): AlertDialog.Builder {
+        val confirmationDialog = AlertDialog.Builder(context)
+        confirmationDialog.setTitle("O Banco de Dados foi carregado com sucesso!")
+        confirmationDialog.setPositiveButton("Ok") { dialogInterface, _ ->
+            binding.progressBar.progress = 0
+            binding.progressBar.visibility = View.GONE
+            dialogInterface.dismiss()
+        }
+        return confirmationDialog
+    }
+
 }

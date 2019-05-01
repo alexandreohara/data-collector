@@ -69,7 +69,6 @@
                 android:layout_marginEnd="8dp"
                 android:ems="10"
                 android:inputType="number"
-                android:text="@={itemViewModel.name}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -98,39 +97,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
             <TextView
-                android:id="@+id/textView13"
-                style="@style/information_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/product_name_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/t2_serial_number_text" />
-
-            <EditText
-                android:id="@+id/t2_name_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@={itemViewModel.oldName}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-            <TextView
                 android:id="@+id/textView14"
                 style="@style/information_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/vendor_text"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/t2_name_text" />
+                app:layout_constraintTop_toBottomOf="@+id/t2_serial_number_text" />
 
             <EditText
                 android:id="@+id/t2_vendor_text"
