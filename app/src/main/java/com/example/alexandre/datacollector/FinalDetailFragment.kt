@@ -257,9 +257,9 @@ class FinalDetailFragment : Fragment() {
     }
 
     private fun createCSV() {
-        val CSV_HEADER = "\"Name\",\"Old Name\",\"Deployment State\",\"Incident State\",\"Vendor\",\"Model\",\"Description\",\"Type\",\"Owner\",\"Serial Number\",\"Location\",\"Observation\""
+        val CSV_HEADER = "\"Name\",\"Old Name\",\"Deployment State\",\"Incident State\",\"Vendor\",\"Model\",\"Description\",\"Type\",\"Serial Number\",\"Location\",\"Observation\""
         var dir = Environment.getExternalStorageDirectory()
-        var file = File(dir, "/teste_3.csv")
+        var file = File(dir, "/data-collector.csv")
         print(file.exists())
         if (!file.exists()) {
             var fileOutputStream = FileOutputStream(file, true)
@@ -292,7 +292,7 @@ class FinalDetailFragment : Fragment() {
         try {
             fileWriter.append("\"" + itemViewModel.name + "\"")
             fileWriter.append(",")
-            fileWriter.append("\"" + itemViewModel.oldName + "\"")
+            fileWriter.append("\"" + itemViewModel.oldName.value + "\"")
             fileWriter.append(",")
             fileWriter.append("\"" + itemViewModel.deploymentState + "\"")
             fileWriter.append(",")

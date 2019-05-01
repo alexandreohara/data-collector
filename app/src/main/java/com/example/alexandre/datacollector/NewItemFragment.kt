@@ -101,15 +101,15 @@ class NewItemFragment : Fragment() {
                     binding.t1ContinueButton.text = "Continuar"
                 }
             } else {
-                itemViewModel.description = item.description
+                itemViewModel.description = item.description ?: ""
                 itemViewModel.number = item.number
-                itemViewModel.model = item.model
-                itemViewModel.oldName.value = item.name
-                itemViewModel.deploymentState = item.deploymentState
-                itemViewModel.serialNumber = item.serialNumber
-                itemViewModel.vendor = item.vendor
-                itemViewModel.model = item.model
-                itemViewModel.type = item.type
+                itemViewModel.model = item.model ?: ""
+                itemViewModel.oldName.value = item.name ?: ""
+                itemViewModel.deploymentState = item.deploymentState ?: ""
+                itemViewModel.serialNumber = item.serialNumber ?: ""
+                itemViewModel.vendor = item.vendor ?: ""
+                itemViewModel.model = item.model ?: ""
+                itemViewModel.type = item.type ?: ""
 
                 findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                 itemViewModel.doneNavigating()
