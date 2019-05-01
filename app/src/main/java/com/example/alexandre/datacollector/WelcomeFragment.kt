@@ -46,6 +46,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                               savedInstanceState: Bundle?): View? {
 
         val dialog = createSuccessDialog()
+        job = Job()
 
         binding = DataBindingUtil.inflate(inflater, R.layout.welcome, container, false)
         binding.addMainButton.setOnClickListener { view: View ->
@@ -58,7 +59,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
             binding.progressBar.visibility = View.VISIBLE
 
             val application = requireNotNull(this.activity).application
-            job = Job()
+
             launch {
                 val finished = async(Dispatchers.Default) {
                     readCSV(application, "Export_Hardware.csv")
