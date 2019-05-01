@@ -62,7 +62,6 @@ class NewItemFragment : Fragment() {
                 Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
             } else {
                 binding.t1ContinueButton.text = "Aguarde..."
-                println(itemViewModel?.oldName?.value)
                 itemViewModel?.onButtonClicked()
             }
         }
@@ -91,12 +90,13 @@ class NewItemFragment : Fragment() {
 
         itemViewModel?.navigateToDetails?.observe(this, Observer {
             item ->
-            if (item == null) {
-                if (itemViewModel.doneNavigating == false && findSelected() != "MANUAL") {
+            if (findSelected() == "MANUAL" && itemViewModel.doneNavigating == false) {
+                findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
+                itemViewModel.doneNavigating()
+            } else if (item == null) {
+                if (itemViewModel.doneNavigating == false) {
                     Toast.makeText(context, "Item não encontrado!", Toast.LENGTH_SHORT).show()
                     binding.t1ContinueButton.text = "Continuar"
-                } else if (findSelected() == "MANUAL") {
-                    findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                 }
             } else {
                 itemViewModel.description = item.description
