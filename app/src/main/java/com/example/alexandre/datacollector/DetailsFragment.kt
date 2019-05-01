@@ -2,6 +2,7 @@ package com.example.alexandre.datacollector
 
 
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -51,6 +52,17 @@ class DetailsFragment : Fragment() {
         binding.itemViewModel = itemViewModel
         binding.setLifecycleOwner(this)
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        MainActivity.tvresult = binding.t2NewNumberText
+
+        binding.t2ScanButton.setOnClickListener {
+            val intent = Intent(activity, ScanActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {
