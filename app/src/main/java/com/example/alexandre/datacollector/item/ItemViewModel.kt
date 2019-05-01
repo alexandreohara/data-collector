@@ -30,7 +30,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
     var name: String = ""
     var oldName = MutableLiveData<String>()
     var deploymentState: String? = ""
-    var serialNumber: String? = ""
+    var serialNumber = MutableLiveData<String>()
     var vendor: String? = ""
     var model: String? = ""
     var type: String? = ""
@@ -54,7 +54,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         return withContext(Dispatchers.IO) {
             //val rows = database.getRowsCount()
             var item: Item?
-            var serialNumber = serialNumber ?: ""
+            var serialNumber = serialNumber.value ?: ""
             val name = oldName.value ?: ""
             if (typeSelected == "NUMBER") {
                 item = database.getItem(name)
@@ -82,7 +82,7 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         name = ""
         oldName.value = ""
         deploymentState = ""
-        serialNumber = ""
+        serialNumber.value = ""
         vendor = ""
         model = ""
         type = ""

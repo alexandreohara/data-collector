@@ -21,7 +21,7 @@ import com.example.alexandre.datacollector.databinding.AddNewItemBinding
 import com.example.alexandre.datacollector.db.ItemDatabase
 
 /**
- * A simple [Fragment] subclass.
+ * A simple [Fragment] subclass.q
  *
  */
 class NewItemFragment : Fragment() {
@@ -94,7 +94,7 @@ class NewItemFragment : Fragment() {
                 itemViewModel.model = item.model ?: ""
                 itemViewModel.oldName.value = item.name ?: ""
                 itemViewModel.deploymentState = item.deploymentState ?: ""
-                itemViewModel.serialNumber = item.serialNumber ?: ""
+                itemViewModel.serialNumber.value = item.serialNumber ?: ""
                 itemViewModel.vendor = item.vendor ?: ""
                 itemViewModel.model = item.model ?: ""
                 itemViewModel.type = item.type ?: ""
