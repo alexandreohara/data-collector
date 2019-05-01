@@ -32,6 +32,7 @@ class NewItemFragment : Fragment() {
     }
 
     private lateinit var binding: AddNewItemBinding
+    private lateinit var itemViewModel: ItemViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -48,7 +49,7 @@ class NewItemFragment : Fragment() {
         val application = requireNotNull(this.activity).application
         val dataSource = ItemDatabase.getInstance(application).itemDao()
         val viewModelFactory = ItemViewModelFactory(dataSource, application)
-        var itemViewModel = activity?.run {
+        var itemViewModel = activity!!.run {
             ViewModelProviders.of(this, viewModelFactory).get(ItemViewModel::class.java)
         }
 
@@ -62,7 +63,7 @@ class NewItemFragment : Fragment() {
                 Toast.makeText(context, "Selecione uma das opções!", Toast.LENGTH_SHORT).show()
             } else {
                 binding.t1ContinueButton.text = "Aguarde..."
-                itemViewModel?.onButtonClicked()
+                itemViewModel.onButtonClicked()
             }
         }
 
@@ -70,26 +71,27 @@ class NewItemFragment : Fragment() {
         binding.t1ScanRadio.setOnClickListener {
             binding.t1ScanText.visibility = View.VISIBLE
             binding.t1SerialText.visibility = View.GONE
-            itemViewModel?.typeSelected = "NUMBER"
+            itemViewModel.typeSelected = "NUMBER"
         }
 
         binding.t1SerialRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.VISIBLE
             binding.t1ScanText.visibility = View.GONE
-            itemViewModel?.typeSelected = "SERIAL_NUMBER"
+            itemViewModel.typeSelected = "SERIAL_NUMBER"
         }
 
         binding.t1ManualRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.GONE
             binding.t1ScanText.visibility = View.GONE
-            itemViewModel?.typeSelected = "MANUAL"
+            itemViewModel.typeSelected = "MANUAL"
         }
 
         binding.itemViewModel = itemViewModel
         binding.setLifecycleOwner(this.activity)
 
-        itemViewModel?.navigateToDetails?.observe(this, Observer {
+        itemViewModel.navigateToDetails?.observe(this, Observer {
             item ->
+            println(item)
             if (findSelected() == "MANUAL" && itemViewModel.doneNavigating == false) {
                 findNavController().navigate(R.id.action_newItemFragment_to_detailsFragment2)
                 itemViewModel.doneNavigating()

@@ -88,6 +88,8 @@ class ItemViewModel(val database: ItemDao, application: Application) : AndroidVi
         type = ""
         description = ""
         localization = ""
+        qualityState = 0
+        observation = ""
         doneNavigating = false
     }
 
