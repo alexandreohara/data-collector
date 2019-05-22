@@ -28,6 +28,10 @@ android {
     }
 
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
 }
 
 dependencies {
