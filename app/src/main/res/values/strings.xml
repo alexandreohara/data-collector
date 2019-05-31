@@ -34,4 +34,5 @@
     <string name="insert_password_text">Insira a senha:</string>
     <string name="acess_button">Acessar</string>
     <string name="scan_new_button">Escanear</string>
+    <string name="scan_serial_number_text">Escanear Número de Série</string>
 </resources>
