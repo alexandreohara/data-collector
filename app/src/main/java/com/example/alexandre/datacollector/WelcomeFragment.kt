@@ -65,6 +65,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
                     readCSV(application, "Export_Hardware.csv")
                     readCSV(application, "Export_Notebook.csv")
                     readCSV(application, "Export_Desktop.csv")
+                    readCSV(application, "Export_Monitor.csv")
                     readCSV(application, "Export_Ramal.csv")
                 }
                 if (finished.await() == job.isCompleted) {
@@ -138,7 +139,7 @@ class WelcomeFragment : Fragment(), CoroutineScope {
             //val dataSource = ItemDatabase.getInstance(application).itemDao()
             //println("Numero de itens no BD: " + dataSource.getRowsCount())
             csvReader.close()
-            binding.progressBar.progress += 25
+            binding.progressBar.progress += 20
             return true
         } catch (e: Exception) {
             println("Reading CSV Error!")
