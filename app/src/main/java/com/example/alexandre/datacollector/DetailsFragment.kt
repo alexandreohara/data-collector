@@ -57,9 +57,23 @@ class DetailsFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        MainActivity.tvresult = binding.t2NewNumberText
+//        MainActivity.tvresult = binding.t2NewNumberText
 
         binding.t2ScanButton.setOnClickListener {
+            MainActivity.tvresult = binding.t2NewNumberText
+            val intent = Intent(activity, ScanActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        binding.t2ScanSerialNumber.setOnClickListener {
+            MainActivity.tvresult = binding.t2SerialNumberText
+            val intent = Intent(activity, ScanActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.t2ScanModel.setOnClickListener {
+            MainActivity.tvresult = binding.t2ModelText
             val intent = Intent(activity, ScanActivity::class.java)
             startActivity(intent)
         }

@@ -58,12 +58,16 @@ class NewItemFragment : Fragment() {
         // listeners para mostrar/esconder campos de texto
         binding.t1ScanRadio.setOnClickListener {
             binding.t1ScanText.visibility = View.VISIBLE
+            binding.t1ScanButton.visibility = View.VISIBLE
+            binding.t1ScanSerialNumber.visibility = View.GONE
             binding.t1SerialText.visibility = View.GONE
             itemViewModel.typeSelected = "NUMBER"
         }
 
         binding.t1SerialRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.VISIBLE
+            binding.t1ScanSerialNumber.visibility = View.VISIBLE
+            binding.t1ScanButton.visibility = View.GONE
             binding.t1ScanText.visibility = View.GONE
             itemViewModel.typeSelected = "SERIAL_NUMBER"
         }
@@ -71,6 +75,8 @@ class NewItemFragment : Fragment() {
         binding.t1ManualRadio.setOnClickListener {
             binding.t1SerialText.visibility = View.GONE
             binding.t1ScanText.visibility = View.GONE
+            binding.t1ScanSerialNumber.visibility = View.GONE
+            binding.t1ScanButton.visibility = View.GONE
             itemViewModel.typeSelected = "MANUAL"
         }
 
@@ -110,9 +116,16 @@ class NewItemFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        MainActivity.tvresult = binding.t1ScanText
+//        MainActivity.tvresult = binding.t1ScanText
 
         binding.t1ScanButton.setOnClickListener {
+            MainActivity.tvresult = binding.t1ScanText
+            val intent = Intent(activity, ScanActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.t1ScanSerialNumber.setOnClickListener {
+            MainActivity.tvresult = binding.t1SerialText
             val intent = Intent(activity, ScanActivity::class.java)
             startActivity(intent)
         }

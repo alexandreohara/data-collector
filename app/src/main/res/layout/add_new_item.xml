@@ -43,8 +43,9 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number"
-                android:visibility="gone"
-                android:text="@={itemViewModel.oldName}"/>
+                android:text="@={itemViewModel.oldName}"
+                android:visibility="gone" />
+
             <RadioButton
                 android:id="@+id/t1_serial_radio"
                 android:layout_width="wrap_content"
@@ -95,8 +96,22 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
                 android:layout_weight="1"
-                android:text="@string/scan_button_text" />
+                android:text="@string/scan_button_text"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/t1_scan_serial_number"
+                style="@style/SecondaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:text="@string/scan_serial_number_text"
+                android:visibility="gone" />
 
         </RadioGroup>
     </ScrollView>
