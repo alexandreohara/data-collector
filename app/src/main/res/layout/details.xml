@@ -86,7 +86,7 @@
                     style="@style/SecondaryButton"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="0"
                     android:text="@string/scan_new_button"
                     android:textSize="11sp" />
@@ -128,7 +128,7 @@
                     style="@style/SecondaryButton"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="0"
                     android:text="@string/scan_new_button"
                     android:textSize="11sp" />
@@ -196,7 +196,7 @@
                     style="@style/SecondaryButton"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="0"
                     android:text="@string/scan_new_button"
                     android:textSize="11sp" />
