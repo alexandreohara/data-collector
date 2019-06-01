@@ -61,19 +61,37 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/t2_number_text" />
 
-            <EditText
-                android:id="@+id/t2_new_number_text"
-                android:layout_width="280dp"
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:inputType="number"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <EditText
+                    android:id="@+id/t2_new_number_text"
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/t2_scan_button"
+                    style="@style/SecondaryButton"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:text="@string/scan_new_button"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView15"
@@ -83,22 +101,38 @@
                 android:layout_marginStart="8dp"
                 android:text="@string/serial_information_text"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/t2_new_number_text" />
+                app:layout_constraintTop_toBottomOf="@+id/linear" />
 
-            <EditText
-                android:id="@+id/t2_serial_number_text"
-                android:layout_width="280dp"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@={itemViewModel.serialNumber}"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/t2_serial_number_text"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@={itemViewModel.serialNumber}"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/t2_scan_serial_number"
+                    style="@style/SecondaryButton"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:text="@string/scan_new_button"
+                    android:textSize="11sp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView14"
@@ -109,7 +143,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/vendor_text"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/t2_serial_number_text" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
             <EditText
                 android:id="@+id/t2_vendor_text"
@@ -136,20 +170,37 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/t2_vendor_text" />
 
-            <EditText
-                android:id="@+id/t2_model_text"
-                android:layout_width="280dp"
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@={itemViewModel.model}"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                tools:layout_editor_absoluteX="16dp">
+
+                <EditText
+                    android:id="@+id/t2_model_text"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@={itemViewModel.model}"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/t2_scan_model"
+                    style="@style/SecondaryButton"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0"
+                    android:text="@string/scan_new_button"
+                    android:textSize="11sp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView17"
@@ -157,10 +208,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
                 android:text="@string/type_text"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/t2_model_text" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
             <EditText
                 android:id="@+id/t2_type_text"
@@ -234,51 +284,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/t2_scan_button"
-                style="@style/SecondaryButton"
-                android:layout_width="51dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/scan_new_button"
-                android:textSize="11sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/t2_new_number_text"
-                app:layout_constraintTop_toBottomOf="@+id/t2_number_text" />
-
-            <Button
-                android:id="@+id/t2_scan_serial_number"
-                style="@style/SecondaryButton"
-                android:layout_width="51dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/scan_new_button"
-                android:textSize="11sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/t2_serial_number_text"
-                app:layout_constraintTop_toBottomOf="@+id/t2_scan_button" />
-
-            <Button
-                android:id="@+id/t2_scan_model"
-                style="@style/SecondaryButton"
-                android:layout_width="51dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/scan_new_button"
-                android:textSize="11sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/t2_model_text"
-                app:layout_constraintTop_toBottomOf="@+id/t2_vendor_text" />
 
 
         </android.support.constraint.ConstraintLayout>
